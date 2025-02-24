@@ -71,7 +71,6 @@ nav {
         );
         pointer-events: none;
         opacity: 0;
-        
         animation: reveal-blur linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
@@ -92,7 +91,7 @@ nav {
     }
 
     .header-saf-on {
-        background-color: var(--header-on);
+        background-color: #0b0a0a08;
         pointer-events: all;
         backdrop-filter: blur(5px);
 
@@ -100,9 +99,10 @@ nav {
     }
 
     .blur-saf-on {
-        backdrop-filter: blur(16px);
+        backdrop-filter: blur(1px);
         opacity: 1;
     }
+
     @keyframes reveal-blur {
         100% {opacity: 1;}
 
