@@ -349,7 +349,7 @@ function setVolumeProgressBar(e) {
     audio.volume = clickX / width;
 }
 
-audio.volume = 0.7;
+audio.volume = 0.5;
 
 volumePlayerProgress.addEventListener('click', setVolumeProgressBar);
 audio.addEventListener('volumechange', updateVolumeProgressBar);

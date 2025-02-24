@@ -16,6 +16,14 @@
     box-sizing: border-box;
 }
 
+* {
+    --Montserrat: 'Montserrat', sans-serif;
+    --Helvetica: 'Helvetica', sans-serif;
+    --Inter: 'Inter', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Instrument: 'Instrument Sans', sans-serif
+}
+
 html,body {height: 100%;}
 
 ::selection {background-color: var(--select-text);}
@@ -75,7 +83,7 @@ body {
 
     /*Header*/
     --header:#15151500;
-    --header-on:var(--background);
+    --header-on:#0b0a0a08;
 
     /*Botones*/
     --buttons:#292828;

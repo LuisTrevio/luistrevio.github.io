@@ -39,6 +39,11 @@ nav {
     display: none;
 }
 
+.blur-effect {
+    color: var(--red);
+    display: none;
+}
+
 @media (max-width:780px) {
     header, nav {
         display: flex;
@@ -48,12 +53,45 @@ nav {
         animation-range: 0 170px;
     }
 
+    .blur-effect {
+        display: block;
+        position: absolute;
+        inset: 0;
+        height: 200%;
+        background: linear-gradient(
+          to bottom,
+          hsl(0deg 0% 0%) 0%,
+          transparent 50%
+        );
+        backdrop-filter: blur(16px);
+        mask-image: linear-gradient(
+          to bottom,
+          black 0% 50%,
+          transparent 50% 100%
+        );
+        pointer-events: none;
+    }
+
+    @supports
+    (backdrop-filter: blur(16px)) or
+    (-webkit-backdrop-filter: blur(16px)) {
+        .red {
+            background: linear-gradient(
+            to bottom,
+            hsl(0deg 0% 0%) 0%,
+            transparent 50%
+            );
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    }
+
     .header-saf-on {
         background-color: var(--header-on);
         pointer-events: all;
         backdrop-filter: blur(5px);
 
-        box-shadow: var( --shadow-header-complex);
+        border-bottom: 1px solid #000000;
     }
 
     @keyframes reveal {
@@ -62,7 +100,7 @@ nav {
             pointer-events: all;
             backdrop-filter: blur(5px);
 
-            box-shadow: var( --shadow-header-complex);
+            border-bottom: 1px solid #000000;
         }
 
         80% {
@@ -94,7 +132,7 @@ nav {
         height: 40px;
 
         border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgba(234, 234, 234, 0);
 
     }
 
@@ -158,9 +196,7 @@ nav {
         pointer-events: none;
     }
 
-    .box-tool-up {
-        opacity: 1;
-    }
+    .box-tool-up {opacity: 1;}
 
     .grid-box {
         width: 100%;
@@ -173,10 +209,7 @@ nav {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
 
-        grid-template-areas: 
-        "a1 a2" 
-        "a3 a4" 
-        "a5 a5";
+        grid-template-areas: "a1 a2" "a3 a4" "a5 a5";
         gap: 16px;
         padding: 27px;
 

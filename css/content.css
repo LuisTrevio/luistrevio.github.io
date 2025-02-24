@@ -104,7 +104,7 @@
     align-items: center;
     justify-content: center;
 
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--Instrument);
 
     color: var(--white);
     transform: translate(0,0);
@@ -370,7 +370,7 @@
     height: 100%;
 
     color: var(--white);
-    font-family: "Helvetica", sans-serif;
+    font-family: var(--Helvetica);
 
     font-size: 16px;
 
@@ -380,7 +380,7 @@
 }
 
 h1, h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--Montserrat);
     line-height: 1.4;
 }
 
@@ -631,7 +631,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 }
 
 .music-progress-bar {
-    width: 100%;
+    width: 0%;
     height: 100%;
 
     background-color: var(--buttons-hover);
@@ -777,13 +777,13 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 @media (max-width:780px) {
     .flex-items-dev {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns:repeat(auto-fill,minmax(7.5rem,1fr));
     }
 
     .items-dev {width: auto;}
 }
 
-@media (max-width:560px) {.flex-items-dev {grid-template-columns: 1fr 1fr 1fr;}}
+@media (max-width:560px) {.flex-items-dev {grid-template-columns: repeat(auto-fill,minmax(6rem,1fr));}}
 
 .items-logo {
     width: 100%;
