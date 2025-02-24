@@ -70,12 +70,17 @@ nav {
           transparent 50% 100%
         );
         pointer-events: none;
+        opacity: 0;
+        
+        animation: reveal-blur linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 170px;
     }
 
     @supports
     (backdrop-filter: blur(16px)) or
     (-webkit-backdrop-filter: blur(16px)) {
-        .red {
+        .blur-effect {
             background: linear-gradient(
             to bottom,
             hsl(0deg 0% 0%) 0%,
@@ -94,6 +99,24 @@ nav {
         border-bottom: 1px solid #000000;
     }
 
+    .blur-saf-on {
+        backdrop-filter: blur(16px);
+        opacity: 1;
+    }
+    @keyframes reveal-blur {
+        100% {opacity: 1;}
+
+        80% {
+            opacity: 0;
+            backdrop-filter: blur(0px);
+        }
+
+        0% {
+            opacity: 0;
+            backdrop-filter: blur(0px);
+        }
+    }
+
     @keyframes reveal {
         100% {
             background-color: var(--header-on);
@@ -105,11 +128,13 @@ nav {
 
         80% {
             backdrop-filter: blur(0px);
+            border-bottom: 1px solid #00000000;
         }
 
         0% {
             background-color: var(--header);
             backdrop-filter: blur(0px);
+            border-bottom: 1px solid #00000000;
         }
     }
 

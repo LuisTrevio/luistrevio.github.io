@@ -25,7 +25,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             ['.animate-safari', 'animate-safari-on'],
             ['.name-safari', 'name-safari-on'],
             ['.header-safari', 'header-saf-on'],
-            ['.h1-safari', 'h1-saf-on']
+            ['.h1-safari', 'h1-saf-on'],
+            ['.blur-safari', 'blur-saf-on']
         ];
 
         toggleClasses.forEach(([selector, className]) => {
