@@ -82,7 +82,7 @@ nav {
     }
 
     .header-saf-on {
-        background-color: #0b0a0a00;
+        background-color: #0b0a0a3d;
         pointer-events: all;
         backdrop-filter: blur(5px);
 
@@ -92,6 +92,10 @@ nav {
     .blur-saf-on {
         backdrop-filter: blur(16px);
         opacity: 1;
+    }
+
+    .off-safari {
+        display: none;
     }
 
     @keyframes reveal-blur {

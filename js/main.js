@@ -19,6 +19,7 @@ let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     document.querySelectorAll('.sar-web').forEach((result) => { result.classList.add('sar-on');})
     document.querySelectorAll('.img-saf').forEach((result) => { result.classList.add('img-safari');})
+    document.querySelectorAll('.off-saf').forEach((result) => { result.classList.add('off-safari');})
    
     window.addEventListener("scroll", () => {
         const toggleClasses = [
