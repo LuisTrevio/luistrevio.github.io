@@ -53,45 +53,36 @@ nav {
         animation-range: 0 170px;
     }
 
-    .blur-effect {
-        display: block;
-        position: absolute;
-        inset: 0;
-        height: 200%;
-        background: linear-gradient(
-          to bottom,
-          hsl(0deg 0% 0%) 0%,
-          transparent 50%
-        );
-        backdrop-filter: blur(16px);
-        mask-image: linear-gradient(
-          to bottom,
-          black 0% 50%,
-          transparent 50% 100%
-        );
-        pointer-events: none;
-        opacity: 0;
-        animation: reveal-blur linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0 170px;
-    }
-
     @supports
     (backdrop-filter: blur(16px)) or
     (-webkit-backdrop-filter: blur(16px)) {
         .blur-effect {
+            display: block;
+            position: absolute;
+            inset: 0;
+            height: 200%;
             background: linear-gradient(
-            to bottom,
-            hsl(0deg 0% 0%) 0%,
-            transparent 50%
+              to bottom,
+              hsl(0deg 0% 0%) 0%,
+              transparent 50%
             );
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            mask-image: linear-gradient(
+              to bottom,
+              black 0% 50%,
+              transparent 50% 100%
+            );
+            pointer-events: none;
+            opacity: 0;
+            animation: reveal-blur linear both;
+            animation-timeline: scroll(root);
+            animation-range: 0 170px;
+            z-index: 2;
         }
     }
 
     .header-saf-on {
-        background-color: #0b0a0a08;
+        background-color: #0b0a0a00;
         pointer-events: all;
         backdrop-filter: blur(5px);
 
@@ -99,7 +90,7 @@ nav {
     }
 
     .blur-saf-on {
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(16px);
         opacity: 1;
     }
 

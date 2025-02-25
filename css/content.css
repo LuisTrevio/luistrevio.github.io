@@ -136,7 +136,7 @@
 
     .animate-safari-on {
         transition: 0.2s ease-out;
-        animation:secreto 0.46s forwards cubic-bezier(0.39, 0.58, 0.57, 1) !important;
+        animation:secreto 0.38s forwards cubic-bezier(0.39, 0.58, 0.57, 1) !important;
     }
 
 
