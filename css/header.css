@@ -81,12 +81,16 @@ nav {
         }
     }
 
-    .header-saf-on {
-        background-color: #0b0a0a3d;
-        pointer-events: all;
-        backdrop-filter: blur(5px);
-
-        border-bottom: 1px solid #000000;
+    @supports
+    (backdrop-filter: blur(16px)) or
+    (-webkit-backdrop-filter: blur(16px)) {
+        .header-saf-on {
+            background-color: #0b0a0a3d;
+            pointer-events: all;
+            backdrop-filter: blur(16px);
+    
+            border-bottom: 1px solid #000000;
+        }
     }
 
     .blur-saf-on {
