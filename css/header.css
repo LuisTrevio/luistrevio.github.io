@@ -85,11 +85,12 @@ nav {
     (backdrop-filter: blur(16px)) or
     (-webkit-backdrop-filter: blur(16px)) {
         .header-saf-on {
-            background-color: #0b0a0a3d;
+            background-color: #0b0a0a35;
             pointer-events: all;
             backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
     
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #000000;    
         }
     }
 
