@@ -17,9 +17,17 @@ window.addEventListener("scroll", () => {
 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    document.querySelectorAll('.sar-web').forEach((result) => { result.classList.add('sar-on');})
-    document.querySelectorAll('.img-saf').forEach((result) => { result.classList.add('img-safari');})
-    document.querySelectorAll('.off-saf').forEach((result) => { result.classList.add('off-safari');})
+
+    const safariClasses = [
+        ['.sar-web', 'sar-on'],
+        ['.img-saf', 'img-safari'],
+        ['.off-saf', 'off-safari'],
+        ['.slow-saf', 'slow-safari']
+    ];
+
+    safariClasses.forEach(([selector, className]) => {
+        document.querySelectorAll(selector).forEach(result => result.classList.add(className));
+    });
    
     window.addEventListener("scroll", () => {
         const toggleClasses = [
@@ -27,7 +35,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             ['.name-safari', 'name-safari-on'],
             ['.header-safari', 'header-saf-on'],
             ['.h1-safari', 'h1-saf-on'],
-            ['.blur-safari', 'blur-saf-on']
         ];
 
         toggleClasses.forEach(([selector, className]) => {
