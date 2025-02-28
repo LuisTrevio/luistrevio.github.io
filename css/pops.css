@@ -178,7 +178,7 @@
     .St-Word {width: 80%;}
 
 
-.Status-Animated {animation: Status 0.43s cubic-bezier(.17,.67,.51,1);}
+.Status-Animated {animation: Status 0.410s cubic-bezier(.17,.67,.51,1);}
 
 @keyframes Status {0% { width: 0%;} 10% { width: 0%;} 100% {}}
 
@@ -206,7 +206,7 @@
     transform: translate(0,0);
     opacity: 0;
 
-    transition: 0.157s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.203s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
 
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -239,7 +239,7 @@
 
     transform: translate(0,0);
     opacity: 0;
-    transition: 0.157s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.201s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
 
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -248,9 +248,11 @@
     box-shadow: none;
 }
 
-.slow-safari {
-    transition: opacity 0.25s, transform 0.2s cubic-bezier(0.41, 0.1, 0.13, 1);
-    -webkit-transition: opacity 0.352s, transform 0.3s cubic-bezier(0.41, 0.1, 0.13, 1);
+@media (max-width:780px) { 
+    .slow-safari {
+        transition: opacity 0.300s, transform 0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
+        -webkit-transition: opacity 0.300s, transform 0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
+    }
 }
 
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
@@ -628,7 +630,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
     transform: translate(0,70px);
     opacity: 0;
-    transition: 0.157s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.203s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
 
     padding: 25px 25px 25px 25px;
     flex-direction: column;
