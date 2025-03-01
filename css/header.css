@@ -85,7 +85,7 @@ nav {
     (backdrop-filter: blur(16px)) or
     (-webkit-backdrop-filter: blur(16px)) {
         .header-saf-on {
-            background-color: #0b0a0a35;
+            background-color: #0000001c;
             pointer-events: all;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -94,9 +94,7 @@ nav {
         }
     }
 
-    .off-safari {
-        display: none;
-    }
+    .off-safari {display: none;}
 
     @keyframes reveal-blur {
         100% {opacity: 1;}

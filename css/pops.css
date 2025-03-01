@@ -550,6 +550,7 @@
     pointer-events: none;
     transition: 0.2s ease-out;
 }
+.socialmedia.email {display: none;}
 
 a.socialmedia.icons.facebook::before {content: 'Facebook';}
 a.socialmedia.icons.twitter::before {content: 'Twitter'; }
@@ -557,6 +558,7 @@ a.socialmedia.icons.whatsapp::before {content: 'Whatsapp';}
 a.socialmedia.icons.reddit::before {content: 'Reddit'; }
 a.socialmedia.icons.linkedin::before {content: 'Linkedin'; }
 a.socialmedia.icons.telegram::before {content: 'Telegram'; }
+a.socialmedia.icons.email::before {content: 'SMS';}
 
 a.socialmedia.icons.facebook:hover::before {transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
 a.socialmedia.icons.twitter:hover::before {transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
@@ -564,7 +566,9 @@ a.socialmedia.icons.whatsapp:hover::before {transition: 0.2s ease-out; transform
 a.socialmedia.icons.reddit:hover::before { transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
 a.socialmedia.icons.linkedin:hover::before {transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
 a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
-@media (max-width:780px) {.socialmedia::before{display: none;}}
+a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: translateY(-45px); opacity: 1;}
+
+@media (max-width:780px) {.socialmedia::before{display: none;} .socialmedia.email {display: flex;}}
 
 .flex-full {
     width: 100vw;
@@ -1005,3 +1009,4 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
     opacity: 1;
     pointer-events: all;
 }
+

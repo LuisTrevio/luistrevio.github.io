@@ -22,7 +22,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         ['.sar-web', 'sar-on'],
         ['.img-saf', 'img-safari'],
         ['.off-saf', 'off-safari'],
-        ['.slow-saf', 'slow-safari']
+        ['.slow-saf', 'slow-safari'],
+        ['.sms-saf', 'sms-safari']
     ];
 
     safariClasses.forEach(([selector, className]) => {
