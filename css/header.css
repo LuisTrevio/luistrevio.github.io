@@ -35,14 +35,9 @@ nav {
     display: none;
 }
 
-.box-tool {
-    display: none;
-}
+.box-tool {display: none;}
 
-.blur-effect {
-    color: var(--red);
-    display: none;
-}
+.blur-effect {display: none;}
 
 @media (max-width:780px) {
     header, nav {
@@ -53,51 +48,44 @@ nav {
         animation-range: 0 170px;
     }
 
-    @supports
-    (backdrop-filter: blur(16px)) or
-    (-webkit-backdrop-filter: blur(16px)) {
-        .blur-effect {
-            display: block;
-            position: absolute;
-            inset: 0;
-            height: 200%;
-            background: linear-gradient(
-              to bottom,
-              hsla(0, 0%, 0%, 0.527) 0%,
-              transparent 50%
-            );
-            backdrop-filter: blur(16px);
-            mask-image: linear-gradient(
-              to bottom,
-              black 0% 50%,
-              transparent 50% 100%
-            );
-            pointer-events: none;
-            opacity: 0;
-            animation: reveal-blur linear both;
-            animation-timeline: scroll(root);
-            animation-range: 0 170px;
-            z-index: 2;
-        }
-    }
+    .blur-effect {
+        display: block;
+        position: absolute;
+        inset: 0;
+        height: 200%;
+        background: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0.527) 0%,
+        transparent 50%
+        );
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        mask-image: linear-gradient(
+        to bottom,
+         black 0% 50%,
+        transparent 50% 100%
+        );
+        pointer-events: none;
+        opacity: 0;
 
-    @supports
-    (backdrop-filter: blur(16px)) or
-    (-webkit-backdrop-filter: blur(16px)) {
-        .header-saf-on {
-            background-color: #0000001c;
-            pointer-events: all;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+        animation: reveal-blur linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 170px;
+    }
     
-            border-bottom: 1px solid #000000;    
-        }
+    .header-saf-on {
+        background-color: #0000001c;
+        pointer-events: all;
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+    
+        border-bottom: 1px solid #000000;    
     }
-
+    
     .off-safari {display: none;}
 
     @keyframes reveal-blur {
-        100% {opacity: 1;}
+        100% {opacity: 1; backdrop-filter: blur(16px);}
 
         80% {
             opacity: 0;

@@ -65,6 +65,7 @@ body {
 
 body {
     background: var(--background);
+    
     /*Text & Nucleo*/
     --select-text: #66598c;
     --white: #e6e6e6;
@@ -74,12 +75,6 @@ body {
     --background: #0B0A0A;
     --stock-perfil:#724a18;
     --border-stock-perfil: #e2810b;
-
-    /*Background
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    */
 
     /*Header*/
     --header:#15151500;

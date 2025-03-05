@@ -3,6 +3,7 @@
     height: 100%;
 
     background-color: #0000006e;
+    
     position: fixed;
     display: flex;
 
@@ -90,6 +91,7 @@
 
 .Pop-Close:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 @media (max-width:780px) { 
+    .Pop {backdrop-filter: blur(5px);}
     .Pop-Close-Up {transform: translateY(9px);}
     .Pop-Close:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
     .Pop-Close:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
