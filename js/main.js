@@ -124,7 +124,8 @@ function Pop() {
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
-    document.querySelector('.reels-socialmedia').scrollLeft = 20;
+    
+    document.querySelector('.reels-socialmedia').scrollLeft = 0;
 }
 
 //PopUp de las Habilidades
@@ -151,6 +152,9 @@ popFunctions.forEach(([funcName, selector, className]) => {
         document.querySelectorAll(`.${selector}`).forEach(result => {
             result.classList.add(className);
         });
+        setTimeout(() => { 
+            document.querySelector('.reels-socialmedia').scrollTo(50, 0);
+        },100); 
     };
 });
 
