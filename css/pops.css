@@ -253,8 +253,8 @@
 
 @media (max-width:780px) { 
     .slow-safari {
-        transition: opacity 0.300s, transform 0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
-        -webkit-transition: opacity 0.300s, transform 0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1) !important;
+        -webkit-transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1) !important;
     }
 }
 
@@ -267,6 +267,8 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
+
+    animation: fade-out-pop 0.201s ease-out both;
 }
 
 .Pop-As-Out {
@@ -278,6 +280,7 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
+    animation: fade-out-pop 0.201s ease-out both;
 }
 
 .Pop-Mail-Out {
@@ -289,6 +292,7 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
+    animation: fade-out-pop 0.201s ease-out both;
 }
 
 .Pop-Share-Out {
@@ -300,6 +304,12 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
+    animation: fade-out-pop 0.201s ease-out both;
+}
+
+@keyframes fade-out-pop {
+    0% {background-color:rgb(11 10 10); filter: blur(2.37px);}
+    100% {filter: blur(0);}
 }
 
 @media (max-width:780px) {
@@ -356,6 +366,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-Mail-Out {
@@ -363,6 +374,8 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+
+        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-As-Out {
@@ -370,6 +383,8 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+
+        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-Share-Out {
@@ -377,6 +392,8 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+
+        animation: fade-out-pop 0.255s ease-out both;
     }
 
 }
