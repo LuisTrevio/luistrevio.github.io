@@ -268,7 +268,7 @@
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
 
-    animation: fade-out-pop 0.201s ease-out both;
+    animation: fade-out-pop 0.201s ease-out forwards;
 }
 
 .Pop-As-Out {
@@ -280,7 +280,7 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
-    animation: fade-out-pop 0.201s ease-out both;
+    animation: fade-out-pop 0.201s ease-out forwards;
 }
 
 .Pop-Mail-Out {
@@ -292,7 +292,7 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
-    animation: fade-out-pop 0.201s ease-out both;
+    animation: fade-out-pop 0.201s ease-out forwards;
 }
 
 .Pop-Share-Out {
@@ -304,10 +304,10 @@
     background-color: var(--bg-pop);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
-    animation: fade-out-pop 0.201s ease-out both;
+    animation: fade-out-pop 0.201s ease-out forwards;
 }
 
-@keyframes fade-out-pop {
+@keyframes fade-out-pop { 
     0% {filter: blur(2.37px);}
     100% {filter: blur(0);}
 }
