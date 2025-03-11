@@ -308,7 +308,7 @@
 }
 
 @keyframes fade-out-pop {
-    0% {background-color:rgb(11 10 10); filter: blur(2.37px);}
+    0% {filter: blur(2.37px);}
     100% {filter: blur(0);}
 }
 
