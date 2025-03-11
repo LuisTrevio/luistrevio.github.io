@@ -253,8 +253,8 @@
 
 @media (max-width:780px) { 
     .slow-safari {
-        transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1) !important;
-        -webkit-transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1) !important;
+        transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
+        -webkit-transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 }
 
@@ -366,7 +366,6 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-Mail-Out {
@@ -375,7 +374,6 @@
         box-shadow: none;
         filter: blur(0);
 
-        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-As-Out {
@@ -384,7 +382,6 @@
         box-shadow: none;
         filter: blur(0);
 
-        animation: fade-out-pop 0.255s ease-out both;
     }
 
     .Pop-Share-Out {
@@ -393,7 +390,6 @@
         box-shadow: none;
         filter: blur(0);
 
-        animation: fade-out-pop 0.255s ease-out both;
     }
 
 }
