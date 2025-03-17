@@ -74,7 +74,7 @@ nav {
     }
     
     .header-saf-on {
-        background-color: #ffffff1c;
+        background: #ffffff1c;
         pointer-events: all;
         -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
