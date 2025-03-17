@@ -55,7 +55,7 @@ nav {
         height: 200%;
         background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 0%, 0.527) 0%,
+        hsla(0, 0%, 0%, 0.272) 0%,
         transparent 50%
         );
         -webkit-backdrop-filter: blur(16px);
@@ -74,7 +74,7 @@ nav {
     }
     
     .header-saf-on {
-        background-color: #0000001c;
+        background-color: #ffffff1c;
         pointer-events: all;
         -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
