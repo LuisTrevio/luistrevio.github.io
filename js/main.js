@@ -29,6 +29,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
     safariClasses.forEach(([selector, className]) => {
         document.querySelectorAll(selector).forEach(result => result.classList.add(className));
     });
+
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000000');
    
     window.addEventListener("scroll", () => {
         const toggleClasses = [

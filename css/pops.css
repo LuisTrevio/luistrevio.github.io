@@ -290,10 +290,7 @@
 }
 
 @media (max-width:780px) { 
-    .slow-safari {
-        transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
-        -webkit-transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);
-    }
+    .slow-safari {transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);}
 }
 
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
