@@ -251,8 +251,8 @@
     box-shadow: none;
 }
 
-.Pop-Photo1, .Pop-Photo2 {
-    width: 30vw;
+.Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
+    width: 28vw;
     max-width: 1080px;
     height: fit-content;
 
@@ -345,7 +345,7 @@
     animation: fade-out-pop 0.201s ease-out forwards;
 }
 
-.Pop-P1-Out, .Pop-P2-Out {
+.Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
     transform: translate(0,0px);
     opacity: 1;
     pointer-events: all;
@@ -410,7 +410,7 @@
         filter: blur(2.75px);
     }
 
-    .Pop-Photo1, .Pop-Photo2 {
+    .Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
         width: 80vw;
         bottom: 0;
 
@@ -449,7 +449,7 @@
         filter: blur(0);
     }
 
-    .Pop-P1-Out, .Pop-P2-Out {
+    .Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
         transform: translate(0,0);
         opacity: 1;
         box-shadow: none;
