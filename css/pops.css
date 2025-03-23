@@ -289,10 +289,6 @@
 
 }
 
-@media (max-width:780px) { 
-    .slow-safari {transition:0.301s cubic-bezier(0.41, 0.1, 0.13, 1);}
-}
-
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
     transform: translate(0,-50px);
     opacity: 1;
@@ -369,6 +365,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-As {
@@ -381,6 +378,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Mail{ 
@@ -393,6 +391,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Share{ 
@@ -405,6 +404,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
@@ -413,6 +413,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
@@ -769,6 +770,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
         animation-timeline: scroll(self);
         animation-range: 0 170px;
         box-shadow: none;
+        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Waltz-Out, .Pop-Tech-Out {
@@ -1099,3 +1101,39 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     pointer-events: all;
 }
 
+.Pop-Next, .Pop-Prev {
+    width: 41px;
+    height: 41px;
+
+    background-color: var(--bg-pop);
+    border: 2px solid var(--buttons);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    position: fixed;
+
+    z-index: 6;
+
+    transform: translate(0px);
+    
+    transition: 0.2s ease-out;
+    margin: auto;
+}
+
+.Pop-Prev {inset: 0 auto 0 0;}
+.Pop-Next {inset: 0 0 0 auto;}
+
+.Pop-Next:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.Pop-Prev:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+@media (max-width:780px) { 
+    .Pop-Next, .Pop-Prev {  top: auto; bottom: 0; transform: translateY(50px);}
+    .Pop-Next:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
+    .Pop-Next:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+    .Pop-Prev:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
+    .Pop-Prev:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+}

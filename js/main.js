@@ -22,7 +22,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         ['.sar-web', 'sar-on'],
         ['.img-saf', 'img-safari'],
         ['.off-saf', 'off-safari'],
-        ['.slow-saf', 'slow-safari'],
         ['.sms-saf', 'sms-safari']
     ];
 
@@ -192,6 +191,18 @@ function Ommit2() {
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
+}
+
+function Ommit3() {
+    const classesToRemove = [
+        'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
+    ];
+
+    classesToRemove.forEach(className => {
+        document.querySelectorAll(`.${className.replace('-Out', '-O')}`).forEach(result => {
+            result.classList.remove(className);
+        });
+    });
 }
 
 document.addEventListener('keydown', (event) => {
