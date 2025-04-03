@@ -208,7 +208,7 @@
     transform: translate(0,0);
     opacity: 0;
 
-    transition: opacity 0.203s, transform 0.202s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
+    transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
     filter: blur(1.37px);
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -242,7 +242,7 @@
     transform: translate(0,0);
     opacity: 0;
     filter: blur(1.37px);
-    transition: opacity 0.201s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+    transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
 
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -273,7 +273,7 @@
 
     transform: translate(0,70px);
     opacity: 0;
-    transition: opacity 0.203s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+    transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
 
     flex-direction: column;
     pointer-events: none;
@@ -365,7 +365,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
-        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-As {
@@ -378,7 +378,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
-        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Mail{ 
@@ -391,7 +391,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
-        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Share{ 
@@ -404,7 +404,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
-        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
@@ -413,7 +413,7 @@
 
         transform: translate(0,300px);
         filter: blur(2.75px);
-        transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
@@ -1162,4 +1162,6 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     }
 
     .selected-img {background-color: var(--buttons-hover); border: 2px solid var(--white); }
+
+    .trans-img-off {transition: 0s !important;}
 }

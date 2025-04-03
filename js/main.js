@@ -29,7 +29,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         document.querySelectorAll(selector).forEach(result => result.classList.add(className));
     });
 
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0E0E0E');
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000000');
    
     window.addEventListener("scroll", () => {
         const toggleClasses = [
@@ -128,6 +128,7 @@ function Pop() {
     document.querySelector('.Pop-Tech').scrollTop = 0;
     
     document.querySelector('.reels-socialmedia').scrollLeft = 0;
+    document.querySelectorAll('.trans-img').forEach((result) => {result.classList.remove('trans-img-off')});
 }
 
 //PopUp de las Habilidades
@@ -203,6 +204,8 @@ function Ommit3() {
             result.classList.remove(className);
         });
     });
+
+    document.querySelectorAll('.trans-img').forEach((result) => {result.classList.add('trans-img-off')});
 }
 
 document.addEventListener('keydown', (event) => {
