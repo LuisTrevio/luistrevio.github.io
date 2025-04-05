@@ -92,6 +92,7 @@
 .Pop-Close:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 @media (max-width:780px) { 
     .Pop {backdrop-filter: blur(5px);}
+
     .Pop-Close-Up {transform: translateY(9px);}
     .Pop-Close:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
     .Pop-Close:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
@@ -185,7 +186,7 @@
 @keyframes Status {0% { width: 0%;} 10% { width: 0%;} 100% {}}
 
 .Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office{
-    width: 75ch;
+    width: 70ch;
     max-width: 720px;
     height: auto;
 
@@ -210,6 +211,7 @@
 
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
     filter: blur(1.37px);
+    
     padding: 0 25px 25px 25px;
     flex-direction: column;
     pointer-events: none;
@@ -218,7 +220,7 @@
 }
 
 .Pop-Mail, .Pop-As, .Pop-Share {
-    width: 75ch;
+    width: 70ch;
     max-width: 720px;
     height: auto;
 
@@ -241,6 +243,7 @@
 
     transform: translate(0,0);
     opacity: 0;
+    
     filter: blur(1.37px);
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
 
