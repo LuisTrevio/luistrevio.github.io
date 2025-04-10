@@ -1108,8 +1108,8 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     width: 41px;
     height: 41px;
 
-    background-color: var(--bg-pop);
-    border: 2px solid var(--buttons);
+    background-color: rgba(178, 34, 34, 0);
+    border: 2px solid rgba(178, 34, 34, 0);
     color: var(--white);
 
     display: flex;
@@ -1130,13 +1130,13 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 
 .mini-buttons, .mini-img {display: none;}
 
-.Pop-Prev {inset: 0 auto 0 0;transform: translateX(-25px);}
-.Pop-Next {inset: 0 0 0 auto; transform: translateX(25px);}
+.Pop-Prev {inset: 0 auto 0 0;transform: translateX(-42px);}
+.Pop-Next {inset: 0 0 0 auto; transform: translateX(42px);}
 
 .Pop-Next:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 .Pop-Prev:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 @media (max-width:780px) { 
-    .Pop-Next, .Pop-Prev {display: none;}
+    .Pop-Next, .Pop-Prev {width: 40px; height: 40px;}
     .mini-buttons {
         display: flex;
         justify-content: center;

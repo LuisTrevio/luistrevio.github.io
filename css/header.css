@@ -244,8 +244,8 @@ nav {
         justify-content: center;
         
         gap: 16px;
-        border-radius: 30px;
-        transform: translate(0,45px); opacity: 0;
+        border-radius: 60px;
+        transform: translate(0,45px) scale(0.8); opacity: 0;
         transition: 0.38s cubic-bezier(0, 0.3, 0.5, 1) opacity, 0.29s cubic-bezier(0, 0.3, 0.5, 1) transform;
 
         box-shadow: var(--shadow-select-complex);
@@ -269,8 +269,9 @@ nav {
 
     .select-ani-up {
         opacity: 1;
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1);
         pointer-events: all;
+        border-radius: 30px;
     }
 
     .bumper {display: none; pointer-events: none;}

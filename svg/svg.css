@@ -46,10 +46,10 @@
 .astro {background-image: url(frames.svg);}
 .react {background-image: url(mdi_react.svg);}
 
-.img1 {background-image: url(Nerium.jpg);}
-.img2 {background-image: url(Serium.jpg);}
-.img3 {background-image: url(noche.JPEG);}
-.img4 {background-image: url(wawa.JPEG);}
+.img1 {background-image: url(NeriumWP.webp);}
+.img2 {background-image: url(SeriumWP.webp);}
+.img3 {background-image: url(nocheWP.webp);}
+.img4 {background-image: url(wawaWP.webp);}
 
 .svran-bg {background-image: url(severan.png); background-size: cover;}
 
@@ -58,6 +58,7 @@
 .proyect-techemet {background-image: url(-proyect-techmet.svg);}
 
 .enter-svg {background-image: url(iconamoon_enter-bold.svg);}
+.gallery-svg {background-image: url(gallery.svg);}
 
 .wt-1 {background-image: url(waltz-sc1.webp);}
 .wt-2 {background-image: url(waltz-sc2.webp);}
