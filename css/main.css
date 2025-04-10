@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 /* font-family: "Inter", sans-serif; Textos en Detalle*/
 
+@font-face {
+    font-family: 'Planet Kosmos';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Planet Kosmos'), url('../font/PLANK___.woff') format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +28,8 @@
     /* Text  */--Helvetica: 'Helvetica', sans-serif;
     /* Text  */--Inter: 'Inter', sans-serif;
     /* Text  */--Roboto: 'Roboto', sans-serif;
+    /* Text  */--PlanetKosmos: 'Planet Kosmos';
+
 }
 
 html,body {height: 100%;}
@@ -94,11 +103,11 @@ body {
 
     --music-progress:#1f1e1e;
 
-    --buttons-proyect:#2e2e2e;
+    --buttons-proyect:#4c4c4c;
 
     --techemet-bg:#08102f;
     --techemet-bg-bar:#05091b;
-    --buttons-proyect-tech:#1f284d;
+    --buttons-proyect-tech:#0E3B6D;
 
     /*Webkit Bar*/
     --bg: var(--background);
