@@ -879,15 +879,18 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 }
 .tags:hover {background-color: #515151;}
 
-.htmlcss {background-color: #030c10; color: #2d8ab2; cursor: pointer;}
-.htmlcss:hover {background-color: #2d8ab2; color: #030c10;}
-.jscolor {background-color: #2f2b0b; color: #efd81d; cursor: pointer;}
-.jscolor:hover {background-color: #efd81d; color: #2f2b0b;}
+.htmlcolortag {background-color: #1f0a05; color: #ff6428; cursor: pointer;}
+.htmlcolortag:hover {background-color: #ff6428; color: #1f0a05;}
+.csscolortag {background-color: #160d21; color: #b871ff; cursor: pointer;}
+.csscolortag:hover {background-color: #b871ff; color: #160d21;}
+.jscolortag {background-color: #2f2b0b; color: #efd81d; cursor: pointer;}
+.jscolortag:hover {background-color: #efd81d; color: #2f2b0b;}
 
 @media (max-width:780px) { 
     .tags:hover {background-color: #313131;} .tags:active {background-color: #515151;}
-    .htmlcss:hover {background-color: #030c10; color: #2d8ab2;} .htmlcss:active {background-color: #2d8ab2; color: #030c10;}
-    .jscolor:hover {background-color: #2f2b0b; color: #efd81d;} .jscolor:active {background-color: #efd81d; color: #2f2b0b;}
+    .htmlcolortag:hover {background-color: #1f0a05; color: #ff6428;} .htmlcolortag:active {background-color: #ff6428; color: #1f0a05;}
+    .csscolortag:hover {background-color: #160d21; color: #b871ff;} .csscolortag:active {background-color: #b871ff; color: #160d21;}
+    .jscolortag:hover {background-color: #2f2b0b; color: #efd81d;} .jscolor:active {background-color: #efd81d; color: #2f2b0b;}
 }
 
 .buttons-role {
@@ -1144,8 +1147,8 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 .Pop-Prev {inset: 0 auto 0 0;transform: translateX(-42px);}
 .Pop-Next {inset: 0 0 0 auto; transform: translateX(42px);}
 
-.Pop-Next:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
-.Pop-Prev:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.Pop-Next:hover{background-color: #ffffff51; border: 2px solid #ffffff51}
+.Pop-Prev:hover{background-color:#ffffff51; border: 2px solid #ffffff51}
 @media (max-width:780px) { 
     .Pop-Next, .Pop-Prev {width: 40px; height: 40px;}
     .mini-buttons {
