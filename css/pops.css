@@ -359,40 +359,43 @@
 
 @media (max-width:780px) {
     .Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office {
-        width: 100%;
+        width: 95%;
         height: auto;
 
         bottom: 0;
-        border-radius: 35px 35px 0 0;
-        padding: 25px 25px 40px 25px;
+        border-radius: 35px 35px;
+        padding: 25px 25px 25px 25px;
+        margin: 3%;
 
-        transform: translate(0,300px);
+        transform: translate(0,300px) scale(0.98);
         filter: blur(2.75px);
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-As {
-        width: 100%;
+        width: 95%;
         height: auto;
 
         bottom: 0;
-        border-radius: 35px 35px 0 0;
-        padding: 25px 25px 40px 25px;
+        border-radius: 35px 35px;
+        padding: 25px 25px 25px 25px;
+        margin: 3%;
 
-        transform: translate(0,300px);
+        transform: translate(0,300px) scale(0.98);
         filter: blur(2.75px);
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
     .Pop-Mail{ 
-        width: 100%;
+        width: 95%;
         height: auto;
 
         bottom: 0;
-        border-radius: 35px 35px 0 0;
-        padding: 0 25px 40px 25px;
+        border-radius: 35px 35px;
+        padding: 0px 25px 25px 25px;
+        margin: 3%;
 
-        transform: translate(0,300px);
+        transform: translate(0,300px) scale(0.98);
         filter: blur(2.75px);
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
@@ -420,7 +423,7 @@
     }
 
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1);
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
@@ -428,7 +431,7 @@
     }
 
     .Pop-Mail-Out {
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1);
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
@@ -436,7 +439,7 @@
     }
 
     .Pop-As-Out {
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1);
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
