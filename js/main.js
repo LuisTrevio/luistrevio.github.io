@@ -1,3 +1,4 @@
+
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
@@ -98,6 +99,8 @@ function Top() {
     }, 1000);
 }
 
+//se ejecuta al cargar la página
+
 //PopUp o Ventana Modal
 function Pop() {
     const toggleClasses = [
@@ -114,7 +117,7 @@ function Pop() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
-        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Share-Out' ,'Pop-Flex-Out', 'Pop-Magic-Out', 
+        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Flex-Out', 'Pop-Magic-Out', 
         'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
@@ -131,6 +134,7 @@ function Pop() {
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.remove('trans-img-off')});
 }
 
+
 //PopUp de las Habilidades
 const popFunctions = [
     ['PopVS', 'Pop-VS-O', 'Pop-VS-Out'],
@@ -145,6 +149,7 @@ const popFunctions = [
     ['PopAs', 'Pop-As-O', 'Pop-As-Out'],
     ['PopOffice', 'Pop-Office-O', 'Pop-Office-Out'],
     ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
+    ['PopWarn', 'Pop-Warn-O', 'Pop-Warn-Out'],
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out'],
@@ -164,6 +169,17 @@ popFunctions.forEach(([funcName, selector, className]) => {
         },100); 
     };
 });
+
+window.addEventListener("load", () => {
+    const warnClosed = localStorage.getItem('🍪');
+    if (warnClosed === 'true') {    
+    document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})
+    } else {
+    document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.add('Pop-Warn-Out');})
+    }
+});
+
+function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
 
 //PopUp de las Habilidades pero de Omitir
 function Ommit() {
