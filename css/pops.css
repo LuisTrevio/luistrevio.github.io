@@ -102,7 +102,7 @@
     height: 100px;
 
     border-radius: 80px;
-    background-color: var(--bg-pop);
+    background-color: var(--bg-pop-old);
     pointer-events: none;
 
     border: 2px solid var(--white);
@@ -125,6 +125,7 @@
         width: 118px;
         height: 118px;
         border: none;
+        background: none;
     }
 
     .icon-bar {border: 2px solid var(--white);}
@@ -202,7 +203,7 @@
     margin-bottom: auto;
 
     color: var(--white-dn);
-    border: 2px solid var(--bar-pop);
+    border: none;
 
     display: flex;
     position: fixed;
@@ -238,7 +239,7 @@
 
     background-color: var(--bg-pop-old);
     color: var(--white-dn);
-    border: 2px solid var(--bar-pop);
+    border: none;
 
     display: flex;
     position: fixed;
@@ -360,7 +361,7 @@
     pointer-events: all;
     
     filter: blur(0px);
-    background-color: var(--bg-pop);
+    background-color: var(--bg-pop-old);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
 
@@ -373,7 +374,7 @@
     pointer-events: all;
 
     filter: blur(0px);
-    background-color: var(--bg-pop);
+    background-color: var(--bg-pop-old);
     border-radius: 25px 25px;
     box-shadow: var( --shadow-header-complex);
     animation: fade-out-pop 0.201s ease-out forwards;
@@ -443,6 +444,7 @@
         border-radius: 35px 35px;
         padding: 10px 25px 25px 25px;
         margin: 3%;
+        background-color: var(--bg-pop);
 
         transform: translate(0,267px);
         filter: blur(2.75px);
@@ -457,6 +459,7 @@
         border-radius: 35px 35px;
         padding: 10px 25px 25px 25px;
         margin: 3%;
+        background-color: var(--bg-pop);
 
         transform: translate(0,267px);
         filter: blur(2.75px);
@@ -519,7 +522,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        
+        border: 2px solid var(--bar-pop);
     }
 
     .Pop-Mail-Out {
@@ -527,6 +530,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+        border: 2px solid var(--bar-pop);
     }
 
     .Pop-Warn-Out {
@@ -534,6 +538,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+        border: 2px solid var(--bar-pop);
     }
 
     .Pop-As-Out {
@@ -541,6 +546,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
+        border: 2px solid var(--bar-pop);
 
     }
 
