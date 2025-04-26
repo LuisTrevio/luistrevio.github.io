@@ -9,14 +9,14 @@
         <link rel="apple-touch-icon" href="css/favicon.png"/>
         <link rel="apple-touch-icon" sizes="180x180" href="css/favicon.png"/>
 
-        <link rel="apple-touch-icon" sizes="167x167" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="152x152" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="120x120" href="css/favicon.png"/>
-        <link rel="apple-touch-icon" sizes="76x76" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="60x60" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="57x57" href="css/favicon.png"/>
-        <link rel="apple-touch-icon" sizes="40x40" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="32x32" href="css/favicon.png"/><link rel="apple-touch-icon" sizes="16x16" href="css/favicon.png"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="LuisTrevio4">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="theme-color" content="#0B0A0A" />
 
+        <meta name="msapplication-TileColor" content="#0B0A0A" />
         <meta
         name="description"
         content="Hola, esta es una tarjeta de presentación de LuisTrevio4"
@@ -38,7 +38,6 @@
         <meta name="twitter:title" content="Tarjeta de LuisTrevio4">
         <meta name="twitter:description" content="Hola, esta es una tarjeta de presentación de LuisTrevio4.">
         <meta name="twitter:image" content="http://luistrevio.github.io/bg/background-publised.png">
-        
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/header.css">
@@ -200,13 +199,13 @@
                                 <p class="property-text">"The Hampsterdance Song" de Hampton the Hampster es propietaria de © Boomtang Records.</p>
                             
                             </div>
-
+                            <!---
                             <div class="section #experience">
                                 <h1>Experiencia Laboral</h1>
 
                                 <div class="svran-bg division">
                                     <div class="exp-frame-sup">
-                                        <!---    <div class="exp-icon icons-frame pizzalok"></div> -->
+                                           <div class="exp-icon icons-frame pizzalok"></div> 
                                         <div class="exp-icon icons factory"></div>
                                         <div class="date-exp">2023 - 2024 </div>
                                     </div>
@@ -230,7 +229,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            -->
                             <div class="section #items">
                                 <h1>Desarrollo de Web/Apps</h1>
                                 <div class="flex-items-dev">
@@ -396,7 +395,10 @@
             <button onclick="Pop()" class="Pop-Close close-up close-svg"></button>
 
             <div class="Pop-VS Pop-VS-O ">
-                <div class="Pop-icon"><div class="Pop-bubble icons vslogo"></div></div>
+                <div class="Pop-icon">
+                    <div class="Pop-bubble icons vslogo"></div>
+                    <button onclick="Pop()" class="xcross-mobile close-svg"></button>
+                </div>
                 <div class="Pop-center"><h2>Visual Studios Code</h2></div>
                 <div class="Pop-text">
                     Es un editor muy popular, entre Vim y Sublime Text elegi a VS Code por la 
@@ -702,8 +704,8 @@
             <div class="Pop-Waltz Waltz Pop-Waltz-O ">
                 <div onclick="Pop()" class="click-here"></div>
                 <div class="Pop-enge Waltz-m">
-                    <div class="Pop-icon icon-left">
-                        <div class=" Pop-bubble Waltz Waltz-m waltz-icon"></div>
+                    <div class="Pop-icon icon-late icon-left">
+                        <div class=" Pop-bubble icon-bar Waltz Waltz-m waltz-icon"></div>
                     </div>
                     <div class="Pop-text center-text-mobile"><h1>Waltz</h1></div>
                 <div class="tags-proyect">
@@ -747,7 +749,7 @@
             <div class="Pop-Tech Techemet Pop-Tech-O ">
                 <div onclick="Pop()" class="click-here"></div>
             <div class="Pop-enge Techemet-m">
-                <div class="Pop-icon icon-left"><div class="Pop-bubble Techemet Techemet-m tech-icon"></div></div>
+                <div class="Pop-icon icon-late icon-left"><div class="Pop-bubble icon-bar Techemet Techemet-m tech-icon"></div></div>
                 <div class="Pop-text center-text-mobile"><h1 class="text-amount-h2">Techemet Demo</h1></div>
             <div class="tags-proyect">
                 <div onclick="Ommit2(), PopHTML()" class="tags htmlcolortag">HTML</div>

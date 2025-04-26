@@ -116,7 +116,9 @@ body {
     --bar-hover: #6a4cc5;
 
     /*Pop*/
-    --bg-pop: #2e2e2e;
+    --bg-pop-old: #2e2e2e;    
+    --bg-pop: #000000a8;
+    --bar-pop: #5b5b5ba8;
     --white-dn:var(--white);
 
     --status: #000000;
@@ -227,6 +229,7 @@ body::-webkit-scrollbar-button:single-button:vertical:increment {
     border-color: var(--bar) transparent transparent transparent;
 }
 body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-color: var(--bar-hover) transparent transparent transparent;}
+
 
 @media (max-width:780px) {
     .scroll-frost {overflow: hidden;}
