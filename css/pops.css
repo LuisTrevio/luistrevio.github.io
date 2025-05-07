@@ -1003,7 +1003,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     .tags:hover {background-color: #313131;} .tags:active {background-color: #515151;}
     .htmlcolortag:hover {background-color: #1f0a05; color: #ff6428;} .htmlcolortag:active {background-color: #ff6428; color: #1f0a05;}
     .csscolortag:hover {background-color: #160d21; color: #b871ff;} .csscolortag:active {background-color: #b871ff; color: #160d21;}
-    .jscolortag:hover {background-color: #2f2b0b; color: #efd81d;} .jscolor:active {background-color: #efd81d; color: #2f2b0b;}
+    .jscolortag:hover {background-color: #2f2b0b; color: #efd81d;} .jscolortag:active {background-color: #efd81d; color: #2f2b0b;}
 }
 
 .buttons-role {
