@@ -18,7 +18,7 @@
 
 .up-svg {background-image: url(up.svg); background-size: 100% 100%;}
 
-.close-svg {background-image: url(maki_cross.svg);}
+.close-svg {background-image: url(maki_cross.svg); background-size: 68%;}
 
 .linkedin {background-image: url(mdi_linkedin.svg);}
 .twitter {background-image: url(ant-design_x-outlined.svg);}
@@ -52,6 +52,9 @@
 .img4 {background-image: url(wawaWP.webp);}
 
 .svran-bg {background-image: url(severan.webp); background-size: cover;}
+
+.bib {background-image: url(../Subtract2\ \(1\).svg); background-size: cover; width: 20px; height: 20px; display: inline-block;}
+
 
 
 .proyect-waltz {background-image: url(-proyect-waltz.svg);}
