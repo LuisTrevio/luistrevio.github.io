@@ -59,6 +59,18 @@ window.addEventListener("scroll", () => {
     }
 })
 
+const images = [
+    'cato1.gif',
+    'cato2.gif',
+    'cato3.gif',
+    'cato4.gif',
+    'profile.png'
+];
+const randomIndex = Math.floor(Math.random() * images.length);
+const randomImage = images[randomIndex];
+document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
+document.querySelector('.img-random').style.backgroundSize = 'cover';
+
 //Menu en Dispositivos Móviles
 function Dash() {
     const toggleClasses = [
@@ -154,7 +166,6 @@ const popFunctions = [
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out'],
     ['PopPhoto1', 'Pop-P1-O', 'Pop-P1-Out'],
-    ['PopPhoto2', 'Pop-P2-O', 'Pop-P2-Out'],
     ['PopPhoto3', 'Pop-P3-O', 'Pop-P3-Out'],
     ['PopPhoto4', 'Pop-P4-O', 'Pop-P4-Out']
 ];
@@ -212,7 +223,7 @@ function Ommit2() {
 
 function Ommit3() {
     const classesToRemove = [
-        'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
+        'Pop-P1-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
     classesToRemove.forEach(className => {
