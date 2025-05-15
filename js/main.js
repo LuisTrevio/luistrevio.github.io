@@ -1,4 +1,4 @@
-
+let awi2 = false
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
@@ -7,14 +7,18 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
+        awi2 = true
     } else { 
         
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
     
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
+         awi2 = false
     }
-})//Empieza a contar el scroll y activa las animaciones en el menú
+})
+
+//Empieza a contar el scroll y activa las animaciones en el menú
 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -71,6 +75,29 @@ const randomImage = images[randomIndex];
 document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
 document.querySelector('.img-random').style.backgroundSize = 'cover';
 
+document.querySelector('.img-random').addEventListener('click', () => {
+   
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+    document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
+    document.querySelector('.img-random').style.backgroundSize = 'cover';
+
+    document.querySelectorAll('.awi').forEach((result) => {result.classList.add('awiwi')});
+    setTimeout(() => {
+        document.querySelectorAll('.awi').forEach((result) => {result.classList.remove('awiwi')});
+    }, 100);
+
+    if (awi2) {
+       document.querySelectorAll('.awi2').forEach((result) => {result.classList.add('awiwi2')});
+        setTimeout(() => {
+        document.querySelectorAll('.awi2').forEach((result) => {result.classList.remove('awiwi2')});
+        }, 100);
+    }
+
+});
+
+
+
 //Menu en Dispositivos Móviles
 function Dash() {
     const toggleClasses = [
@@ -111,8 +138,6 @@ function Top() {
     }, 1000);
 }
 
-//se ejecuta al cargar la página
-
 //PopUp o Ventana Modal
 function Pop() {
     const toggleClasses = [
@@ -144,6 +169,7 @@ function Pop() {
     
     document.querySelector('.reels-socialmedia').scrollLeft = 0;
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.remove('trans-img-off')});
+    document.querySelectorAll('.HTML-Button').forEach((result) => {result.classList.remove('Close-HTML')});
 }
 
 
@@ -206,6 +232,7 @@ function Ommit() {
     });
 }
 
+
 function Ommit2() {
     const classesToRemove = [
         'Pop-Waltz-Out', 'Pop-Tech-Out'
@@ -234,6 +261,16 @@ function Ommit3() {
 
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.add('trans-img-off')});
 }
+
+//hace un sonido al hacer click 
+//function Click() {
+//    const audio = new Audio('music/click.mp3');
+//    audio.play();
+//    document.querySelectorAll('.soundo').forEach((result) => {result.classList.add('soundo-active')});
+//    setTimeout(() => {
+//        document.querySelectorAll('.soundo').forEach((result) => {result.classList.remove('soundo-active')});
+//    }, 100);
+//}
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && document.querySelector('.Pop-Exit.Pop-out')) {

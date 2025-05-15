@@ -74,11 +74,12 @@ nav {
     }
     
     .header-saf-on {
-        background: #00000064;
+        background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
         pointer-events: all;
-        backdrop-filter: blur(16px);
-    
-        border-bottom: 1px solid #444444;    
+        backdrop-filter: blur(0);
+        /**backdrop-filter: blur(16px);**/
+        /**border-bottom: 1px solid #444444;    **/
+        border-bottom: none;    
     }
     
     .off-safari {display: none;}
@@ -133,15 +134,16 @@ nav {
 
         transition: 0.2s ease-out;
 
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
 
-        border-radius: 10px;
-        background-color: rgba(234, 234, 234, 0);
+        border-radius: 60px;
+        background-color: rgb(0, 0, 0);
+        filter: invert(1);
 
     }
 
-    .button-fever {flex-direction: column; gap: 4px;}
+    .button-fever {flex-direction: column; gap: 3px;}
 
     .button-scroll-on {opacity: 1; pointer-events: all;}
 
@@ -154,6 +156,9 @@ nav {
         60% {transform: translateY(-10px);}
         100% {transform: translateY(0);}
     }
+
+    .awiwi {transform: scale(1.2) !important;} 
+    .awiwi2 {transform: translateY(13px) !important;} 
 
     .top-block-up {pointer-events: none; opacity: 0;}
     
@@ -308,8 +313,8 @@ nav {
 }
 
 .bur-1, .bur-2, .bur-3 {
-    width: 20px;
-    height: 4px;
+    width: 15px;
+    height: 3px;
     border-radius: 50px;
 
     background-color: var(--white);
@@ -327,10 +332,10 @@ nav {
 }*/
 
 .bur-1-up {
-    width: 20px;
-    height: 4px;
+    width: 15px;
+    height: 3px;
 
-    transform: translateY(8px) rotate(-45deg);
+    transform: translateY(6px) rotate(-45deg);
 }
 
 .bur-2-up {
@@ -338,8 +343,8 @@ nav {
 }
 
 .bur-3-up {
-    width: 20px;
-    height: 4px;
+    width: 15px;
+    height: 3px;
 
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg);
 }

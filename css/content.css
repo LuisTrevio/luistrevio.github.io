@@ -81,6 +81,10 @@
 }
 
 .border-icon:hover {border: 5px solid var(--white);}
+@media (max-width:780px) { 
+    .border-icon:hover {border: 5px solid rgba(139, 139, 139, 0.164);}
+    .border-icon:active {border: 5px solid var(--white);}
+}
 
 .img {
     width: 160px;
@@ -131,6 +135,7 @@
         animation: reveal-img linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
+        transition: 0.2s ease-out;
     }
 
     .animate-safari-on {
@@ -154,12 +159,13 @@
     
             top: 0;
         
-            transform: translate(0,9px);
+            transform: translate(0,19px);
             position: fixed;
             z-index: 3;
     
             width: 40px;
             height: 40px;
+            border:2px solid var(--white);
         }
     }
 
@@ -169,10 +175,10 @@
             transform: scale(0.5) translate(0,50px);
         }
         80% {transform: scale(0.88);}
-        100% {transform: scale(1) translate(0,9px);
+        100% {transform: scale(1) translate(0,19px);
         
             top: 0;
-    
+            border:2px solid var(--white);
             /**transform: translate(0,9px);*/
             position: fixed;
             z-index: 3;
@@ -212,7 +218,7 @@
         z-index: 3;
 
         height: auto;
-        opacity: 1;
+        opacity: 0;
         }
     }
 
@@ -231,7 +237,7 @@
         z-index: 3;
 
         height: auto;
-        opacity: 1;
+        opacity: 0;
     }
 
     .h1-saf-on {font-size: 15px;}
@@ -419,7 +425,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     color: black;
     border-radius: 60px;
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     user-select: none;
@@ -555,6 +561,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     padding: 10px;
 }
+
 
 .music-title {
     width: 100%;
@@ -836,7 +843,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     padding: 10px;
 }
 
-.id-proyect:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.id-proyect:hover{background-color: var(--buttons-hover); border: 2px solid var(--white); background-size: 80% cover;}
 @media (max-width:780px) { 
     .id-proyect:hover{background-color: var(--buttons); border: 2px solid var(--buttons);}
     .id-proyect:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}

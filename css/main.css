@@ -76,7 +76,7 @@ body {
 }
 
 body {
-    background: var(--background);
+    background-color: var(--background);
     
     /*Text & Nucleo*/
     --select-text: #66598c;
@@ -151,9 +151,7 @@ body {
     --word:#2b579a;
 
     --basic: #3f3f3f;
-
 }
-
 .aurora {
     background-image: linear-gradient(48deg, 
     hsl(240deg 23% 50% / 29%) 0%, hsl(268deg 24% 47% / 30%) 8%, 
@@ -164,6 +162,12 @@ body {
     hsl(53deg 60% 35% / 30%) 83%, hsl(74deg 53% 37% / 30%) 92%, 
     hsl(104deg 41% 44% / 30%) 100%);
 }
+
+.exnor {background-image: linear-gradient(
+    45deg,hsl(266deg 77% 36%) 0%,hsl(219deg 100% 35%) 8%,hsl(212deg 100% 35%) 17%,hsl(205deg 100% 31%) 25%,hsl(196deg 100% 26%) 33%,hsl(184deg 100% 21%) 42%,hsl(172deg 78% 23%) 50%,hsl(155deg 83% 24%) 58%,hsl(105deg 56% 29%) 67%,hsl(71deg 100% 23%) 75%,hsl(45deg 100% 29%) 83%,hsl(26deg 100% 39%) 92%,hsl(0deg 100% 50%) 100%
+);}
+
+
 
 .gradient {
     background-image: linear-gradient(45deg,

@@ -107,7 +107,48 @@
     pointer-events: all;
 }
 
+.RegressButton {
+    width: fit-content;
+    height: 41px;
+
+    padding: 20px 10px;
+
+    font-family: var(--Montserrat);
+    font-size: 15px;
+
+    background-color: var(--bg-pop-old);
+    border: 2px solid var(--buttons);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    position: fixed;
+    z-index: 6;
+
+    top: 0;
+    transform:translate(110px, -10px);
+    opacity: 0;
+    pointer-events: none;
+
+    background-position: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+
+    transition: 0.15s cubic-bezier(.4,0,.2,1);
+}
+
+.Close-HTML {
+    transform:translate(110px, 15px);
+    opacity: 1;
+    pointer-events: all;
+}
+
 .Pop-Close:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.RegressButton:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 @media (max-width:780px) { 
     .Pop {backdrop-filter: blur(1rem);}
     .margin-pop-close {padding: 0 15px;}
