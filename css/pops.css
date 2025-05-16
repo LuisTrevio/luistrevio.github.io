@@ -9,6 +9,7 @@
 
     pointer-events: none;
     opacity: 0;
+    visibility: hidden;
 
     z-index: 4;
     transition: all 0.3s ease-out;
@@ -17,6 +18,7 @@
 .Pop-out {
     pointer-events:all;
     opacity: 1;
+    visibility: visible;
 }
 
 .flex-pop {
@@ -92,6 +94,7 @@
     top: 0;
     transform: translateY(-10px);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
 
     background-position: center;
@@ -104,6 +107,7 @@
 .Pop-Close-Up {
     transform: translateY(22px);
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
 }
 
@@ -275,6 +279,7 @@
 
     transform: translate(0,0);
     opacity: 0;
+    visibility: hidden;
 
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
     filter: blur(1.37px);
@@ -311,6 +316,7 @@
 
     transform: translate(0,0);
     opacity: 0;
+    visibility: hidden;
     
     filter: blur(1.37px);
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
@@ -377,7 +383,7 @@
     transition: 0.200s ease-out;
 }
 
-.Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
+.Pop-Photo1, .Pop-Photo3, .Pop-Photo4 {
     width: 28vw;
     max-width: 1080px;
     height: fit-content;
@@ -399,6 +405,7 @@
 
     transform: translate(0,70px);
     opacity: 0;
+    visibility: hidden;
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
 
     flex-direction: column;
@@ -418,6 +425,7 @@
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
     transform: translate(0,-50px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
     
     filter: blur(0px);
@@ -429,6 +437,7 @@
 .Pop-As-Out {
     transform: translate(0,-50px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
 
     filter: blur(0px);
@@ -440,6 +449,7 @@
 .Pop-Mail-Out {
     transform: translate(0,-50px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
 
     filter: blur(0px);
@@ -451,6 +461,7 @@
 .Pop-Warn-Out {
     transform: translate(0,-50px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
 
     filter: blur(0px);
@@ -464,6 +475,7 @@
 .Pop-Share-Out {
     transform: translate(0,-50px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
 
     filter: blur(0px);
@@ -473,9 +485,10 @@
     box-shadow: var( --shadow-header-complex);
 }
 
-.Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
+.Pop-P1-Out, .Pop-P3-Out, .Pop-P4-Out {
     transform: translate(0,0px);
     opacity: 1;
+      visibility: visible;
     pointer-events: all;
 
     filter: blur(0px);
@@ -555,12 +568,11 @@
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
-    .Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
+    .Pop-Photo1, .Pop-Photo3, .Pop-Photo4 {
         width: 80vw;
         bottom: 0;
 
         transform: translate(0,267px);
-        filter: blur(2.75px);
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
@@ -604,7 +616,7 @@
         filter: blur(0);
     }
 
-    .Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
+    .Pop-P1-Out, .Pop-P3-Out, .Pop-P4-Out {
         transform: translate(0,0);
         opacity: 1;
         box-shadow: none;

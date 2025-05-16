@@ -38,6 +38,7 @@ nav {
 .box-tool {display: none;}
 
 .blur-effect {display: none;}
+ .awiwi {transform: scale(1.2) !important;} 
 
 @media (max-width:780px) {
     header, nav {
@@ -46,8 +47,13 @@ nav {
         animation: reveal linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
-    }
 
+        pointer-events: all;
+        backdrop-filter: blur(0);
+
+        transition: 0.2s ease-out;
+    }
+    /**
     .blur-effect {
         display: block;
         position: absolute;
@@ -58,6 +64,7 @@ nav {
         hsla(0, 0%, 0%, 0.272) 0%,
         transparent 50%
         );
+        opacity: 0;
         -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
         mask-image: linear-gradient(
@@ -71,7 +78,7 @@ nav {
         animation: reveal-blur linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
-    }
+    }*/
     
     .header-saf-on {
         background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
@@ -100,22 +107,16 @@ nav {
 
     @keyframes reveal {
         100% {
-            background-color: var(--header-on);
+            background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
             pointer-events: all;
-            backdrop-filter: blur(5px);
-
-            border-bottom: 1px solid #000000;
         }
 
         80% {
-            backdrop-filter: blur(0px);
-            border-bottom: 1px solid #00000000;
+             background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
         }
 
         0% {
-            background-color: var(--header);
-            backdrop-filter: blur(0px);
-            border-bottom: 1px solid #00000000;
+            background: var(--header);
         }
     }
 
@@ -157,7 +158,7 @@ nav {
         100% {transform: translateY(0);}
     }
 
-    .awiwi {transform: scale(1.2) !important;} 
+   
     .awiwi2 {transform: translateY(13px) !important;} 
 
     .top-block-up {pointer-events: none; opacity: 0;}

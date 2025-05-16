@@ -92,6 +92,7 @@
 
     background-color: var(--white);
     border-radius: 90px;
+    transition: 0.3s ease-out;
 }
 
 .height-name {
@@ -135,7 +136,6 @@
         animation: reveal-img linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
-        transition: 0.2s ease-out;
     }
 
     .animate-safari-on {
