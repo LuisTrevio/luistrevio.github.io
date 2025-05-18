@@ -1,5 +1,4 @@
-const tipwav = new Audio('js/tip.wav');
-tipwav.volume = 0.6;
+
 let awi2 = false
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
@@ -65,6 +64,11 @@ window.addEventListener("scroll", () => {
     }
 })
 
+const tipwav = new Audio('js/tip.wav');
+const clickwav = new Audio('js/act.wav');
+tipwav.volume = 0.6;
+clickwav.volume = 0.6;
+
 const images = [
     'cato1.gif',
     'cato2.gif',
@@ -78,19 +82,13 @@ document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomI
 document.querySelector('.img-random').style.backgroundSize = 'cover';
 
 document.querySelector('.img-random').addEventListener('click', () => {
-   
-    const clickwav = new Audio('js/act.wav');
-    clickwav.volume = 0.6;
+    
+    clickwav.play();
+    clickwav.currentTime = 0;
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex];
     document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
     document.querySelector('.img-random').style.backgroundSize = 'cover';
-
-    clickwav.play();
-    document.querySelectorAll('.soundo').forEach((result) => {result.classList.add('soundo-active')});
-    setTimeout(() => {
-        document.querySelectorAll('.soundo').forEach((result) => {result.classList.remove('soundo-active')});
-    }, 100);
 
     document.querySelectorAll('.awi').forEach((result) => {result.classList.add('awiwi')});
     setTimeout(() => {
@@ -127,6 +125,7 @@ function Dash() {
     });
 
     tipwav.play();
+    tipwav.currentTime = 0;
 
     if(audio.paused) {
         document.querySelectorAll('.bumper').forEach((result) => {result.classList.remove('bumper-menu')})
@@ -148,6 +147,7 @@ function Top() {
         document.querySelectorAll('.block-m').forEach((result) => {result.classList.remove('block-menu')});
     }, 1000);
     tipwav.play();
+    tipwav.currentTime = 0;
 }
 
 //PopUp o Ventana Modal
@@ -219,7 +219,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
-function tip() {tipwav.play();}
+function tip() {tipwav.play();tipwav.currentTime = 0;}
 
 window.addEventListener("load", () => {
     const warnClosed = localStorage.getItem('🍪');
@@ -504,18 +504,44 @@ document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowRight') {}
     });
 });
-
+const audioMuted = localStorage.getItem('audioMuted');
 function Mute() {
     audio.muted = !audio.muted;
+    tipwav.muted = !tipwav.muted;
+    clickwav.muted = !clickwav.muted;
+
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
 
    updateVolumeProgressBar();
+
+    if (audio.muted) {
+        localStorage.setItem('audioMuted', 'true');
+    } else {
+        localStorage.setItem('audioMuted', 'false');
+    }
+}
+
+if (audioMuted === 'true') {
+    audio.muted = true;
+    tipwav.muted = true;
+    clickwav.muted = true;
+    document.querySelectorAll('.Mute').forEach((result) => {result.classList.add('Mute-Off')});
+    document.querySelectorAll('.byebye').forEach((result) => {result.classList.add('volume-bar-none')});
+} else {
+    audio.muted = false;
+    tipwav.muted = false;
+    clickwav.muted = false;
+    document.querySelectorAll('.Mute').forEach((result) => {result.classList.remove('Mute-Off')});
+    document.querySelectorAll('.byebye').forEach((result) => {result.classList.remove('volume-bar-none')});
 }
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'm') {
         audio.muted = !audio.muted;
+        tipwav.muted = !tipwav.muted;
+        clickwav.muted = !clickwav.muted;
+
         document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
         document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
         updateVolumeProgressBar();
