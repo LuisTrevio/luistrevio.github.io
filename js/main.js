@@ -1,3 +1,5 @@
+const tipwav = new Audio('js/tip.wav');
+tipwav.volume = 0.6;
 let awi2 = false
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
@@ -77,10 +79,18 @@ document.querySelector('.img-random').style.backgroundSize = 'cover';
 
 document.querySelector('.img-random').addEventListener('click', () => {
    
+    const clickwav = new Audio('js/act.wav');
+    clickwav.volume = 0.6;
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex];
     document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
     document.querySelector('.img-random').style.backgroundSize = 'cover';
+
+    clickwav.play();
+    document.querySelectorAll('.soundo').forEach((result) => {result.classList.add('soundo-active')});
+    setTimeout(() => {
+        document.querySelectorAll('.soundo').forEach((result) => {result.classList.remove('soundo-active')});
+    }, 100);
 
     document.querySelectorAll('.awi').forEach((result) => {result.classList.add('awiwi')});
     setTimeout(() => {
@@ -95,7 +105,6 @@ document.querySelector('.img-random').addEventListener('click', () => {
     }
 
 });
-
 
 
 //Menu en Dispositivos Móviles
@@ -117,6 +126,8 @@ function Dash() {
         document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
     });
 
+    tipwav.play();
+
     if(audio.paused) {
         document.querySelectorAll('.bumper').forEach((result) => {result.classList.remove('bumper-menu')})
     }  
@@ -136,6 +147,7 @@ function Top() {
     setTimeout(() => {
         document.querySelectorAll('.block-m').forEach((result) => {result.classList.remove('block-menu')});
     }, 1000);
+    tipwav.play();
 }
 
 //PopUp o Ventana Modal
@@ -207,6 +219,8 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
+function tip() {tipwav.play();}
+
 window.addEventListener("load", () => {
     const warnClosed = localStorage.getItem('🍪');
     if (warnClosed === 'true') {    
@@ -261,16 +275,6 @@ function Ommit3() {
 
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.add('trans-img-off')});
 }
-
-//hace un sonido al hacer click 
-//function Click() {
-//    const audio = new Audio('music/click.mp3');
-//    audio.play();
-//    document.querySelectorAll('.soundo').forEach((result) => {result.classList.add('soundo-active')});
-//    setTimeout(() => {
-//        document.querySelectorAll('.soundo').forEach((result) => {result.classList.remove('soundo-active')});
-//    }, 100);
-//}
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && document.querySelector('.Pop-Exit.Pop-out')) {
