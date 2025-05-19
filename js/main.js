@@ -65,7 +65,8 @@ window.addEventListener("scroll", () => {
 })
 
 const tipwav = new Audio('js/tip.wav');
-const clickwav = new Audio('js/act.wav');
+const clickwav = new Audio('js/act2.wav');
+
 tipwav.volume = 0.6;
 clickwav.volume = 0.6;
 
@@ -82,9 +83,11 @@ document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomI
 document.querySelector('.img-random').style.backgroundSize = 'cover';
 
 document.querySelector('.img-random').addEventListener('click', () => {
-    
+
+    const randomAudioIndex = Math.floor(Math.random() * 2) + 1;
+    clickwav.src = `js/act${randomAudioIndex}.wav`
     clickwav.play();
-    clickwav.currentTime = 0;
+    
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex];
     document.querySelector('.img-random').style.backgroundImage = `url(svg/${randomImage})`;
@@ -102,6 +105,8 @@ document.querySelector('.img-random').addEventListener('click', () => {
         }, 100);
     }
 
+    //se cambia el audio de clickwav
+   
 });
 
 
