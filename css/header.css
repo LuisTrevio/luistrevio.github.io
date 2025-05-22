@@ -135,7 +135,7 @@ nav {
 
         transition: 0.2s ease-out;
 
-        width: 35px;
+        width: fit-content;
         height: 35px;
 
         border-radius: 60px;
@@ -162,6 +162,15 @@ nav {
         height: 35px;
     }
 
+    .up {
+        width: 35px;
+        height: 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .button-text {
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
@@ -184,18 +193,25 @@ nav {
         position: fixed;
     }
 
-   .dtext-on {animation: release 3.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
-   .doto {animation: dot 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
+    .textright {  padding: 0 0px 0 7px;
+        margin: 0 0px 0 7px;
+}
 
-    @keyframes release {
+   .ltext-on {animation: releasel 3.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
+    .rtext-on {animation: releaser 3.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
+
+    @keyframes releasel {
         0% {opacity: 0; position: relative; width: 0;}
-        5% {opacity: 1; position: relative; width: 45px;}
-        90% {opacity: 1; position: relative; width: 45px;}
-        95% {opacity: 0; position: relative; width: 45px;}
+        5% {opacity: 1; position: relative; width: 39px;}
+        90% {opacity: 1; position: relative; width: 39px;}
+        95% {opacity: 0; position: relative; width: 39px;}
         100% {opacity: 0; position: fixed; pointer-events: none; width: 0;}
     }
-     @keyframes dot {
-        0% {opacity: 0; position: relative; width: 45px;}
+    @keyframes releaser {
+        0% {opacity: 0; position: relative; width: 0;}
+        5% {opacity: 1; position: relative; width: 42px;}
+        90% {opacity: 1; position: relative; width: 42px;}
+        95% {opacity: 0; position: relative; width: 42px;}
         100% {opacity: 0; position: fixed; pointer-events: none; width: 0;}
     }
 

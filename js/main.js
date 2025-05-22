@@ -7,7 +7,8 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
 
-        document.querySelectorAll('.dtext').forEach((result) => { result.classList.add('dtext-on');})
+        document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
+        document.querySelectorAll('.rtext').forEach((result) => { result.classList.add('rtext-on');})
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
         awi2 = true
     } else { 
@@ -15,7 +16,8 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
 
-        document.querySelectorAll('.dtext').forEach((result) => { result.classList.remove('dtext-on');})
+        document.querySelectorAll('.ltext').forEach((result) => { result.classList.remove('ltext-on');})
+        document.querySelectorAll('.rtext').forEach((result) => { result.classList.remove('rtext-on');})
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
          awi2 = false
     }
