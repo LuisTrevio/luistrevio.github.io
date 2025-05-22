@@ -7,13 +7,15 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
 
+        document.querySelectorAll('.dtext').forEach((result) => { result.classList.add('dtext-on');})
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
         awi2 = true
     } else { 
         
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
-    
+
+        document.querySelectorAll('.dtext').forEach((result) => { result.classList.remove('dtext-on');})
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
          awi2 = false
     }
@@ -51,7 +53,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             });
         });
     });
-
 }
 
 let LastScrollY2 = 0
@@ -67,8 +68,8 @@ window.addEventListener("scroll", () => {
 const tipwav = new Audio('js/tip.wav');
 const clickwav = new Audio('js/act2.wav');
 
-tipwav.volume = 0.6;
-clickwav.volume = 0.6;
+tipwav.volume = 0.4;
+clickwav.volume = 0.5;
 
 const images = [
     'cato1.gif',
@@ -131,13 +132,13 @@ function Dash() {
 
     tipwav.play();
     tipwav.currentTime = 0;
-
+    /*
     if(audio.paused) {
         document.querySelectorAll('.bumper').forEach((result) => {result.classList.remove('bumper-menu')})
     }  
     else {
         document.querySelectorAll('.bumper').forEach((result) => {result.classList.add('bumper-menu')})
-    }
+    }*/
 }
 
 //Menu de desplazamiento hacia arriba (Mobile)
@@ -363,7 +364,7 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
         })
     })
 })
-
+/*
 const audio = new Audio('music/hamster.mp3');
 
 function Play() {
@@ -389,7 +390,7 @@ function Play() {
   
     }
 }
-
+*/
 function Volume() {
     document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.toggle('volume-colapse')});
     document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.toggle('volume-hover')});
@@ -405,7 +406,7 @@ document.addEventListener('click', function(event) {
         document.querySelectorAll('.expande-pad').forEach((result) => {result.classList.remove('music-expande')});
     }
 });
-
+/*
 audio.addEventListener('pause', () => {
     document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')})
     document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.add('gradient-loading')})
@@ -508,33 +509,33 @@ document.addEventListener('keydown', (event) => {
     document.addEventListener('keyup', (event) => {
         if (event.key === 'ArrowRight') {}
     });
-});
+});*/
 const audioMuted = localStorage.getItem('audioMuted');
 function Mute() {
-    audio.muted = !audio.muted;
+    /*audio.muted = !audio.muted;*/
     tipwav.muted = !tipwav.muted;
     clickwav.muted = !clickwav.muted;
 
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
-
+    /*
    updateVolumeProgressBar();
 
     if (audio.muted) {
         localStorage.setItem('audioMuted', 'true');
     } else {
         localStorage.setItem('audioMuted', 'false');
-    }
+    }*/
 }
 
 if (audioMuted === 'true') {
-    audio.muted = true;
+    /*audio.muted = true;*/
     tipwav.muted = true;
     clickwav.muted = true;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.add('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.add('volume-bar-none')});
 } else {
-    audio.muted = false;
+    /*audio.muted = false;*/
     tipwav.muted = false;
     clickwav.muted = false;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.remove('Mute-Off')});
@@ -543,13 +544,13 @@ if (audioMuted === 'true') {
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'm') {
-        audio.muted = !audio.muted;
+        /*audio.muted = !audio.muted;*/
         tipwav.muted = !tipwav.muted;
         clickwav.muted = !clickwav.muted;
 
         document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
         document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
-        updateVolumeProgressBar();
+        /*updateVolumeProgressBar();*/
     }
 });
 

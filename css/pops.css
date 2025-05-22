@@ -101,7 +101,7 @@
     background-size: 50% 50%;
     background-repeat: no-repeat;
 
-    transition: 0.15s cubic-bezier(.4,0,.2,1);
+    transition: 0.195s cubic-bezier(.4,0,.2,1);
 }
 
 .Pop-Close-Up {
@@ -1345,6 +1345,4 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     }
 
     .selected-img {background-color: var(--buttons-hover); border: 2px solid var(--white); }
-
-    .trans-img-off {transition: 0.179s !important;}
 }
