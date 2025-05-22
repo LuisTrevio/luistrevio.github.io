@@ -520,12 +520,12 @@ function Mute() {
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
     /*
    updateVolumeProgressBar();
-
-    if (audio.muted) {
+*/
+    if (tipwav.muted) {
         localStorage.setItem('audioMuted', 'true');
     } else {
-        localStorage.setItem('audioMuted', 'false');
-    }*/
+        localStorage.setItem('audioMuted', 'false'); 
+    }
 }
 
 if (audioMuted === 'true') {
