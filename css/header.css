@@ -197,8 +197,8 @@ nav {
         margin: 0 0px 0 7px;
 }
 
-   .ltext-on {animation: releasel 3.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
-    .rtext-on {animation: releaser 3.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
+   .ltext-on {animation: releasel 4.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
+    .rtext-on {animation: releaser 4.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;}
 
     @keyframes releasel {
         0% {opacity: 0; position: relative; width: 0;}

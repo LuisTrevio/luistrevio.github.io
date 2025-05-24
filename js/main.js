@@ -236,7 +236,7 @@ window.addEventListener("load", () => {
     }
 });
 
-function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
+//function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
 
 //PopUp de las Habilidades pero de Omitir
 function Ommit() {
