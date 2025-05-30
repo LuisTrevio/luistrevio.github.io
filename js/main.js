@@ -6,10 +6,11 @@ window.addEventListener("scroll", () => {
 
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
-
+        document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
+        
+        document.querySelectorAll('.vid').forEach((result) => { result.classList.add('vid-on');})
         document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
         document.querySelectorAll('.rtext').forEach((result) => { result.classList.add('rtext-on');})
-        document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
         awi2 = true
     } else { 
         
@@ -20,6 +21,15 @@ window.addEventListener("scroll", () => {
          awi2 = false
     }
 })
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger,ScrollSmoother)
+    let smoother = ScrollSmoother.create({
+        wrapper: ".content-center",
+        content: ".stock-detalles",
+        smooth: 1.5,
+    });
+});
 
 //Empieza a contar el scroll y activa las animaciones en el menú
 
@@ -517,7 +527,12 @@ function Mute() {
     clickwav.muted = !clickwav.muted;
 
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
+    document.querySelectorAll('.bounce-mute').forEach((result) => {result.classList.toggle('bounce-mute-on')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
+
+    setTimeout(() => {
+        document.querySelectorAll('.bounce-mute').forEach((result) => {result.classList.remove('bounce-mute-on')});
+    }, 500);
     /*
    updateVolumeProgressBar();
 */

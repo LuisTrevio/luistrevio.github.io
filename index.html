@@ -45,13 +45,16 @@
         <link rel="stylesheet" type="text/css" href="css/content.css">
 
         <link rel="stylesheet" type="text/css" href="svg/svg.css">
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <script defer src="js/main.js"></script>
     </head>
     <body ontouchstart="" class="scr-fr">
         
         <header class="sar-web">
             <nav class="sar-web header-safari">
-                <button name="menu-pop" onclick="Dash()" class="button-fever button-scroll block-m ">
+                <button name="menu-pop" onclick="Dash()" class="button-fever button-scroll block-m vid">
                     <div class="three-dots">
                         <span class="bur-1 bar-1 animate"></span>
                         <span class="bur-2 bar-2 animate"></span>
@@ -59,7 +62,7 @@
                     </div>
                     <div class="button-text ltext">Menu</div>
                 </button>
-                <button onclick="Top()" name="button-up" class="button-up top-ani block-up button-scroll">
+                <button onclick="Top()" name="button-up" class="button-up top-ani block-up button-scroll vid">
                     <div class="button-text rtext textright">Inicio</div>
                     <span class="up up-svg"></span>
                 </button>
@@ -140,7 +143,10 @@
                                 <a href="https://x.com/LuisTrevio4" class="sub icons twitter2"></a>
                                 <button name="email-pop" onclick="Pop(), PopMail(), tip()" class="sub icons email"></button>
                                 <span class="separate"></span>
-                                <button name="play-button" onclick="Mute(), tip()" class="subsub Mute icons icon-volume"></button>
+                                <button name="play-button" onclick="Mute(), tip()" class="subsub ">
+                                    <span class="sub-volume icons icon-mute"></span>
+                                    <span class="sub-icon Mute icons icon-g bounce-mute"></span>
+                                </button>
                             </div>
 
                         </div>

@@ -15,6 +15,33 @@
     background-repeat: no-repeat;
 }
 
+.sub-volume {
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+
+    width: 30px;
+    height: 50px;
+
+    display: flex;
+    background-position-x: 7px;
+}
+
+.sub-icon {
+    background-position: center;
+    background-size: 74% 60%;
+    background-repeat: no-repeat;
+
+    width: 20px;
+    height: 50px;
+
+    display: flex;
+    background-position-x: -1px;
+}
+
+.icon-mute {background-image: url(volume-g.svg);}
+.icon-g {background-image: url(mute-off.svg);}
+
 .up-svg {background-image: url(up.svg); background-size: 100% 100%;}
 
 .close-svg {background-image: url(maki_cross.svg); background-size: 68%;}
@@ -113,7 +140,9 @@
 .icon-volume {background-image: url(volume.svg); animation: bounce2 0.2s ease-out;}
 .icon-back {background-image: url(tenseconds.svg);}
 
-.Mute-Off { background-image: url(mute.svg); animation: bounce 0.2s ease-out;}
+
+.Mute-Off {background-image: url(mute-on.svg); }
+.bounce-mute-on {animation: bounce 0.1s ease-out;}
 
 @keyframes bounce {
     0% {
