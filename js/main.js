@@ -27,9 +27,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let smoother = ScrollSmoother.create({
         wrapper: ".content-center",
         content: ".stock-detalles",
-        smooth: 1.5,
+        smooth: 1.2,
     });
+    //kill the scroll trigger when the page is reloaded
+    ScrollTrigger.refresh();
+
+    //the content padding is removed
+    document.querySelector('.stock-detalles').style.padding = '70px 0px 0px 0px';
+    if (window.innerWidth <= 768) {document.querySelector('.stock-detalles').style.padding = '0px';}
+
 });
+
+//se reinicia la pagina con location.reload(); pero mejor no hacer esto
 
 //Empieza a contar el scroll y activa las animaciones en el menú
 

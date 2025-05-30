@@ -400,8 +400,10 @@
     width: 100%;
     height: auto;
 
-    padding: 70px 20px;
+    padding: 10px 20px;
 }
+
+.loaded {padding: 70px 20px;}
 
 .stock-detalles {
     width: 100%;
