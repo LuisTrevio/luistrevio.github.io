@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.refresh();
 
     //the content padding is removed
-    document.querySelector('.stock-detalles').style.padding = '70px 0px 0px 0px';
+    document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
     if (window.innerWidth <= 768) {document.querySelector('.stock-detalles').style.padding = '0px';}
 
 });
@@ -538,6 +538,7 @@ function Mute() {
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
     document.querySelectorAll('.bounce-mute').forEach((result) => {result.classList.toggle('bounce-mute-on')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
+    document.querySelectorAll('.bruh').forEach((result) => {result.classList.toggle('bruh-on')});
 
     setTimeout(() => {
         document.querySelectorAll('.bounce-mute').forEach((result) => {result.classList.remove('bounce-mute-on')});
@@ -558,12 +559,14 @@ if (audioMuted === 'true') {
     clickwav.muted = true;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.add('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.add('volume-bar-none')});
+    document.querySelectorAll('.bruh').forEach((result) => {result.classList.add('bruh-on')});
 } else {
     /*audio.muted = false;*/
     tipwav.muted = false;
     clickwav.muted = false;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.remove('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.remove('volume-bar-none')});
+    document.querySelectorAll('.bruh').forEach((result) => {result.classList.remove('bruh-on')});
 }
 
 document.addEventListener('keydown', (event) => {

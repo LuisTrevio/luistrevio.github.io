@@ -25,6 +25,7 @@
 
     display: flex;
     background-position-x: 7px;
+    transition: 0.2s ease-out;
 }
 
 .sub-icon {
@@ -39,8 +40,8 @@
     background-position-x: -1px;
 }
 
-.icon-mute {background-image: url(volume-g.svg);}
-.icon-g {background-image: url(mute-off.svg);}
+.icon-mute {background-image: url(volume-g.svg); }
+.icon-g {background-image: url(mute-off.svg); opacity: 1;}
 
 .up-svg {background-image: url(up.svg); background-size: 100% 100%;}
 
@@ -140,19 +141,21 @@
 .icon-volume {background-image: url(volume.svg); animation: bounce2 0.2s ease-out;}
 .icon-back {background-image: url(tenseconds.svg);}
 
+.bruh-on {transform: translate(5px, 0);}
 
-.Mute-Off {background-image: url(mute-on.svg); }
-.bounce-mute-on {animation: bounce 0.1s ease-out;}
+.Mute-Off {background-image: url(mute-on.svg);opacity: 0; }
+.bounce-mute-on {animation: bounce 0.2s ease-out;}
 
 @keyframes bounce {
     0% {
-        background-size: 100% 60%;
+        background-size: 100% 60%; transform: rotate(-15deg);
     }
+    30% {transform: rotate(0deg);}
     50% {
-        background-size: 50% 20%;
+        background-size: 50% 20%; transform: rotate(15deg);
     }
     100% {
-        background-size: 100% 60%;
+        background-size: 100% 60%; transform: rotate(0deg);
     }
 }
 
