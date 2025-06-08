@@ -92,7 +92,7 @@
     z-index: 6;
 
     top: 0;
-    transform: translateY(-10px);
+    transform: translateY(22px) scale(0.95);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -383,7 +383,7 @@
     transition: 0.200s ease-out;
 }
 
-.Pop-Photo1, .Pop-Photo3, .Pop-Photo4 {
+.Pop-Photo1, .Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
     width: 28vw;
     max-width: 1080px;
     height: fit-content;
@@ -403,7 +403,7 @@
 
     z-index: 5;
 
-    transform: translate(0,70px);
+    transform: translate(0,0px) scale(0.95);
     opacity: 0;
     visibility: hidden;
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
@@ -412,6 +412,7 @@
     pointer-events: none;
 
     box-shadow: var( --shadow-header-complex);
+    border: 1px solid var(--bar-pop);
 }
 
 .Photo img {
@@ -485,7 +486,7 @@
     box-shadow: var( --shadow-header-complex);
 }
 
-.Pop-P1-Out, .Pop-P3-Out, .Pop-P4-Out {
+.Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
     transform: translate(0,0px);
     opacity: 1;
       visibility: visible;
@@ -568,12 +569,13 @@
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 
-    .Pop-Photo1, .Pop-Photo3, .Pop-Photo4 {
+    .Pop-Photo1,.Pop-Photo2, .Pop-Photo3, .Pop-Photo4 {
         width: 80vw;
         bottom: 0;
 
-        transform: translate(0,267px);
+        transform: translate(0,0px) scale(0.95);
         transition:0.300s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
+        border: none;
     }
 
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
@@ -616,7 +618,7 @@
         filter: blur(0);
     }
 
-    .Pop-P1-Out, .Pop-P3-Out, .Pop-P4-Out {
+    .Pop-P1-Out, .Pop-P2-Out, .Pop-P3-Out, .Pop-P4-Out {
         transform: translate(0,0);
         opacity: 1;
         box-shadow: none;
@@ -898,11 +900,11 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     position: fixed;
 
     inset: 0;
-    border-radius: 0 0;
+    border-radius: 35px 35px;
 
     z-index: 5;
 
-    transform: translate(0,70px);
+    transform: translate(0,10px) scale(0.95);
     opacity: 0;
     transition: opacity 0.203s, transform 0.202s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
 
