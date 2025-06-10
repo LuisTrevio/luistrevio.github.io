@@ -256,6 +256,22 @@ window.addEventListener("load", () => {
     }
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab' && document.querySelector('.Pop-Exit.Pop-out')) {
+        event.preventDefault();
+        const focusableElements = document.querySelectorAll('.Pop-Exit.Pop-out a, .Pop-Exit.Pop-out button, .Pop-Exit.Pop-out input, .Pop-Exit.Pop-out textarea');
+        if (focusableElements.length > 0) {
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+            if (document.activeElement === lastElement && !event.shiftKey) {
+                firstElement.focus();
+            } else if (document.activeElement === firstElement && event.shiftKey) {
+                lastElement.focus();
+            }
+        }
+    }
+});
+
 //function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
 
 //PopUp de las Habilidades pero de Omitir
@@ -384,7 +400,9 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
         })
     })
 })
-/*
+
+
+/* REPRODUCTOR DE MÚSICA
 const audio = new Audio('music/hamster.mp3');
 
 function Play() {
@@ -426,7 +444,8 @@ document.addEventListener('click', function(event) {
         document.querySelectorAll('.expande-pad').forEach((result) => {result.classList.remove('music-expande')});
     }
 });
-/*
+
+/* PAUSAR, DETENER Y PROGRESO DEL AUDIO
 audio.addEventListener('pause', () => {
     document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')})
     document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.add('gradient-loading')})
@@ -530,9 +549,11 @@ document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowRight') {}
     });
 });*/
+
+
 const audioMuted = localStorage.getItem('audioMuted');
 function Mute() {
-    /*audio.muted = !audio.muted;*/
+    /*audio.muted = !audio.muted; */ /* Si el audio de la musica esta en silencio */
     tipwav.muted = !tipwav.muted;
     clickwav.muted = !clickwav.muted;
 

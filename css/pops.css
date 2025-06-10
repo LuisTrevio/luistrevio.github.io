@@ -282,6 +282,7 @@
     visibility: hidden;
 
     transition: 0.201s, cubic-bezier cubic-bezier(0.5, 0.11, 0.13, 1);
+    border: 2px solid var(--bar-pop);
     filter: blur(1.37px);
     
     padding: 0 25px 25px 25px;
@@ -326,6 +327,7 @@
     pointer-events: none;
     
     box-shadow: none;
+    border: 2px solid var(--bar-pop);
 }
 
 .Pop-Warn {
@@ -583,7 +585,7 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        border: 2px solid var(--bar-pop);
+     
     }
 
     .Pop-Mail-Out {
@@ -591,7 +593,6 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        border: 2px solid var(--bar-pop);
     }
 
     .Pop-Warn-Out {
@@ -599,7 +600,6 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        border: 2px solid var(--bar-pop);
     }
 
     .Pop-As-Out {
@@ -607,8 +607,6 @@
         opacity: 1;
         box-shadow: none;
         filter: blur(0);
-        border: 2px solid var(--bar-pop);
-
     }
 
     .Pop-Share-Out {
@@ -913,6 +911,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     pointer-events: none;
 
     box-shadow: var( --shadow-header-complex);
+    border: 1px solid var(--bar-pop);
 }
 
 .Waltz {
@@ -952,6 +951,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
         animation-timeline: scroll(self);
         animation-range: 0 170px;
         box-shadow: none;
+        border: none;
         transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
     }
 

@@ -815,6 +815,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 }
 
 .items-dev:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.items-dev:active{transform: scale(0.95);}
 @media (max-width:780px) { 
     .items-dev:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
     .items-dev:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
@@ -885,12 +886,14 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 }
 
 .id-proyect:hover{background-color: var(--buttons-hover); border: 2px solid var(--white); background-size: 80% cover;}
+.id-proyect:active{transform: scale(0.97);}
 @media (max-width:780px) { 
     .id-proyect:hover{background-color: var(--buttons); border: 2px solid var(--buttons);}
     .id-proyect:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 }
 
 .img-burble:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.img-burble:active{transform: scale(0.97);}
 @media (max-width:780px) { 
     .img-burble:hover{background-color: var(--buttons); border: 2px solid var(--buttons);}
     .img-burble:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
@@ -923,11 +926,21 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
    }
 }
 
-.id-proyect:hover .title-proyect > .img-proyect {animation: slide-svg 0.3s ease-in-out;}
-.img-burble:hover .title-proyect > .img-proyect {animation: slide-svg 0.3s ease-in-out;}
-
+.id-proyect:hover .title-proyect > .img-proyect {animation: slide-svg 0.45s ease-in-out;}
+.img-burble:hover .title-proyect > .img-proyect {animation: slide-svg 0.45s ease-in-out;}
+/*
 @keyframes slide-svg {
     0% {transform: translate(0,0);} 50% {transform: translate(-4px,0);} 100% {transform: translate(0,0);}
+}*/
+
+@keyframes slide-svg {
+    0% {transform: rotate(-15deg); }
+    15% {transform: rotate(0deg);}
+    30% {transform: rotate(15deg);}
+    45% {transform: rotate(-15deg);}
+    60% {transform: rotate(0deg);}
+    75% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
 }
 
 .property-text {
