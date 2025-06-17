@@ -84,11 +84,11 @@ window.addEventListener("scroll", () => {
     }
 })
 
-const tipwav = new Audio('js/tip.wav');
-const clickwav = new Audio('js/act2.wav');
+//const tipwav = new Audio('js/tip.wav');
+//const clickwav = new Audio('js/act2.wav');
 
-tipwav.volume = 0.4;
-clickwav.volume = 0.5;
+//tipwav.volume = 0.4;
+//clickwav.volume = 0.5;
 
 const images = [
     'cato1.gif',
@@ -105,8 +105,8 @@ document.querySelector('.img-random').style.backgroundSize = 'cover';
 document.querySelector('.img-random').addEventListener('click', () => {
 
     const randomAudioIndex = Math.floor(Math.random() * 2) + 1;
-    clickwav.src = `js/act${randomAudioIndex}.wav`
-    clickwav.play();
+    //clickwav.src = `js/act${randomAudioIndex}.wav`
+    //clickwav.play();
     
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex];
@@ -149,8 +149,8 @@ function Dash() {
         document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
     });
 
-    tipwav.play();
-    tipwav.currentTime = 0;
+    //tipwav.play();
+    //tipwav.currentTime = 0;
     /*
     if(audio.paused) {
         document.querySelectorAll('.bumper').forEach((result) => {result.classList.remove('bumper-menu')})
@@ -171,8 +171,8 @@ function Top() {
     setTimeout(() => {
         document.querySelectorAll('.block-m').forEach((result) => {result.classList.remove('block-menu')});
     }, 1000);
-    tipwav.play();
-    tipwav.currentTime = 0;
+    //tipwav.play();
+    //tipwav.currentTime = 0;
 }
 
 //PopUp o Ventana Modal
@@ -245,7 +245,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
-function tip() {tipwav.play();tipwav.currentTime = 0;}
+//function tip() {tipwav.play();tipwav.currentTime = 0;}
 
 window.addEventListener("load", () => {
     const warnClosed = localStorage.getItem('🍪');
@@ -550,10 +550,10 @@ document.addEventListener('keydown', (event) => {
     });
 });*/
 
-
+/* Mute y Audio
 const audioMuted = localStorage.getItem('audioMuted');
 function Mute() {
-    /*audio.muted = !audio.muted; */ /* Si el audio de la musica esta en silencio */
+    //audio.muted = !audio.muted; Si el audio de la musica esta en silencio 
     tipwav.muted = !tipwav.muted;
     clickwav.muted = !clickwav.muted;
 
@@ -565,9 +565,7 @@ function Mute() {
     setTimeout(() => {
         document.querySelectorAll('.bounce-mute').forEach((result) => {result.classList.remove('bounce-mute-on')});
     }, 500);
-    /*
-   updateVolumeProgressBar();
-*/
+    //updateVolumeProgressBar();
     if (tipwav.muted) {
         localStorage.setItem('audioMuted', 'true');
     } else {
@@ -576,14 +574,14 @@ function Mute() {
 }
 
 if (audioMuted === 'true') {
-    /*audio.muted = true;*/
+    //audio.muted = true;
     tipwav.muted = true;
     clickwav.muted = true;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.add('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.add('volume-bar-none')});
     document.querySelectorAll('.bruh').forEach((result) => {result.classList.add('bruh-on')});
 } else {
-    /*audio.muted = false;*/
+    //audio.muted = false;
     tipwav.muted = false;
     clickwav.muted = false;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.remove('Mute-Off')});
@@ -593,13 +591,13 @@ if (audioMuted === 'true') {
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'm') {
-        /*audio.muted = !audio.muted;*/
+        //audio.muted = !audio.muted;
         tipwav.muted = !tipwav.muted;
         clickwav.muted = !clickwav.muted;
 
         document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
         document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
-        /*updateVolumeProgressBar();*/
+        //updateVolumeProgressBar();
     }
 });
 
@@ -609,3 +607,4 @@ function Stop() {
     document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')});
     document.querySelector('.music-progress-bar').style.animation = 'none';
 }
+*/

@@ -225,6 +225,9 @@
 .power-color {background-color: var(--powerpoint);}
 .word-color {background-color: var(--word);}
 
+.microsoft-bg {background-image: var(--microsoft-bg);} 
+.microsoft-color {background-color:var(--microsoft);}
+
 .basic-color {background-color: var(--basic);}
 
 .Status {
@@ -1122,6 +1125,26 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     background-size: 100% 100%;
 }
 
+.screenshots.link-waltz:hover, .screenshots.link-tech:hover {
+    background-color: var(--buttons-hover);
+    border: 2px solid var(--white);
+}
+
+@media (max-width:780px) { 
+    .screenshots.link-waltz:hover {
+        background-color: var(--buttons-proyect);
+        border: 2px solid var(--buttons-proyect);
+    }
+    .screenshots.link-tech:hover {
+        background-color: var(--buttons-proyect-tech);
+        border: 2px solid var(--buttons-proyect-tech);
+    }
+    .screenshots.link-waltz:active, .screenshots.link-tech:active {
+        background-color: var(--buttons-hover);
+        border: 2px solid var(--white);
+    }
+}
+
 .link-github {
     width: 50px;
     height: 50px;
@@ -1247,9 +1270,6 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     border-radius: 10px;
     transition: 0.2s ease-out;
 }
-
-.screenshots:hover{border: 2px solid var(--buttons-hover);}
-@media (max-width:780px) { .screenshots:hover{border: 2px solid var(--buttons);}}
 
 
 @media (max-width:780px) { 

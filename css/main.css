@@ -76,7 +76,8 @@ body {
 }
 
 body {
-    background-color: var(--background);
+    /*background: var(--background-bg);*/
+    background-color: var(--background-color);
     
     /*Text & Nucleo*/
     --select-text: #66598c;
@@ -84,6 +85,8 @@ body {
     --black: #000000;
 
     /*Background*/
+    --background-bg: url(../bg/back-background.png) no-repeat center center fixed;
+    --background-color: #0B0A0A;
     --background: #0B0A0A;
     --stock-perfil:#04010c;
     --border-stock-perfil: #66598c;
@@ -149,6 +152,11 @@ body {
     --excel:#217346;
     --powerpoint:#b7472a;
     --word:#2b579a;
+
+    --microsoft-bg: linear-gradient(
+    45deg,hsl(58deg 87% 22%) 0%,hsl(73deg 64% 25%) 8%,hsl(91deg 48% 29%) 17%,hsl(119deg 35% 33%) 25%,hsl(147deg 55% 29%) 33%,hsl(174deg 100% 22%) 42%,hsl(191deg 100% 26%) 50%,hsl(201deg 100% 30%) 58%,hsl(216deg 56% 39%) 67%,hsl(271deg 33% 44%) 75%,hsl(321deg 45% 43%) 83%,hsl(345deg 55% 46%) 92%,hsl(12deg 63% 44%) 100%
+    );
+    --microsoft: #000000;
 
     --basic: #3f3f3f;
 }

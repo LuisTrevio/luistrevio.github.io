@@ -78,8 +78,9 @@
 .img3 {background-image: url(nocheWP.webp);}
 .img4 {background-image: url(WawaWP.avif);}
 
-.svran-bg {background-image: url(severan.webp); background-size: cover;}
-
+.svran-bg {background-image: url(severan.webp); background-repeat: no-repeat; background-size: 200% 200%; background-position: center;}
+/*.svran-bg {background-image: url(severan12.svg); background-size: 200% 200%; background-position: center;}
+*/
 .bib {background-image: url(../Subtract2\ \(1\).svg); background-size: cover; width: 20px; height: 20px; display: inline-block;}
 
 
