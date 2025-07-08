@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //se reinicia la pagina con location.reload(); pero mejor no hacer esto
 
 //Empieza a contar el scroll y activa las animaciones en el menú
-/*
+
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
@@ -90,7 +90,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         });
     });
 }
-*/
+
 let LastScrollY2 = 0
 window.addEventListener("scroll", () => {
     if(LastScrollY2 < window.scrollY) {
