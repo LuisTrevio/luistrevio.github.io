@@ -31,17 +31,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     //kill the scroll trigger when the page is reloaded
     ScrollTrigger.refresh();
+    ScrollSmoother.refresh();
 
     //the content padding is removed
-    document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
-    if (window.innerWidth <= 768) {document.querySelector('.stock-detalles').style.padding = '0px';}
 
+    document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
+    if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 786) {
+            smoother.kill();
+            document.querySelector('.stock-detalles').style.padding = '0px';
+        } else {
+            smoother = ScrollSmoother.create({
+                wrapper: ".content-center",
+                content: ".stock-detalles",
+                smooth: 1.2,
+            });
+            document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
+        }
+        ScrollTrigger.refresh();
+        ScrollSmoother.refresh();
+    });
 });
 
 //se reinicia la pagina con location.reload(); pero mejor no hacer esto
 
 //Empieza a contar el scroll y activa las animaciones en el menú
-
+/*
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
@@ -73,7 +90,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         });
     });
 }
-
+*/
 let LastScrollY2 = 0
 window.addEventListener("scroll", () => {
     if(LastScrollY2 < window.scrollY) {
@@ -84,12 +101,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
-//const tipwav = new Audio('js/tip.wav');
-//const clickwav = new Audio('js/act2.wav');
-
-//tipwav.volume = 0.4;
-//clickwav.volume = 0.5;
-
+//Imagen aleatoria en la página principal
 const images = [
     'cato1.gif',
     'cato2.gif',
@@ -104,9 +116,6 @@ document.querySelector('.img-random').style.backgroundSize = 'cover';
 
 document.querySelector('.img-random').addEventListener('click', () => {
 
-    const randomAudioIndex = Math.floor(Math.random() * 2) + 1;
-    //clickwav.src = `js/act${randomAudioIndex}.wav`
-    //clickwav.play();
     
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex];
@@ -124,9 +133,6 @@ document.querySelector('.img-random').addEventListener('click', () => {
         document.querySelectorAll('.awi2').forEach((result) => {result.classList.remove('awiwi2')});
         }, 100);
     }
-
-    //se cambia el audio de clickwav
-   
 });
 
 
@@ -245,6 +251,28 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
+//las popFunctions cuando están abiertas, se pueden arrastrar con el mouse
+document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
+    result.addEventListener('mousedown', (event) => {
+        const popElement = event.currentTarget;
+        const offsetX = event.clientX - popElement.getBoundingClientRect().left;
+        const offsetY = event.clientY - popElement.getBoundingClientRect().top;
+
+        function mouseMoveHandler(e) {
+            popElement.style.left = `${e.clientX - offsetX}px`;
+            popElement.style.top = `${e.clientY - offsetY}px`;
+        }
+
+        function mouseUpHandler() {
+            document.removeEventListener('mousemove', mouseMoveHandler);
+            document.removeEventListener('mouseup', mouseUpHandler);
+        }
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    });
+});
+
 //function tip() {tipwav.play();tipwav.currentTime = 0;}
 
 window.addEventListener("load", () => {
@@ -287,7 +315,6 @@ function Ommit() {
         });
     });
 }
-
 
 function Ommit2() {
     const classesToRemove = [
