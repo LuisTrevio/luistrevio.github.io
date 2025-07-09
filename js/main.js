@@ -38,7 +38,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
     if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
 
-    window.addEventListener('resize', () => {
+   
+});
+
+//se reinicia la pagina con location.reload(); pero mejor no hacer esto
+
+//Empieza a contar el scroll y activa las animaciones en el menú
+
+/**
+   window.addEventListener('resize', () => {
         if (window.innerWidth <= 786) {
             smoother.kill();
             document.querySelector('.stock-detalles').style.padding = '0px';
@@ -53,11 +61,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ScrollTrigger.refresh();
         ScrollSmoother.refresh();
     });
-});
-
-//se reinicia la pagina con location.reload(); pero mejor no hacer esto
-
-//Empieza a contar el scroll y activa las animaciones en el menú
+ */
 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {

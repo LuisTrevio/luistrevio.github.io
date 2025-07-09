@@ -940,16 +940,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        animation: reveal-pop-enge linear both;
-        animation-timeline: scroll(nearest);
-        animation-range: 0 170px;
-        
-    }
-
-    @keyframes reveal-pop-enge {
-        0% {padding: 10px 10px 10px 10px;}
-        100% {padding: 25px 25px 25px 25px;}
+        align-items: center;    
     }
 
     .click-here {
