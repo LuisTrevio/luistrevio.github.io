@@ -918,7 +918,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 @media (dynamic-range: standard) {
   .hd-avise {
-    display: block;
+    display: none;
   }
 }
 
