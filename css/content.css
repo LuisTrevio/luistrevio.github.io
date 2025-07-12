@@ -911,7 +911,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     background-color: #616161b0;
     border-radius: 20px;
-    border: 2px solid var(--buttons-stock);3
+    border: 2px solid var(--buttons-stock);
     user-select: none;
     
 }
