@@ -1,3 +1,6 @@
+function DynamicRange (high, low) {
+  return Math.log2(high) - Math.log2(low);
+} 
 
 let awi2 = false
 let LastScrollY = 170
@@ -62,6 +65,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ScrollSmoother.refresh();
     });
  */
+
+
 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {

@@ -384,7 +384,7 @@
     height: auto;
 
     border-radius: 25px 25px 0 0;
-
+    dynamic-range-limit: constrained-high;
 }
 
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
