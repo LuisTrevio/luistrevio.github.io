@@ -909,15 +909,16 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     font-family: "Inter", sans-serif;
     font-size: 12px;
 
-    background-color: var(--buttons-stock);
+    background-color: #616161b0;
     border-radius: 20px;
-    border: 2px solid var(--buttons-stock);
+    border: 2px solid var(--buttons-stock);3
+    user-select: none;
     
 }
 
 @media (dynamic-range: standard) {
   .hd-avise {
-    display: none;
+    display: block;
   }
 }
 
