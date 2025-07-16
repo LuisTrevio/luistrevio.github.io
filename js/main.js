@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ScrollTrigger.refresh();
         ScrollSmoother.refresh();
     });
-
    
 });
 
