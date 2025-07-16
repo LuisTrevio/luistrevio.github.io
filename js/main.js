@@ -1,4 +1,4 @@
-let awi2 = false
+let headerbg = false
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
@@ -10,14 +10,14 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.vid').forEach((result) => { result.classList.add('vid-on');})
         document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
         document.querySelectorAll('.rtext').forEach((result) => { result.classList.add('rtext-on');})
-        awi2 = true
+        headerbg = true
     } else { 
         
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
-         awi2 = false
+        headerbg = false
     }
 })
 
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
     if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
-
-    
-   window.addEventListener('resize', () => {
+   
+});
+/*   window.addEventListener('resize', () => {
         if (window.innerWidth <= 786) {
             smoother.kill();
             document.querySelector('.stock-detalles').style.padding = '0px';
@@ -53,9 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ScrollTrigger.refresh();
         ScrollSmoother.refresh();
     });
-   
-});
-
+*/
 //se reinicia la pagina con location.reload(); pero mejor no hacer esto
 
 //Empieza a contar el scroll y activa las animaciones en el menú
@@ -131,7 +129,7 @@ document.querySelector('.img-random').addEventListener('click', () => {
         document.querySelectorAll('.awi').forEach((result) => {result.classList.remove('awiwi')});
     }, 100);
 
-    if (awi2) {
+    if (headerbg) {
        document.querySelectorAll('.awi2').forEach((result) => {result.classList.add('awiwi2')});
         setTimeout(() => {
         document.querySelectorAll('.awi2').forEach((result) => {result.classList.remove('awiwi2')});
