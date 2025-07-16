@@ -1,7 +1,3 @@
-function DynamicRange (high, low) {
-  return Math.log2(high) - Math.log2(low);
-} 
-
 let awi2 = false
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
@@ -48,7 +44,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 //Empieza a contar el scroll y activa las animaciones en el menú
 
-/**
+
    window.addEventListener('resize', () => {
         if (window.innerWidth <= 786) {
             smoother.kill();
@@ -64,7 +60,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ScrollTrigger.refresh();
         ScrollSmoother.refresh();
     });
- */
 
 
 
