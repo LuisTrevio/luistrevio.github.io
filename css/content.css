@@ -953,12 +953,9 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     color: var(--white);
 }
 
-.border-poptitle, .border-title {
-    padding: 0 8px;
-    border-radius: 28px;
+.border-poptitle, .border-title {  
+    text-shadow: 0 0 10px rgb(0 0 0);
 }
-
-.border-poptitle { background-color: #111111ad;}
 
 .img-proyect {
     width: 24px;
