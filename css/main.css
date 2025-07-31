@@ -99,7 +99,7 @@ body {
     --buttons:#292828;
     --buttons-stock:#66598c21;
     --buttons-hover:#505050;
-    --buttons-stock-hover:#505050;
+    --buttons-stock-hover:#66598c;
     --solid-box: var(--buttons);
 
     --buttons-pop:#0d0d0d;
