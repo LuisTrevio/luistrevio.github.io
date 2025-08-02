@@ -202,6 +202,7 @@ content {
         animation: reveal-nick linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
+        
     }
 
     .nickname-h1 {
@@ -229,6 +230,7 @@ content {
 
         height: auto;
         opacity: 0;
+        pointer-events: none;
         }
     }
 
@@ -935,11 +937,13 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     .id-proyect:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 }
 
-.img-burble:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.img-burble:hover{background-color: var(--buttons-hover); border: 2px solid var(--white); background-position: 0 -151px;}
 .img-burble:active{transform: scale(0.97);}
+@media (max-width:1025px) { .img-burble:hover{background-color: var(--buttons-hover); border: 2px solid var(--white); background-position: 0 -105px;}}
+
 @media (max-width:780px) { 
-    .img-burble:hover{background-color: var(--buttons); border: 2px solid var(--buttons);}
-    .img-burble:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+    .img-burble:hover{background-color: var(--buttons); border: 2px solid var(--buttons); background-position: center;}
+    .img-burble:active{background-color: var(--buttons-hover); border: 2px solid var(--white); background-position: 0 -151px;}
 }
 
 .title-proyect {
