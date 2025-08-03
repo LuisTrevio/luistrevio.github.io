@@ -68,13 +68,15 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         ['.sar-web', 'sar-on'],
         ['.img-saf', 'img-safari'],
         ['.off-saf', 'off-safari'],
-        ['.sms-saf', 'sms-safari'],
-        ['.glass-saf', 'glass-safari']
+        ['.sms-saf', 'sms-safari'], 
+        ['.glass-saf', 'glass-safari'], 
     ];
 
     safariClasses.forEach(([selector, className]) => {
         document.querySelectorAll(selector).forEach(result => result.classList.add(className));
     });
+
+    document.querySelector('.content-filter').style.background = '000000bc';
 
     document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B0A0A');
    
