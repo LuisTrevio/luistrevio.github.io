@@ -53,6 +53,8 @@ content {
 }
 
 @media (max-width:780px) {
+    content {padding: 70px 0 110px 0;}
+
     .stock-perfil {
         height: 372px;
         border-radius: 35px;

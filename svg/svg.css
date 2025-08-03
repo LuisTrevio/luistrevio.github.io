@@ -212,3 +212,22 @@
     background-size: 100% 60%;
     background-repeat: no-repeat;
 }
+
+.icon-filter {
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease-out;
+}
+
+.filter-home {background-image: url(homero.svg);}
+.filter-fotos {background-image: url(photo.svg);}
+.filter-web {background-image: url(web.svg);}

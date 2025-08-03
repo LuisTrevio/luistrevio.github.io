@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //the content padding is removed
 
-    document.querySelector('.stock-detalles').style.padding = '70px 0px 30px 0px';
+    document.querySelector('.stock-detalles').style.padding = '70px 0px 70px 0px';
     if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
    
 });
@@ -150,7 +150,8 @@ function Dash() {
         ['.grid-up', 'grid-tool-up'],
         ['.select-up', 'select-ani-up'],
         ['.music-up', 'music-dash-up'],
-        ['.block-up', 'top-block-up']
+        ['.block-up', 'top-block-up'],
+        ['.filter-up', 'filter-block-up']
     ];
 
     toggleClasses.forEach(([selector, className]) => {
@@ -637,3 +638,95 @@ function Stop() {
     document.querySelector('.music-progress-bar').style.animation = 'none';
 }
 */
+
+
+const filterText = document.querySelectorAll('.filter-text');
+const filterBall = document.querySelector('.filter-ball');
+const filterPasive = document.querySelector('.filter-pasive');
+const filterActive = document.querySelector('.filter-active');
+filterText.forEach((text) => {
+    text.addEventListener('click', () => {
+        filterText.forEach((t) => t.classList.remove('active'));
+        text.classList.add('active');
+        filterBall.style.left = `${text.offsetLeft}px`;
+        filterBall.style.width = `${text.offsetWidth}px`;
+        document.querySelectorAll('.blur-block').forEach((result) => {result.classList.add('blur-active')});
+        setTimeout(() => {document.querySelectorAll('.blur-block').forEach((result) => {result.classList.remove('blur-active')});}, 200);
+    });
+});
+
+
+window.addEventListener('load', () => {
+    const activeText = document.querySelector('.filter-text.active');
+    if (activeText) {
+        filterBall.style.left = `${activeText.offsetLeft}px`;
+        filterBall.style.width = `${activeText.offsetWidth}px`;
+    }
+
+    //document.querySelector('.filter-home').style.filter = 'invert(100%)';
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const firstFilter = document.querySelector('.filter-text');
+    if (firstFilter) {
+        firstFilter.classList.add('active');
+        filterBall.style.left = `${firstFilter.offsetLeft}px`;
+        filterBall.style.width = `${firstFilter.offsetWidth}px`;
+    }
+});
+
+// Filtro de Secciones con el Data-sort 
+document.querySelectorAll('.filter-text').forEach((filter) => {
+    filter.addEventListener('click', () => {
+        const filterValue = filter.getAttribute('data-sort');
+        document.querySelectorAll('.section').forEach((section) => {
+            if (section.getAttribute('data-sort') === filterValue || filterValue === 'default') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    });
+});
+
+window.addEventListener('resize', () => {
+    const activeText = document.querySelector('.filter-text.active');
+    if (activeText) {
+        filterBall.style.left = `${activeText.offsetLeft}px`;
+        filterBall.style.width = `${activeText.offsetWidth}px`;
+    }
+
+    
+    if (window.innerWidth <= 780) 
+        {document.querySelector('.perfil').style.display = 'none';
+            if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'all') {
+               document.querySelector('.perfil').style.display = 'flex';
+            }
+        }
+    else {document.querySelector('.perfil').style.display = 'flex';}
+});
+
+document.querySelector('.filter-text[data-sort="all"]').addEventListener('click', () => {
+    document.querySelectorAll('.section').forEach((section) => {
+        section.style.display = 'block';
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        document.querySelector('.perfil').style.display = 'flex';
+         document.querySelector('.property-text').style.display = 'inline-block';
+    });
+});
+
+document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('click', () => {
+   if (window.innerWidth <= 780) {
+        document.querySelector('.perfil').style.display = 'none';
+    }
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelector('.property-text').style.display = 'none';
+});
+
+document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
+    if (window.innerWidth <= 780) {
+        document.querySelector('.perfil').style.display = 'none';
+    }
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelector('.property-text').style.display = 'none';
+});
