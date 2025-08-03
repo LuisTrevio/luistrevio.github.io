@@ -533,6 +533,14 @@ nav {
         backdrop-filter: blur(53px);
         -webkit-backdrop-filter: blur(53px);
     }
+
+    .glass-safari {
+        background-color: #0000009e;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1.6px solid #b0acac;
+        box-shadow: none;
+    }
 }
 
 .filter-text {
