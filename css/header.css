@@ -453,8 +453,7 @@ nav {
 @media (max-width: 780px) {
     .header-back {
         display: flex;
-        background-color:rgb(11 10 10);
-        border-top: 2px solid #131313;
+        margin-bottom: 2px;
     }
 }
 
@@ -495,7 +494,7 @@ nav {
     height: 50px;
 
     display: flex;
-    gap: 4px;
+    gap: 2px;
     align-items: center;
     justify-content: center;
 
@@ -505,6 +504,7 @@ nav {
     padding: 6px;
     border: 1.6px solid #b0acac;
     transform: translate(150px, 0);
+    backdrop-filter: blur(10px);
 }
 
 @media (max-width: 780px) {
@@ -512,11 +512,12 @@ nav {
         width: 100%;
         height: 100%;
         justify-content: space-between;
-        border-radius: 0;
+        border-radius: 50px;
 
         padding: 6px 2px;
-        border: none;
         transform: translate(0, 0);
+        background-color: #00000075;
+        backdrop-filter: blur(10px);
     }
 }
 
@@ -525,7 +526,7 @@ nav {
     height: 100%;
 
     padding: 0 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(153, 153, 153);
     font-size: 13px;
 
     font-family: var(--Montserrat);
@@ -565,17 +566,18 @@ nav {
     width: fit-content;
     height: 36px;
 
-    background-color: rgb(58 58 58); 
+    background-color: rgb(58 58 58 / 66%); 
     position: absolute;
-    border-radius: 30px;
+    border-radius: 70px;
     z-index: 2;
 
     transition: 0.22s cubic-bezier(0.3, 0.01, 0.04, 0.98);
+    backdrop-filter:url(#frosted);-webkit-backdrop-filter:url(#frosted);
 }
 
 @media (max-width: 780px) {
     .filter-ball {
-        height: 80%;
+        height: 94%;
     }
 }
 

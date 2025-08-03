@@ -663,6 +663,7 @@ window.addEventListener('load', () => {
         filterBall.style.left = `${activeText.offsetLeft}px`;
         filterBall.style.width = `${activeText.offsetWidth}px`;
     }
+    document.querySelector('.filter-home').style.filter = 'brightness(1)';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -710,6 +711,10 @@ document.querySelector('.filter-text[data-sort="all"]').addEventListener('click'
         window.scrollTo({top: 0, behavior: 'smooth'});
         document.querySelector('.perfil').style.display = 'flex';
          document.querySelector('.property-text').style.display = 'inline-block';
+
+        document.querySelector('.filter-home').style.filter = 'brightness(1)';
+        document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
+        document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
     });
 });
 
@@ -719,6 +724,10 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
+
+    document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
+    document.querySelector('.filter-fotos').style.filter = 'brightness(1)';
+    document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
 });
 
 document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
@@ -727,4 +736,8 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
+
+    document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
+    document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
+    document.querySelector('.filter-web').style.filter = 'brightness(1)';
 });
