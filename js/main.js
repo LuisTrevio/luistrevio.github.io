@@ -696,7 +696,6 @@ window.addEventListener('resize', () => {
         filterBall.style.width = `${activeText.offsetWidth}px`;
     }
 
-    
     if (window.innerWidth <= 780) 
         {document.querySelector('.perfil').style.display = 'none';
             if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'all') {
@@ -709,7 +708,6 @@ window.addEventListener('resize', () => {
 document.querySelector('.filter-text[data-sort="all"]').addEventListener('click', () => {
     document.querySelectorAll('.section').forEach((section) => {
         section.style.display = 'block';
-        window.scrollTo({top: 0, behavior: 'smooth'});
         document.querySelector('.perfil').style.display = 'flex';
          document.querySelector('.property-text').style.display = 'inline-block';
     });
@@ -719,7 +717,6 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
    if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
     }
-    window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
 });
 
@@ -727,6 +724,5 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
     if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
     }
-    window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
 });
