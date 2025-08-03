@@ -639,7 +639,6 @@ function Stop() {
 }
 */
 
-
 const filterText = document.querySelectorAll('.filter-text');
 const filterBall = document.querySelector('.filter-ball');
 const filterPasive = document.querySelector('.filter-pasive');
@@ -650,6 +649,8 @@ filterText.forEach((text) => {
         text.classList.add('active');
         filterBall.style.left = `${text.offsetLeft}px`;
         filterBall.style.width = `${text.offsetWidth}px`;
+        document.querySelectorAll('.slur').forEach((result) => {result.classList.add('slur-active')});
+        setTimeout(() => {document.querySelectorAll('.slur').forEach((result) => {result.classList.remove('slur-active')});}, 100);
         document.querySelectorAll('.blur-block').forEach((result) => {result.classList.add('blur-active')});
         setTimeout(() => {document.querySelectorAll('.blur-block').forEach((result) => {result.classList.remove('blur-active')});}, 200);
     });
@@ -662,8 +663,6 @@ window.addEventListener('load', () => {
         filterBall.style.left = `${activeText.offsetLeft}px`;
         filterBall.style.width = `${activeText.offsetWidth}px`;
     }
-
-    //document.querySelector('.filter-home').style.filter = 'invert(100%)';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
