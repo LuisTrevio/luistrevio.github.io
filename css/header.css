@@ -59,7 +59,7 @@ nav {
         background: none;
         pointer-events: all;
         backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
         /**border-bottom: 1px solid #444444;    **/
         border-bottom: none;    
     }
@@ -521,17 +521,6 @@ nav {
         box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
         inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
         border: none;
-    }
-
-    .content-filter:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        border-radius: 50px;
-        position: absolute;
-    /* background: green; */
-        backdrop-filter: blur(53px);
-        -webkit-backdrop-filter: blur(53px);
     }
 
     .glass-safari {
