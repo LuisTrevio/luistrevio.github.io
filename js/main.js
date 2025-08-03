@@ -68,7 +68,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         ['.sar-web', 'sar-on'],
         ['.img-saf', 'img-safari'],
         ['.off-saf', 'off-safari'],
-        ['.sms-saf', 'sms-safari']
+        ['.sms-saf', 'sms-safari'],
+        ['.glass-saf', 'glass-safari']
     ];
 
     safariClasses.forEach(([selector, className]) => {
