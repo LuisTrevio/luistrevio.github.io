@@ -516,8 +516,23 @@ nav {
 
         padding: 6px 2px;
         transform: translate(0, 0);
-        background-color: #00000075;
+        background-color: #000000b8;
         backdrop-filter: blur(10px);
+            backdrop-filter:url(#glass-distortion);-webkit-backdrop-filter:url(#glass-distortion);
+        box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+        border: none;
+    }
+
+    .content-filter:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        position: absolute;
+    /* background: green; */
+        backdrop-filter: blur(53px);
+        -webkit-backdrop-filter: blur(53px);
     }
 }
 
@@ -572,7 +587,7 @@ nav {
     z-index: 2;
 
     transition: 0.22s cubic-bezier(0.3, 0.01, 0.04, 0.98);
-    backdrop-filter:url(#frosted);-webkit-backdrop-filter:url(#frosted);
+
 }
 
 @media (max-width: 780px) {
@@ -584,6 +599,6 @@ nav {
 .slur-active {animation: sure 0.1s cubic-bezier(0, -1.53, 0, 1.97);}
 
 @keyframes sure {
-    0% {height: 90%; }
+    0% {height: 90%; background-color: rgba(58, 58, 58, 0.228);}
     100% {height: 80%;}
 }

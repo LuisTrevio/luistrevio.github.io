@@ -231,3 +231,8 @@
 .filter-home {background-image: url(homero.svg);}
 .filter-fotos {background-image: url(photo.svg);}
 .filter-web {background-image: url(web.svg);}
+
+.filter-home, .filter-fotos, .filter-web {
+   filter: brightness(0.5);
+    transition: filter 0.2s ease-out;
+}
