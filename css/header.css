@@ -516,9 +516,9 @@ nav {
 
         padding: 6px 2px;
         transform: translate(0, 0);
-        background-color: #000000b8;
+        background-color: #00000059;
             backdrop-filter:url(#glass-distortion);-webkit-backdrop-filter:url(#glass-distortion);
-        box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+        box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
         inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
         border: none;
     }
