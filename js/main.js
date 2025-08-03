@@ -664,6 +664,8 @@ window.addEventListener('load', () => {
         filterBall.style.width = `${activeText.offsetWidth}px`;
     }
     document.querySelector('.filter-home').style.filter = 'brightness(1)';
+        document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
+        document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
