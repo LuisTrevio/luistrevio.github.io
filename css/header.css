@@ -551,6 +551,7 @@ nav {
         height: 100%;
 
         flex-direction: column;
+        user-select: default;
     }
 }
 
