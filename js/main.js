@@ -1,5 +1,6 @@
 let headerbg = false
 let LastScrollY = 170
+let NavLastScrollY = 50
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
 
@@ -7,6 +8,7 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
         
+
         document.querySelectorAll('.vid').forEach((result) => { result.classList.add('vid-on');})
         document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
         document.querySelectorAll('.rtext').forEach((result) => { result.classList.add('rtext-on');})
@@ -17,9 +19,18 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
+       
         headerbg = false
     }
-})
+});
+
+window.addEventListener("scroll", () => {
+    if(NavLastScrollY < window.scrollY) {
+        document.querySelectorAll('.nav-blur').forEach((result) => { result.classList.add('nav-blur-off');})
+    }else {
+        document.querySelectorAll('.nav-blur').forEach((result) => { result.classList.remove('nav-blur-off');})
+    }
+});
 
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger,ScrollSmoother)
