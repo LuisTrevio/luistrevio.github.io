@@ -614,3 +614,27 @@ nav {
     0% {height: 90%; background-color: rgba(58, 58, 58, 0.228);}
     100% {height: 80%;}
 }
+
+.filter-text.active > .filter-home { animation: slideup-svg2 0.45s ease-in-out;}
+.filter-text.active > .filter-web { animation: slideroad-svg2 0.45s ease-in-out;}
+.filter-text.active > .filter-fotos { animation: slide-svg2 0.45s ease-in-out;}
+
+@keyframes slideup-svg2 {
+    0% {transform: translate(0px,-5px)scale(1.3);} 
+    75% {transform: translate(0px,-5px)scale(1.2) rotate(20deg);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes slideroad-svg2 {
+    0% {transform: translate(0px,-5px)scale(1.2);} 
+    75% {transform: translate(0px,-5px)scale(1.2) rotate(180deg);}
+    100% {transform: translate(0,0 ) rotate(-180deg); }
+}
+
+@keyframes slide-svg2 {
+    0% {transform: rotate(-20deg) scale(1.2) translate(0px,-5px); }
+    30% {transform: rotate(20deg) scale(1.2) translate(0px,-5px);}
+    45% {transform: rotate(-20deg) scale(1.2) translate(0px,-5px);}
+    75% {transform: rotate(20deg) scale(1.2) translate(0px,-5px);}
+    100% {transform: rotate(0deg);}
+}
