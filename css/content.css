@@ -958,6 +958,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transform: translate(10px, -10px);
 }
 
+.title-proyect-fix {position: relative; transform: translate(0, 0);}
+.title-proyect-proyect {position: relative;}
 .title-proyect-reverse { flex-direction: row-reverse;}
 
 .border-poptitle, .border-title {  
