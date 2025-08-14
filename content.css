@@ -315,11 +315,11 @@ nav {
         grid-area: a2;
     }
     .select-box:nth-child(3) {
-        transition-delay: 125ms, 125ms;
+        transition-delay: 250ms, 250ms;
         grid-area: a3;
     }
     .select-box:nth-child(4) {
-        transition-delay: 250ms, 250ms;
+        transition-delay: 325ms, 325ms;
         color: rgb(255 66 66);
         grid-area: a4;
     }
@@ -556,6 +556,10 @@ nav {
     }
 }
 
+.content-filter:active {
+    background-color: #14141496;
+}
+
 .filter-text {
     width: fit-content;
     height: 100%;
@@ -602,7 +606,7 @@ nav {
     width: fit-content;
     height: 36px;
 
-    background-color: rgb(58 58 58 / 66%); 
+    background-color: rgba(58, 58, 58, 0.329); 
     position: absolute;
     border-radius: 70px;
     z-index: 2;
@@ -616,11 +620,14 @@ nav {
     }
 }
 
-.slur-active {animation: sure 0.1s cubic-bezier(0, -1.53, 0, 1.97);}
+.slur-active {animation: sure 0.2s cubic-bezier(0, -1.53, 0, 1.97);}
 
 @keyframes sure {
-    0% {height: 120%; background-color: rgba(58, 58, 58, 0.228);}
-    100% {height: 78%;}
+    0% {
+        height: 120%; 
+        background-color: rgba(255, 255, 255, 0.158);
+    }
+    100% {height: 78%; background-color: rgba(255, 255, 255, 0.158);}
 }
 
 .filter-text.active > .filter-home { animation: slideup-svg2 0.45s ease-in-out;}
@@ -922,7 +929,7 @@ content {
         0% {} 100% {
             font-size: 15px;
             background-color: #140b32;
-            padding: 2.3px;
+            padding: 2.2px;
             border-radius: 20px 0 0 20px;
             border-top: 1.5px solid #fff;
             border-left: 1.5px solid #fff;
