@@ -1,0 +1,249 @@
+.icons {
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.icons-frame {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.profile {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sub-volume {
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+
+    width: 30px;
+    height: 50px;
+
+    display: flex;
+    background-position-x: 7px;
+    transition: 0.2s ease-out;
+}
+
+.sub-icon {
+    background-position: center;
+    background-size: 74% 60%;
+    background-repeat: no-repeat;
+
+    width: 20px;
+    height: 50px;
+
+    display: flex;
+    background-position-x: -1px;
+}
+
+.icon-mute {background-image: url(volume-g.svg); }
+.icon-g {background-image: url(mute-off.svg); opacity: 1;}
+
+.up-svg {background-image: url(up.svg); background-size: 100% 100%;}
+
+.close-svg {background-image: url(maki_cross.svg); background-size: 68%;}
+
+.linkedin {background-image: url(mdi_linkedin.svg);}
+.twitter {background-image: url(ant-design_x-outlined.svg);}
+.twitter2 {background-image: url(mdi_twitter.svg);}
+.email {background-image: url(clarity_email-solid.svg);}
+.whatsapp {background-image: url(whatsapp.svg);}
+.facebook {background-image: url(facebook.svg);}
+.reddit {background-image: url(reddit.svg);}
+.telegram {background-image: url(telegram.svg);}
+.discord {background-image: url(discord-svg.svg);}
+.instagram {background-image: url(mdi_instagram.svg);}
+
+.factory {background-image: url(material-symbols_factory.svg);}
+.copy {background-image: url(ph_copyright-bold.svg);}
+.user {background-image: url(bxs_user.svg);}
+
+.vslogo {background-image: url(vscode.svg);}
+.fig {background-image: url(fig.svg);}
+.office {background-image: url(test.svg);}
+.gh {background-image: url(gh.svg);}
+.html {background-image: url(html.svg);}
+.css {background-image: url(RebeccaPurple.svg);}
+.js {background-image: url(js.svg);}
+.py {background-image: url(py.svg);}
+.sql {background-image: url(sql.svg);}
+.frame {background-image: url(mdi_resource-description-framework.svg);}
+.astro {background-image: url(frames.svg);}
+.react {background-image: url(mdi_react.svg);}
+
+.img-pop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    transition: 0.2s ease-out;
+    pointer-events: none;
+}
+
+.img1 {background-image: url(https://luistrevio.github.io/svg/NeriumWP.webp);}
+.img2 {background-image: url(https://luistrevio.github.io/svg/SeriumWP.avif);}
+.img3 {background-image: url(https://luistrevio.github.io/svg/nocheWP.webp);}
+.img4 {background-image: url(https://luistrevio.github.io/svg/wawaWP.webp);}
+
+.svran-bg {background-image: url(severan.webp); background-repeat: no-repeat; background-size: 200% 200%; background-position: center;}
+/*.svran-bg {background-image: url(severan12.svg); background-size: 200% 200%; background-position: center;}
+*/
+.bib {background-image: url(../Subtract2\ \(1\).svg); background-size: cover; width: 20px; height: 20px; display: inline-block;}
+
+
+
+.proyect-waltz {background-image: url(-proyect-waltz.svg);}
+.proyect-techemet {background-image: url(-proyect-techmet.svg);}
+
+.enter-svg {background-image: url(iconamoon_enter-bold.svg);}
+.gallery-svg {background-image: url(gallery.svg);}
+
+.wt-1 {background-image: url(waltz-sc1.webp);}
+.wt-2 {background-image: url(waltz-sc2.webp);}
+.wt-3 {background-image: url(waltz-sc3.webp);}
+.wt-4 {background-image: url(waltz-sc4.webp);}
+
+.tch-1 {background-image: url(tech-sc1.webp);}
+.tch-2 {background-image: url(tech-sc2.webp);}
+.tch-3 {background-image: url(tech-sc3.webp);}
+.tch-4 {background-image: url(tech-sc4.webp);}
+
+.pizzalok {background-image: url(pizzaloklogo.png);}
+
+.wallpaper {
+    background-image: url(../bg/back-background.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: scrollx2 18s linear infinite;
+}
+
+@keyframes scrollx2 {0% {background-position: 0% 100%;filter: brightness(0);} 10% {background-position: 0% 100%; filter: brightness(1);}    
+95% {background-position: 100% 100%;filter: brightness(1);} 100% {background-position: 100% 100%; filter: brightness(0);} }
+
+.wallpaper-front {
+    background-image: url(../bg/front-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: huerotate-colors 18s linear infinite;
+}
+
+@keyframes huerotate-colors {0% {filter: brightness(1); } 
+10% {filter: hue-rotate(1deg) brightness(1);}
+90% {filter: hue-rotate(359deg)brightness(1);} 
+100% {filter: hue-rotate(359deg) brightness(2);} }
+
+
+.music-icon {
+    width: 90px;
+    height: 90px;
+
+    background-position: center;
+}
+
+.icon-play {background-image: url(play.svg); animation: bounce2 0.2s ease-out;}
+.icon-pause {background-image: url(pause.svg); animation: bounce 0.2s ease-out;}
+.icon-volume {background-image: url(volume.svg); animation: bounce2 0.2s ease-out;}
+.icon-back {background-image: url(tenseconds.svg);}
+
+.bruh-on {transform: translate(5px, 0);}
+
+.Mute-Off {background-image: url(mute-on.svg);opacity: 0; }
+.bounce-mute-on {animation: bounce 0.2s ease-out;}
+
+@keyframes bounce {
+    0% {transform: rotate(-15deg);}
+    15% {transform: rotate(0deg);}
+    30% {transform: rotate(15deg);}
+    45% {transform: rotate(-15deg);}
+    60% {transform: rotate(0deg);}
+    75% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes bounce2 {
+    0% {
+        background-size: 100% 60%;
+    }
+    50% {
+        background-size: 70% 20%;
+    }
+    100% {
+        background-size: 100% 60%;
+    }
+}
+
+.icon-back-ani {animation: reverse-se 0.2s ease-out;}
+
+@keyframes reverse-se {
+    0% {
+        background-size: 100% 60%;
+    }
+    50% {
+        background-size: 65% 60%;
+        background-position: left;
+    }
+    100% {
+        background-size: 100% 60%;
+    }
+}
+
+.waltz-icon {
+    background-image: url(waltz-icon.svg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.tech-icon {
+    background-image: url(tech-icon.svg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.icon-left-svg {
+    background-image: url(left.svg);
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.icon-right-svg {
+    background-image: url(right.svg);
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.icon-filter {
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease-out;
+}
+
+.filter-home {background-image: url(homero.svg);}
+.filter-fotos {background-image: url(photo.svg);}
+.filter-web {background-image: url(web.svg);}
+
+.filter-home, .filter-fotos, .filter-web {
+   filter: brightness(0.5);
+    transition: filter 0.2s ease-out;
+}

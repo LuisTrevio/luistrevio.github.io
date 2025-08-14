@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <link rel="icon" href="favicon.svg"/>
+
+        <link rel="apple-touch-icon" href="favicon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.png"/>
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="LuisTrevio4">
+
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#0B0A0A" />
+        <meta name="darkreader-lock">
+
+        <meta
+        name="description"
+        content="Hola, esta es una tarjeta de presentación de LuisTrevio4"
+        />
+        <title> @LuisTrevio4 </title>
+        
+        <!-- TARJETA PARA REDES SOCIALES -->
+        <meta property="og:title" content="Tarjeta de LuisTrevio4">
+        <meta property="og:description:" content="Hola, esta es una tarjeta de presentación de LuisTrevio4.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://luistrevio.github.io/bg/background-publised.png">
+        <meta property="og:image:alt" content="">
+        <meta property="og:image:width" content="1280">
+        <meta property="og:image:height" content="675">
+
+        <!-- TARJETA PARA TWITTER//X -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@Luistrevio4">
+        <meta name="twitter:title" content="Tarjeta de LuisTrevio4">
+        <meta name="twitter:description" content="Hola, esta es una tarjeta de presentación de LuisTrevio4.">
+        <meta name="twitter:image" content="http://luistrevio.github.io/bg/background-publised.png">
+
+        <link rel="stylesheet" type="text/css" href="content.css">
+        <link rel="stylesheet" type="text/css" href="svg/svg.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+        <script defer src="js/main.js"></script>
+    </head>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@897&display=swap');
+/*  font-family: "Montserrat", sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* font-family: "Inter", sans-serif; Textos en Detalle*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+*,::after,::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    /* Title */--Montserrat: 'Montserrat', sans-serif;
+    /* Text  */--Helvetica: 'Helvetica', sans-serif;
+    /* Text & Title */--Inter: 'Inter', sans-serif;
+    /* Text  */--Roboto: 'Roboto', sans-serif;
+    /* Decor  */--PlanetKosmos: 'Planet Kosmos';
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    scroll-snap-align: start;
+}
+
+html,body {height: 100%;}
+
+::selection {background-color: var(--select-text);}
+
+input,button,textarea,select {font: inherit;}
+a {text-decoration: none;}
+button {border: none;}
+
+br {
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+body {
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    --shadow-select-color: 0deg 3% 4%;
+    --shadow-select-complex:
+      0.3px 0.5px 0.7px hsl(var(--shadow-select-color) / 0.36),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-select-color) / 0.36),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-select-color) / 0.36),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-select-color) / 0.36);
+
+    --shadow-header-color: 0deg 0% 0%;
+    --shadow-header-complex:
+    0px 0.5px 0.6px hsl(var(--shadow-header-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--shadow-header-color) / 0.36),
+    -0.1px 3.8px 4.3px -1.7px hsl(var(--shadow-header-color) / 0.36),
+    -0.3px 9.2px 10.4px -2.5px hsl(var(--shadow-header-color) / 0.36);
+
+    --shadow-color-orange: 17deg 100% 28%;
+    --shadow-elevation-orange:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color-orange) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-orange) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-orange) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color-orange) / 0.36);
+}
+
+body {
+    /*background: var(--background-bg);*/
+    background-color: var(--background-color);
+    
+    /*Text & Nucleo*/
+    --select-text: #66598c;
+    --white: #e6e6e6;
+    --black: #000000;
+
+    /*Background*/
+    --background-bg: url(../bg/back-background.png) no-repeat center center fixed;
+    --background-color: #0B0A0A;
+    --background: #0B0A0A;
+    --stock-perfil:#120f21;
+    --border-stock-perfil: #4e39b8;
+
+    /*Header*/
+    --header:#15151500;
+    --header-on:#0b0a0a08;
+
+    /*Botones*/
+    --buttons:#292828;
+    --buttons-stock:#66598c21;
+    --buttons-hover:#505050;
+    --buttons-stock-hover:#66598c;
+    --solid-box: var(--buttons);
+
+    --buttons-pop:#0d0d0d;
+
+    --music-progress:#1f1e1e;
+
+    --buttons-proyect:#4c4c4c;
+
+    --techemet-bg:#08102f;
+    --techemet-bg-bar:#05091b;
+    --buttons-proyect-tech:#0E3B6D;
+    --buttons-proyect-tech-hover:#216fc7;
+
+    /*Webkit Bar*/
+    --bg: var(--background);
+    --bar: #66598c;
+    --bg-bar: #2c212c;
+    --bar-hover: #6a4cc5;
+
+    /*Pop*/
+    --bg-pop-old: #2e2e2e;    
+    --bg-pop: #000000a8;
+    --bar-pop: #5b5b5ba8;
+    --white-dn:var(--white);
+
+    --status: #000000;
+    --status-base: #717171;
+
+    /*Hover*/
+    --hover: #5b5b5b;
+    --hover-bar: #ffffff;
+
+    --vscode:#0361a0;
+    --javascript:#796e12;
+    --html5:#9f3214;
+    --css3:rebeccapurple;
+    --react:#146b83;
+    --python:#306998;
+    
+    --nodejs:#026e00;
+
+    --astro-bg: linear-gradient(45deg,
+        hsl(259deg 85% 10%) 0%,hsl(259deg 85% 10%) 8%,hsl(259deg 85% 9%) 17%,hsl(259deg 86% 9%) 25%,
+        hsl(259deg 87% 9%) 33%,hsl(258deg 87% 8%) 42%,hsl(258deg 88% 8%) 50%,hsl(257deg 89% 7%) 58%,
+        hsl(256deg 91% 7%) 67%,hsl(255deg 92% 6%) 75%,hsl(253deg 94% 6%) 83%,hsl(252deg 97% 5%) 92%,
+        hsl(250deg 100% 5%) 100%
+    );
+    --astro-color: #18073b;
+
+    --office365:#d83b01;
+    --excel:#217346;
+    --powerpoint:#b7472a;
+    --word:#2b579a;
+
+    --microsoft-bg: linear-gradient(
+    45deg,hsl(58deg 87% 22%) 0%,hsl(73deg 64% 25%) 8%,hsl(91deg 48% 29%) 17%,hsl(119deg 35% 33%) 25%,hsl(147deg 55% 29%) 33%,hsl(174deg 100% 22%) 42%,hsl(191deg 100% 26%) 50%,hsl(201deg 100% 30%) 58%,hsl(216deg 56% 39%) 67%,hsl(271deg 33% 44%) 75%,hsl(321deg 45% 43%) 83%,hsl(345deg 55% 46%) 92%,hsl(12deg 63% 44%) 100%
+    );
+    --microsoft: #000000;
+
+    --basic: #3f3f3f;
+}
+
+.aurora {
+    background-image: linear-gradient(48deg, 
+    hsl(240deg 23% 50% / 29%) 0%, hsl(268deg 24% 47% / 30%) 8%, 
+    hsl(297deg 24% 44% / 30%) 17%, hsl(321deg 30% 45% / 30%) 25%, 
+    hsl(336deg 34% 46% / 30%) 33%, hsl(348deg 36% 47% / 30%) 42%, 
+    hsl(0deg 35% 47% / 30%) 50%, hsl(14deg 45% 45% / 30%) 58%, 
+    hsl(27deg 54% 42% / 30%) 67%, hsl(39deg 60% 38% / 30%) 75%, 
+    hsl(53deg 60% 35% / 30%) 83%, hsl(74deg 53% 37% / 30%) 92%, 
+    hsl(104deg 41% 44% / 30%) 100%);
+}
+
+.exnor-rainbow {background-image: linear-gradient(
+    45deg,hsl(266deg 77% 36%) 0%,hsl(219deg 100% 35%) 8%,hsl(212deg 100% 35%) 17%,hsl(205deg 100% 31%) 25%,hsl(196deg 100% 26%) 33%,hsl(184deg 100% 21%) 42%,hsl(172deg 78% 23%) 50%,hsl(155deg 83% 24%) 58%,hsl(105deg 56% 29%) 67%,hsl(71deg 100% 23%) 75%,hsl(45deg 100% 29%) 83%,hsl(26deg 100% 39%) 92%,hsl(0deg 100% 50%) 100%
+);}
+
+.gradient {
+    background-image: linear-gradient(45deg,
+      hsl(16deg 88% 25%) 0%,hsl(16deg 90% 30%) 8%,hsl(16deg 92% 34%) 17%,hsl(16deg 94% 38%) 25%,
+      hsl(16deg 96% 42%) 33%,hsl(16deg 98% 46%) 42%,hsl(16deg 100% 50%) 50%,hsl(16deg 99% 48%) 58%,
+      hsl(16deg 98% 46%) 67%,hsl(16deg 97% 44%) 75%,hsl(16deg 96% 42%) 83%,hsl(16deg 95% 40%) 92%,
+      hsl(16deg 94% 38%) 100%
+    );
+
+    animation: scrollx 7s linear infinite;
+    background-size: 300% 300%;
+}
+
+
+@keyframes scrollx {0% {background-position: 0% 0%;}    100% {background-position: 100% 100%;}  }
+.gradient-loading {
+    background-image: linear-gradient(90deg,
+        hsl(0deg 0% 47%) 0%,hsl(344deg 0% 47%) 8%,hsl(344deg 0% 47%) 17%,hsl(0deg 0% 47%) 25%,
+        hsl(344deg 0% 57%) 33%,hsl(344deg 0% 68%) 42%,hsl(0deg 0% 79%) 50%,hsl(344deg 0% 68%) 58%,
+        hsl(344deg 0% 57%) 67%,hsl(0deg 0% 47%) 75%,hsl(344deg 0% 47%) 83%,hsl(344deg 0% 47%) 92%,
+        hsl(0deg 0% 47%) 100%
+    );
+    animation: loading 3s linear infinite forwards;
+    background-size: 450% 300%;
+}
+
+@media screen and (max-width: 780px) {
+    .gradient {background-size: 200% 200%;}
+    .gradient-loading {background-size: 600% 200%;}
+}
+
+@keyframes loading {0% {background-position: 0% 0%;}100% {background-position: 100% 100%;}  }
+    
+body::-webkit-scrollbar {width: 15px;   background: var(--bg);}
+body::-webkit-scrollbar-thumb {border: 3px solid var(--bg); border-radius: 30px;   background: var(--bar); }
+body::-webkit-scrollbar-track {border-radius: 5px;    background: none;}
+
+body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {
+    border: 4px solid var(--bg-bar);
+}
+
+body::-webkit-scrollbar-button:single-button {
+    background-color: var(--bg);
+    display: block;
+    border-style: solid;
+
+    height: 15px;
+    width: 15px;
+
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 7px 7px 7px;
+    border-color: transparent transparent var(--bar) transparent;
+   
+}
+body::-webkit-scrollbar-button:single-button:vertical:decrement:hover {border-color: transparent transparent var(--bar-hover) transparent;}
+
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 7px 7px 0 7px;
+    border-color: var(--bar) transparent transparent transparent;
+}
+body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-color: var(--bar-hover) transparent transparent transparent;}
+
+
+@media (max-width:780px) {
+    .scroll-frost {overflow: hidden;}
+    ::-webkit-scrollbar {display: none;}
+}
+
+.reel-screenshots::-webkit-scrollbar {
+    height: 11px;
+    border-radius: 8px;
+    background: var(--bg);
+}
+
+.reel-screenshots::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid var(--bg);
+    background: var(--bar);
+}
+
+.Techemet-m .reel-screenshots::-webkit-scrollbar {
+    height: 11px;
+    border-radius: 8px;
+    background: var(--techemet-bg-bar);
+}
+
+.Techemet-m .reel-screenshots::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid var(--techemet-bg-bar);
+    background: var(--buttons-proyect-tech);
+}
+
+.reel-screenshots::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: none;
+}
+
+    </style>
+    <body ontouchstart="" class="scr-fr">
+
+        <svg style="display: none">
+      <filter
+        id="glass-distortion"
+        x="0%"
+        y="0%"
+        width="100%"
+        height="100%"
+        filterUnits="objectBoundingBox"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.001 0.005"
+          numOctaves="1"
+          seed="17"
+          result="turbulence"
+        />
+        <!-- Liked Seeds: 5, 14, 17 -->
+
+        <feComponentTransfer in="turbulence" result="mapped">
+          <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+          <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+          <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+        </feComponentTransfer>
+
+        <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+
+        <feSpecularLighting
+          in="softMap"
+          surfaceScale="5"
+          specularConstant="1"
+          specularExponent="100"
+          lighting-color="white"
+          result="specLight"
+        >
+          <fePointLight x="-200" y="-200" z="300" />
+        </feSpecularLighting>
+
+        <feComposite
+          in="specLight"
+          operator="arithmetic"
+          k1="0"
+          k2="1"
+          k3="1"
+          k4="0"
+          result="litImage"
+        />
+
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="softMap"
+          scale="200"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+        <div class="scenario-blur"></div>
+
+        <header class="sar-web">
+            <nav class="sar-web header-safari">
+                <button name="menu-pop" onclick="Dash()" class="button-fever button-scroll block-m vid">
+                    <div class="three-dots">
+                        <span class="bur-1 bar-1 animate"></span>
+                        <span class="bur-2 bar-2 animate"></span>
+                        <span class="bur-3 bar-3 animate"></span>
+                    </div>
+                    <div class="button-text ltext">Menu</div>
+                    
+                </button>
+                <button onclick="Top()" name="button-up" class="button-up top-ani block-up button-scroll vid">
+                    <div class="button-text rtext textright">Inicio</div>
+                    <span class="up up-svg"></span>
+                </button>
+            </nav>
+            <!---<span class="blur-effect off-saf sar-web"></span>-->
+        </header>
+
+        <div class="header-back filter-up">
+            <div class="filter-category">
+                    <div class="content-filter filter-category nav-blur glass-saf ">
+                        <div class="filter-text" data-sort="all">
+                            <div class="icon-filter filter-home"></div>
+                            Inicio
+                        </div>
+                        <div class="filter-text" data-sort="Sitios Web">
+                            <div class="icon-filter filter-web"></div>
+                            Sitios Web
+                        </div>
+                        <div class="filter-text" data-sort="Fotos">
+                            <div class="icon-filter filter-fotos"></div>
+                            Fotos
+                        </div>
+                        <div class="filter-ball slur"></div>
+                    </div>
+            </div>
+        </div>
+
+        <div onclick="Dash()" class="menu-dash menu-dash-up"></div>
+
+        <div class="box-tool box-up">
+            <div class="grid-box grid-up">
+                <a onclick="Dash(), Top()" class="select-box select-up">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_809_2)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="white"/></g><defs><clipPath id="clip0_809_2"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                    </svg> 
+                    Revisar en Github
+                </a>
+                <a onclick="Dash(), Pop(), PopShare()" class="select-box select-up">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 22C16.1667 22 15.4583 21.7083 14.875 21.125C14.2917 20.5417 14 19.8333 14 19C14 18.9 14.025 18.6667 14.075 18.3L7.05 14.2C6.78333 14.45 6.475 14.646 6.125 14.788C5.775 14.93 5.4 15.0007 5 15C4.16667 15 3.45833 14.7083 2.875 14.125C2.29167 13.5417 2 12.8333 2 12C2 11.1667 2.29167 10.4583 2.875 9.875C3.45833 9.29167 4.16667 9 5 9C5.4 9 5.775 9.071 6.125 9.213C6.475 9.355 6.78333 9.55067 7.05 9.8L14.075 5.7C14.0417 5.58333 14.021 5.471 14.013 5.363C14.005 5.255 14.0007 5.134 14 5C14 4.16667 14.2917 3.45833 14.875 2.875C15.4583 2.29167 16.1667 2 17 2C17.8333 2 18.5417 2.29167 19.125 2.875C19.7083 3.45833 20 4.16667 20 5C20 5.83333 19.7083 6.54167 19.125 7.125C18.5417 7.70833 17.8333 8 17 8C16.6 8 16.225 7.929 15.875 7.787C15.525 7.645 15.2167 7.44933 14.95 7.2L7.925 11.3C7.95833 11.4167 7.97933 11.5293 7.988 11.638C7.99667 11.7467 8.00067 11.8673 8 12C7.99933 12.1327 7.99533 12.2537 7.988 12.363C7.98067 12.4723 7.95967 12.5847 7.925 12.7L14.95 16.8C15.2167 16.55 15.525 16.3543 15.875 16.213C16.225 16.0717 16.6 16.0007 17 16C17.8333 16 18.5417 16.2917 19.125 16.875C19.7083 17.4583 20 18.1667 20 19C20 19.8333 19.7083 20.5417 19.125 21.125C18.5417 21.7083 17.8333 22 17 22Z" fill="white"/>
+                    </svg>                        
+                    Compartir link
+                </a>
+                <a onclick="Dash(), Top()" class="select-box select-up Stop-er">
+                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 14.5L12 8.5L18 14.5H6Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>                                               
+                    Ir a Inicio
+                </a>
+                <a onclick="Dash(), Top()" class="select-box select-up">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.824 3.632L12 9.808L18.144 3.664C18.2797 3.51955 18.4432 3.40399 18.6247 3.32426C18.8061 3.24453 19.0018 3.20226 19.2 3.2C19.6243 3.2 20.0313 3.36857 20.3314 3.66863C20.6314 3.96869 20.8 4.37565 20.8 4.8C20.8037 4.99616 20.7673 5.19102 20.693 5.37261C20.6188 5.5542 20.5081 5.7187 20.368 5.856L14.144 12L20.368 18.224C20.6317 18.482 20.7863 18.8313 20.8 19.2C20.8 19.6243 20.6314 20.0313 20.3314 20.3314C20.0313 20.6314 19.6243 20.8 19.2 20.8C18.9961 20.8085 18.7926 20.7744 18.6026 20.7001C18.4125 20.6257 18.24 20.5126 18.096 20.368L12 14.192L5.84 20.352C5.70481 20.4916 5.5433 20.6031 5.3648 20.68C5.1863 20.7569 4.99434 20.7977 4.8 20.8C4.37565 20.8 3.96869 20.6314 3.66863 20.3314C3.36857 20.0313 3.2 19.6243 3.2 19.2C3.19627 19.0038 3.23266 18.809 3.30695 18.6274C3.38124 18.4458 3.49185 18.2813 3.632 18.144L9.856 12L3.632 5.776C3.36829 5.51801 3.21366 5.16866 3.2 4.8C3.2 4.37565 3.36857 3.96869 3.66863 3.66863C3.96869 3.36857 4.37565 3.2 4.8 3.2C5.184 3.2048 5.552 3.36 5.824 3.632Z" fill="#ff4242"/>
+                    </svg>
+                    Denunciar este sitio
+                </a>
+
+                <div class="bumper music-up">
+                    <div class="music-title"><h2>The Hampsterdance Song</h2></div>
+                    <div class="buttons-div">
+                        <button name="play-button" onclick="Back()" class="music-play Back-i icons icon-back back-ani"></button>
+                        <button name="play-button" onclick="Play()" class="music-play Play-i icons icon-play"></button>
+                        <button name="play-button" onclick="Dash(), Volume()" class="music-play Volume-i icons icon-volume"></button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div onclick="Pop()" class="Pop Pop-Exit Pop-md"> <!-- Ventana de fondo para los POPS --> </div>
+
+        <content>
+            <div class="content-center">
+                <div class="window-full">
+
+                    <div class="perfil size-fix">
+                        <div class="svran-bg stock-perfil">
+
+                            <div class="perfil-icon">
+                                <div class=" border-icon dst sar-web ">
+                                    <div class="awi awi2 img img-scroll img-random profile img-saf animate-safari sar-web"></div>
+                                </div>
+                            </div>
+
+                            <div class="height-name">
+                                <div class="nickname name-safari sar-web">
+                                    <span class="color sar-web">@</span><h1 class="nickname-h1 h1-safari sar-web">LuisTrevio4</h1>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <button name="decorative-pop" class="burble-status">🛠️ Ing. Sistemas Computacionales</button>
+                                <button name="decorative-pop" class="burble-status">🎨 Desarrollo Web Amateur</button>
+                                <button name="decorative-pop" class="burble-status">🍕 Pizzero</button>
+                            </div>
+
+                            <div class="redes">
+                                <a href="https://discord.com/users/738824759286169673" class="sub icons discord"></a>
+                                <a href="https://www.instagram.com/trevioluis?igsh=MWhqbmlydTVsdHA0Zg%3D%3D&utm_source=qr" class="sub icons instagram"></a>
+                                <a href="https://x.com/LuisTrevio4" class="sub icons twitter"></a>
+                                <button name="email-pop" onclick="Pop(), PopMail()" class="sub icons email"></button>
+                                <!--
+                                <span class="separate"></span>
+                                <button name="play-button" onclick="Mute()" class="subsub ">
+                                    <span class="sub-volume icons icon-mute bruh"></span>
+                                    <span class="sub-icon Mute icons icon-g bounce-mute"></span>
+                                </button>
+                                -->
+                              
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                    <div class="detalles load">
+                        <div class="stock-detalles">
+    
+                            <div class="section #alert closed">
+                                <div class="square-orange alert-dunot">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M1 21L12 2L23 21H1ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.905 17.52 13.0007 17.2827 13 17C12.9993 16.7173 12.9033 16.48 12.712 16.288C12.5207 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.0967 16.48 11.0007 16.7173 11 17C10.9993 17.2827 11.0953 17.5203 11.288 17.713C11.4807 17.9057 11.718 18.0013 12 18ZM11 15H13V10H11V15Z" fill="white"/>
+                                    </svg>
+                                    <span> &nbsp;
+                                        Por el momento esta pagina esta en medio de desarrollo.</span>    
+                                </div>
+                            </div>
+            
+                            <!-- Div de section -->
+                        
+                            <div class="section #info all" data-sort="all">
+                                <h1>Acerca de mi</h1>
+                                <p>Hola, mi nombre es <b style="font-family: var(--Montserrat);">Luis Trevio</b>, aunque en servidores y juegos muchos me conocen como <b style="font-family: var(--Montserrat);">CheeseBurguer.</b>
+                                    Podría decir que soy patético en el desarrollo web… y a veces también en la vida real. Pero eso no significa que lo sea en todos los ámbitos.
+                                    Estudié la carrera de Ingeniería en Sistemas Computacionales, donde aprendí los conceptos básicos de la programación y los fundamentos de los sistemas. Poco a poco, sigo buscando en qué áreas realmente me destaque.
+                                </p>
+                                    <br><p>Por el momento no tengo proyectos, seguiré en curso aprendiendo lo mas que pueda.</p>
+                            </div>
+                
+                            <div class="section #items all" data-sort="all">
+                                <h1>Desarrollo de Web/Apps</h1>
+                                <div class="flex-items-dev">
+
+                                    <button name="HTML-pop" onclick="Pop(), PopHTML()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons html"></span>
+                                        </span>
+                                        <span class="items-name">HTML</span>
+                                 
+                                    </button>
+
+                                    <button name="CSS-pop" onclick="Pop(), PopCSS()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons css"></span>
+                                        </span>
+                                        <span class="items-name">CSS</span>
+                                    </button>
+
+                                    <button name="JS-pop" onclick="Pop(), PopJS()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons js"></span>
+                                        </span>
+                                        <span class="items-name">Javascript</span>
+                                    </button>
+
+                                    <button name="Python-pop" onclick="Pop(), PopPY()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons py"></span>
+                                        </span>
+                                        <span class="items-name">Python</span>
+                                    </button>
+
+                                    <button name="SQL-pop" onclick="Pop(), PopSQL()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons sql"></span>
+                                        </span>
+                                        <span class="items-name">MySQL</span>
+                                    </button>
+
+                                    <button name="Frameworks" onclick="Pop(), PopFr()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons react"></span>
+                                        </span>
+                                        <span class="items-name">React</span>
+                                    </button>
+
+                                    <button name="Astro-pop" onclick="Pop(), PopAs()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons astro"></span>
+                                        </span>
+                                        <span class="items-name">Astro</span>
+                                    </button>
+
+                                </div>
+                            </div>
+
+                            <div class="section #items all" data-sort="all">
+                                <h1>Herramientas</h1>
+                                <div class="flex-items-dev">
+                                    <button name="VisualStudio-pop" onclick="Pop(), PopVS(), PopMagic()" class="svran-bg items-dev Pop-Magic-O">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons vslogo"></span>
+                                        </span>
+                                        <span class="items-name">Visual Studio</span>
+                                    </button>
+
+                                    <button name="Github-pop" onclick="Pop(), PopGit()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons gh"></span>
+                                        </span>
+                                        <span class="items-name">Github</span>
+                                    </button>
+
+                                    <button name="Figma-pop" onclick="Pop(), PopFig()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons fig"></span>
+                                        </span>
+                                        <span class="items-name">Figma</span>
+                                    </button>
+
+                                    <button name="Office-pop" onclick="Pop(), PopOffice()" class="svran-bg items-dev">
+                                        <span class="items-logo">
+                                            <span class="img-dev icons office"></span>
+                                        </span>
+                                        <span class="items-name">Office 365</span>
+                                    </button>
+
+                                </div>
+                            </div>    
+
+                            <div class="section #repost sitios" data-sort="Sitios Web">
+                                <h1>Sitios Web</h1>
+                                <div class="proyect-box">
+
+                                    <button name="Waltz-pop" onclick="Pop(), PopWaltz()" class="id-proyect proyect-waltz">
+                                        <span class="title-proyect">
+                                            <h2 class="border-title">Waltz</h2>
+                                            <span class="img-proyect enter-svg"></span>
+                                        </span>
+                                    </button>
+                                    <button name="Techemet-pop" onclick="Pop(), PopTech()" class="id-proyect proyect-techemet">
+                                        <span class="title-proyect ">
+                                            <h2 class="border-poptitle">Techemet Demo</h2>
+                                            <span class="img-proyect enter-svg"></span>
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </div>
+                            <p class="property-text">La marca "Techemet" pertenece a una compañia TECHEMET S.A. DE C.V.</p>
+                            
+                            <div class="section #fotos fotos" data-sort="Fotos">
+                                <h1>Coleccion de Fotos✨</h1>
+                                <div class="proyect-box">
+
+                                    <button name="Nerium Fotos✨" data-sort="img1" onclick="Pop(), PopPhoto1()" class="img-burble" >
+                                        <img src="https://luistrevio.github.io/svg/NeriumWP.webp" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
+
+                                     <button name="Nerium Fotos✨" data-sort="img2" onclick="Pop(), PopPhoto1()" class="img-burble " >
+                                        <img src="https://luistrevio.github.io/svg/SeriumWP.avif" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
+            
+                                    <button name="Nerium Fotos✨" data-sort="img3" onclick="Pop(), PopPhoto1()" class="img-burble ">
+                                        <img src="https://luistrevio.github.io/svg/nocheWP.webp" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
+                                    <button name="Nerium Fotos✨" data-sort="img4" onclick="Pop(), PopPhoto1()" class="img-burble ">
+                                        <img src="https://luistrevio.github.io/svg/wawaWP.webp" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <br>
+                                <p class="property-text" >La planta adelfa o también conocida como Nerium Oleander es conocida por sus flores vibrantes y coloridas.</p>
+                            </div>
+
+                            <div class="section #goodbye all" data-sort="all">
+                                <div class="svran-bg goodbye">
+                                    <div class="goodbye-text">
+                                        <p>Hecho con <b class="animate-heart">❤️</b> a todas las personas que me demandaron y no vieron la pagina 🤗</p>
+                                    </div>    
+                                </div>
+                            </div>   
+                       
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </content>
+
+        <div class="flex-pop"><!-- -->
+            <div class="margin-pop-close">
+                <button onclick="Pop()" class="Pop-Close close-up ">
+                    <span class="img-proyect close-svg"></span>Cerrar&nbsp;
+                </button>
+            </div>
+
+            <div class="Pop-VS Pop-VS-O ">
+                <div class="Pop-icon">
+                    <div class="Pop-bubble icons vslogo"></div>
+                </div>
+                <div class="Pop-center"><h2>Visual Studios Code</h2></div>
+                <div class="Pop-text">
+                    Es un editor muy popular, entre Vim y Sublime Text elegi a VS Code por la 
+                    flexibilidad a la hora de trabajar en cualquier dispositivo usando la web de ella.
+                </div>
+                <div class="Pop-center-text">Uso / Habilidad</div>
+                    <div class="Ability vs-color"><div class="Status vs-color St-VS Status-Ani"></div></div>
+                <div class="Pop-center-text">Habilidad con Terminal</div>
+                    <div class="Ability vs-color"><div class="Status vs-color St-Terml Status-Ani"></div></div>
+                      
+            </div>
+
+            <div class="Pop-Git Pop-Git-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons gh"></div></div>
+                <div class="Pop-center"><h2>Github</h2></div>
+                <div class="Pop-text">
+                    Es una plataforma de repositorios bastante buena para controlar las versiones y gestión de proyectos, y a la vez puedo trabajar con ella mediante la conexión de Visual Studios Code.
+                </div>
+                <div class="Pop-center-text">Habilidad con la plataforma</div>
+                    <div class="Ability basic-color">
+                        <div class="Status basic-color St-Git Status-Ani"></div>
+                    </div>
+                <div class="Pop-center-text">GIT</div>
+                    <div class="Ability basic-color">
+                        <div class="Status basic-color St-GitGit Status-Ani"></div>
+                    </div>
+              
+            </div>
+
+            <div class="Pop-Fig Pop-Fig-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons fig"></div></div>
+                <div class="Pop-center"><h2>Figma</h2></div>
+                <div class="Pop-text">
+                    Figma y entre otros programas, lo uso como herramientas visuales para el desarrollo en editor Visual Studios Code, lo que permite programar, diseñar y organizar de manera más eficiente.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability basic-color">
+                        <div class="Status basic-color St-Fig Status-Ani"></div>
+                    </div>
+                
+            </div>
+
+            <div class="Pop-Office Pop-Office-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons office"></div></div>
+                <div class="Pop-center"><h2>Office 365</h2></div>
+                <div class="Pop-text">
+                    Office 365 es una herramienta de oficina que uso para la creación de documentos, presentaciones y hojas de cálculo.
+                </div>
+                <div class="Pop-center-text">Office Word</div>
+                    <div class="Ability microsoft-bg">
+                        <div class="Status microsoft-color St-Word Status-Ani"></div>
+                    </div>
+                <div class="Pop-center-text">Office Excel</div>
+                    <div class="Ability microsoft-bg">
+                        <div class="Status microsoft-color St-Excel Status-Ani"></div>
+                    </div>
+                <div class="Pop-center-text">Office PowerPoint</div>
+                    <div class="Ability microsoft-bg">
+                        <div class="Status microsoft-color St-Power Status-Ani"></div>
+                    </div>
+                
+            </div>
+
+            <div class="Pop-HTML Pop-HTML-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons html"></div></div>
+                <div class="Pop-center"><h2>HTML</h2></div>
+                <div class="Pop-text">
+                    Es el esqueleto base del sitio web, hay algunos framework que experimentan el cambio con HTML
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability html-color"><div class="Status html-color St-HTML Status-Ani"></div></div>
+                
+                <br>
+                <h2>Proyectos relacionados</h2>
+
+                <div class="reel-proyects">
+                    <button onclick="Ommit(), PopWaltz()" class="mini-proyect proyect-waltz">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Waltz</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                    <button onclick="Ommit(), PopTech()"class="mini-proyect proyect-techemet">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Techemet</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="Pop-CSS Pop-CSS-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons css"></div></div>
+                <div class="Pop-center"><h2>CSS</h2></div>
+                <div class="Pop-text">
+                    El CSS es un lenguaje muy complejo, es un lenguaje que permite diseñar y definir una presentación a base de un documento estructurado.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability css-color"><div class="Status css-color St-CSS Status-Ani"></div></div>
+                
+                <br>
+                <h2>Proyectos relacionados</h2>
+
+                <div class="reel-proyects">
+                    <button onclick="Ommit(), PopWaltz()" class="mini-proyect proyect-waltz">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Waltz</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                    <button onclick="Ommit(), PopTech()"class="mini-proyect proyect-techemet">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Techemet</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="Pop-JS Pop-JS-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons js"></div></div>
+                <div class="Pop-center"><h2>Javascript</h2></div>
+                <div class="Pop-text">
+                    Seré franco, no le sé mucho, pero cada etapa aprendo nuevos conocimientos con nuevas herramientas y lenguajes. Javascript haya sido mi mayor reto en aprender y comprender de lo que sucede actualmente en la tecnología.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability js-color"><div class="Status js-color St-JS Status-Ani"></div></div>
+
+                <br>
+                <h2>Proyectos relacionados</h2>
+
+                <div class="reel-proyects">
+                    <button onclick="Ommit(), PopWaltz()" class="mini-proyect proyect-waltz">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Waltz</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                    <button onclick="Ommit(), PopTech()"class="mini-proyect proyect-techemet">
+                        <div class="title-proyect title-proyect-fix">
+                            <h2>Techemet</h2>
+                            <div class="img-proyect enter-svg"></div>
+                        </div>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class="Pop-PY Pop-PY-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons py"></div></div>
+                <div class="Pop-center"><h2>Python</h2></div>
+                <div class="Pop-text">
+                    Tambien uso Python para desarrollo en otros proyectos. Un lenguaje de programación muy querido por la comunidad.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability py-color"><div class="Status py-color St-PY Status-Ani"></div></div>
+                
+            </div>
+
+            <div class="Pop-SQL Pop-SQL-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons sql"></div></div>
+                <div class="Pop-center"><h2>MySQL</h2></div>
+                <div class="Pop-text">
+                    MySQL y otras plataformas de bases de datos ayudan en la gestión de perfiles, aunque en este punto del desarrollo no es mi punto fuerte, por lo que me enfoco más en el diseño. Trabajaré en mejorar en ese aspecto.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability basic-color"><div class="Status basic-color St-SQL Status-Ani"></div></div>
+            
+            </div>
+
+            <div class="Pop-Fr Pop-Fr-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons frame"></div></div>
+                <div class="Pop-center"><h2>Nodos y Frameworks</h2></div>
+                <div class="Pop-text">
+                    Los frameworks y bibliotecas conlleva muchas herramientas que pueden favorecer en el desarrollo de un sitio web de diferentes maneras, aquí muestro los siguientes que he utilizado para distintos proyectos:
+                </div>
+                <div class="Pop-center-text">React</div>
+                    <div class="Ability react-color"><div class="Status react-color St-React Status-Ani"></div></div>
+                <div class="Pop-center-text">Astro.Build</div>
+                    <div class="Ability react-color"><div class="Status react-color St-Astr Status-Ani"></div></div>
+                <div class="Pop-center-text">Node.js</div>
+                    <div class="Ability react-color"><div class="Status react-color St-Node Status-Ani"></div></div>
+        
+            </div>
+
+            <div class="Pop-As Pop-As-O ">
+                <div class="Pop-icon"><div class="Pop-bubble icons astro"></div></div>
+                <div class="Pop-center"><h2>Astro.Build</h2></div>
+                <div class="Pop-text">
+                    Astro es un framework de construcción de sitios web que se enfoca en la velocidad y la simplicidad. Es un proyecto de código abierto que se puede utilizar para crear sitios web estáticos y dinámicos.
+                </div>
+                <div class="Pop-center-text">Habilidad</div>
+                    <div class="Ability astro-bg"><div class="Status astro-color St-Astr Status-Ani"></div></div>
+            </div>
+
+            <div class="Pop-Mail Pop-Mail-O ">
+                <br>
+                <div class="Pop-center"><h2>e-mail</h2></div>
+                <div class="Pop-text">
+                    Puedes contactarme haciendo click en mi correo electronico o tambien <b>Copia y Pegar</b> con el boton que se muestra.
+                </div>
+                <div class="email-tump">
+                    <a href="mailto:luistrevio2002@gmail.com" class="email-text" >luistrevio2002@gmail.com</a>
+                    <button class="email-button button-ar" data-copy=".email-text">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.012 16.737C3.705 16.5626 3.44965 16.31 3.2719 16.0049C3.09415 15.6998 3.00034 15.3531 3 15V5C3 3.9 3.9 3 5 3H15C15.75 3 16.158 3.385 16.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                
+                    </button>
+                </div>
+            </div>
+            <!--
+            <div class="Pop-Warn Pop-Warn-O">
+                <br>
+                <div class="Pop-center"><h2>Aviso</h2></div>
+                <div class="Pop-text">
+                    Esta pagina web no esta terminada, por lo que se recomienda no usarla como una referencia para el desarrollo web.
+                    Ademas puede afectar el redimiento del dispositivo, ya que no esta optimizada para dispositivos moviles, en especial los de gama baja debido a las animaciones que posee.
+                </div><br>
+                <a href="#" class="okbro" onclick="CloseWarn()">
+                    <b>Ya entendi bro.</b>
+                </a>
+                
+            </div>
+            -->
+
+            <div class="Pop-Photo1 Pop-P1-O fade-r">
+                <button class="Pop-Prev icon-left-svg"></button>
+                <div class="carrusel-img">
+                    <img src="svg/NeriumWP.webp" alt="Nerium" class="img1 Photo" width="100%">
+                    <img src="svg/SeriumWP.avif" alt="Negrium" class="img2 Photo" width="100%">
+                    <img src="svg/nocheWP.webp" alt="Negrium" class="img3 Photo" width="100%">
+                    <img src="svg/WawaWP.avif" alt="Wawerium" class="img4 Photo" width="100%">
+                </div>
+                <button class="Pop-Next icon-right-svg"></button>
+                <div class="mini-buttons boat-mini">
+                    <div data-sort="img1" class="nav-img mini-img img1"></div>
+                    <div data-sort="img2" class="nav-img mini-img img2"></div>
+                    <div data-sort="img3" class="nav-img mini-img img3"></div>
+                    <div data-sort="img4" class="nav-img mini-img img4"></div>
+                </div>
+            </div>
+
+            <!--
+                <div class="Pop-Photo4 Pop-P4-O fade-r">
+                <div class="hd-avise">HDR</div>
+                    <img data-sort="img1" loading="lazy" src="svg/NeriumWP.webp" alt="Nerium" class="Photo" width="100%">
+                    <img data-sort="img2" loading="lazy" src="svg/SeriumWP.avif" alt="Negrium" class="Photo" width="100%">
+                    <img data-sort="img3" loading="lazy" src="svg/nocheWP.webp" alt="Negrium" class="Photo" width="100%">
+                    <img data-sort="img4" loading="lazy" src="svg/WawaWP.avif" alt="Wawerium" class="Photo" width="100%">
+                <button onclick="Ommit3() ,PopPhoto3()" class="Pop-Prev icon-left-svg"></button>
+                <div class="mini-buttons">
+                    <div onclick="Ommit3() ,PopPhoto1()" class="mini-img img1"></div>
+                    <div onclick="Ommit3() ,PopPhoto2()" class="mini-img img2"></div>
+                    <div onclick="Ommit3() ,PopPhoto3()" class="mini-img img3"></div>
+                    <div onclick="Ommit3() ,PopPhoto4()" class="selected-img mini-img img4"></div>
+                </div>
+            </div>
+            -->
+
+            <div class="Pop-Share Pop-Share-O ">
+                <br>
+                <div class="Pop-center"><h2>Compartir Link</h2></div>
+                <div class="wallpaper">
+                    <div class="wallpaper-front"></div>
+                </div>
+                <div class="email-tump">
+                    <a href="https://luistrevio.github.io/" class="email-text2" >https://luistrevio.github.io/</a>
+                    <button class="email-button button-ar" data-copy=".email-text2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.012 16.737C3.705 16.5626 3.44965 16.31 3.2719 16.0049C3.09415 15.6998 3.00034 15.3531 3 15V5C3 3.9 3.9 3 5 3H15C15.75 3 16.158 3.385 16.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                
+                    </button>
+                </div>
+                <div class="reels-socialmedia">
+                    <a href="sms:?&body=Visita%20mi%20pagina%20web%20https://luistrevio.github.io/" class="socialmedia icons email sms-saf"></a>
+                    <a href="https://twitter.com/intent/tweet?text=Visita%20mi%20pagina%20web%20https://luistrevio.github.io/" class="socialmedia icons twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://luistrevio.github.io/" class="socialmedia icons facebook"></a>
+                    <a href="https://api.whatsapp.com/send?text=Visita%20mi%20pagina%20web%20https://luistrevio.github.io/" class="socialmedia icons whatsapp"></a>
+                    <a href="https://www.reddit.com/submit?url=https://luistrevio.github.io/&title=Visita%20mi%20pagina%20web" class="socialmedia icons reddit"></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://luistrevio.github.io/" class="socialmedia icons linkedin"></a>
+                    <a href="https://t.me/share/url?url=https://luistrevio.github.io/&text=Visita%20mi%20pagina%20web" class="socialmedia icons telegram"></a>
+                </div>
+            </div>
+
+
+            <div class="Pop-Waltz Waltz Pop-Waltz-O ">
+                <div onclick="Pop()" class="click-here"></div>
+                <div class="Pop-enge Waltz-m">
+                    <div class="Pop-icon icon-late icon-left">
+                        <div class=" Pop-bubble icon-bar Waltz Waltz-m waltz-icon"></div>
+                    </div>
+                    <div class="Pop-text center-text-mobile"><h1>Waltz</h1></div>
+                <div class="tags-proyect">
+                    <div onclick="Ommit2(), PopHTML()" class="tags htmlcolortag">HTML</div>
+                    <div onclick="Ommit2(), PopCSS()" class="tags csscolortag">CSS</div>
+                    <div onclick="Ommit2(), PopJS()" class="tags jscolortag">Javascript</div>
+                </div>
+                <div class="Pop-text center-text-mobile text-amount">
+                    Mi primer portafolio y sitio web con una marca ficticia, en la cual puedo estar arrepentido.
+                </div>
+                <div class="buttons-role">
+                    <a href="https://luistrevio.github.io/waltz-1/" class="link-page link-waltz">Visitar&nbsp;
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.45793 5.76875C6.72142 4.99725 7.21969 4.32752 7.88293 3.85342C8.54616 3.37932 9.34111 3.12462 10.1564 3.125H17.9689C19.0049 3.125 19.9984 3.53655 20.731 4.26911C21.4636 5.00168 21.8751 5.99525 21.8751 7.03125V14.8437C21.8751 16.5594 20.7689 18.0156 19.2314 18.5422V19.1109C19.2314 19.6344 19.0486 20.3031 18.6189 20.8547C18.1673 21.4359 17.4501 21.875 16.4673 21.875H7.45168C6.88227 21.8789 6.31776 21.7697 5.79095 21.5536C5.26414 21.3374 4.78554 21.0187 4.38298 20.616C3.98041 20.2133 3.6619 19.7346 3.44596 19.2077C3.23002 18.6808 3.12096 18.1163 3.12511 17.5469V8.53594C3.12511 7.67812 3.43293 6.96406 3.97824 6.46875C4.50949 5.98594 5.2048 5.77031 5.88918 5.77031L6.45793 5.76875ZM6.25011 7.33125H5.89074C5.57652 7.31717 5.26854 7.42206 5.02824 7.625C4.84386 7.79219 4.68761 8.06875 4.68761 8.53437V17.5484C4.68761 19.1 5.90011 20.3141 7.45324 20.3141H16.4673C16.9345 20.3141 17.2079 20.125 17.3861 19.8953C17.5569 19.6683 17.6549 19.3948 17.6673 19.1109V18.75H10.1564C9.12036 18.75 8.12679 18.3384 7.39423 17.6059C6.66166 16.8733 6.25011 15.8798 6.25011 14.8437V7.33125ZM12.5001 9.375H14.5204L10.3845 13.5094C10.3119 13.582 10.2542 13.6682 10.2149 13.7632C10.1756 13.8581 10.1554 13.9598 10.1554 14.0625C10.1554 14.1652 10.1756 14.2669 10.2149 14.3618C10.2542 14.4568 10.3119 14.543 10.3845 14.6156C10.4571 14.6883 10.5434 14.7459 10.6383 14.7852C10.7332 14.8245 10.8349 14.8447 10.9376 14.8447C11.0403 14.8447 11.1421 14.8245 11.237 14.7852C11.3319 14.7459 11.4181 14.6883 11.4907 14.6156L15.6251 10.4797V12.5C15.6251 12.7072 15.7074 12.9059 15.8539 13.0524C16.0004 13.1989 16.1992 13.2812 16.4064 13.2812C16.6136 13.2812 16.8123 13.1989 16.9588 13.0524C17.1053 12.9059 17.1876 12.7072 17.1876 12.5V8.59375C17.1876 8.38655 17.1053 8.18784 16.9588 8.04132C16.8123 7.89481 16.6136 7.8125 16.4064 7.8125H12.5001C12.2929 7.8125 12.0942 7.89481 11.9477 8.04132C11.8012 8.18784 11.7189 8.38655 11.7189 8.59375C11.7189 8.80095 11.8012 8.99966 11.9477 9.14618C12.0942 9.29269 12.2929 9.375 12.5001 9.375Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/LuisTrevio/waltz-1" class="link-github link-waltz">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_809_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="white"/></g><defs><clipPath id="clip0_809_2"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                        </svg>    
+                    </a>
+                </div>
+
+                <h2 class="center-text-mobile">Capturas del proyecto</h2>
+
+                <button class="slider-left icon-left-svg" type="button"></button>
+
+                <div class="reel-screenshots">
+                    <div class="screenshots link-waltz wt-1"></div>
+                    <div class="screenshots link-waltz wt-2"></div>
+                    <div class="screenshots link-waltz wt-3"></div>
+                    <div class="screenshots link-waltz wt-4"></div>
+                </div>
+      
+                <button class="slider-right icon-right-svg" type="button"></button>
+
+                </div>
+            </div>
+
+            <div class="Pop-Tech Techemet Pop-Tech-O ">
+                <div onclick="Pop()" class="click-here"></div>
+            <div class="Pop-enge Techemet-m">
+                <div class="Pop-icon icon-late icon-left"><div class="Pop-bubble icon-bar Techemet Techemet-m tech-icon"></div></div>
+                <div class="Pop-text center-text-mobile"><h1 class="text-amount-h2">Techemet Demo</h1></div>
+            <div class="tags-proyect">
+                <div onclick="Ommit2(), PopHTML()" class="tags htmlcolortag">HTML</div>
+                <div onclick="Ommit2(), PopCSS()" class="tags csscolortag">CSS</div>
+                <div onclick="Ommit2(), PopJS()" class="tags jscolortag">Javascript</div>
+            </div>
+            <div class="Pop-text center-text-mobile text-amount">
+                Esta página es un rediseño de la original de Techemet©, con algunos cambios en el aspecto como el menú, los botones y otras funciones.            </div>
+            <div class="buttons-role">
+                <a href="https://luistrevio.github.io/teste/" class="link-page link-tech ">Visitar&nbsp;
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.45793 5.76875C6.72142 4.99725 7.21969 4.32752 7.88293 3.85342C8.54616 3.37932 9.34111 3.12462 10.1564 3.125H17.9689C19.0049 3.125 19.9984 3.53655 20.731 4.26911C21.4636 5.00168 21.8751 5.99525 21.8751 7.03125V14.8437C21.8751 16.5594 20.7689 18.0156 19.2314 18.5422V19.1109C19.2314 19.6344 19.0486 20.3031 18.6189 20.8547C18.1673 21.4359 17.4501 21.875 16.4673 21.875H7.45168C6.88227 21.8789 6.31776 21.7697 5.79095 21.5536C5.26414 21.3374 4.78554 21.0187 4.38298 20.616C3.98041 20.2133 3.6619 19.7346 3.44596 19.2077C3.23002 18.6808 3.12096 18.1163 3.12511 17.5469V8.53594C3.12511 7.67812 3.43293 6.96406 3.97824 6.46875C4.50949 5.98594 5.2048 5.77031 5.88918 5.77031L6.45793 5.76875ZM6.25011 7.33125H5.89074C5.57652 7.31717 5.26854 7.42206 5.02824 7.625C4.84386 7.79219 4.68761 8.06875 4.68761 8.53437V17.5484C4.68761 19.1 5.90011 20.3141 7.45324 20.3141H16.4673C16.9345 20.3141 17.2079 20.125 17.3861 19.8953C17.5569 19.6683 17.6549 19.3948 17.6673 19.1109V18.75H10.1564C9.12036 18.75 8.12679 18.3384 7.39423 17.6059C6.66166 16.8733 6.25011 15.8798 6.25011 14.8437V7.33125ZM12.5001 9.375H14.5204L10.3845 13.5094C10.3119 13.582 10.2542 13.6682 10.2149 13.7632C10.1756 13.8581 10.1554 13.9598 10.1554 14.0625C10.1554 14.1652 10.1756 14.2669 10.2149 14.3618C10.2542 14.4568 10.3119 14.543 10.3845 14.6156C10.4571 14.6883 10.5434 14.7459 10.6383 14.7852C10.7332 14.8245 10.8349 14.8447 10.9376 14.8447C11.0403 14.8447 11.1421 14.8245 11.237 14.7852C11.3319 14.7459 11.4181 14.6883 11.4907 14.6156L15.6251 10.4797V12.5C15.6251 12.7072 15.7074 12.9059 15.8539 13.0524C16.0004 13.1989 16.1992 13.2812 16.4064 13.2812C16.6136 13.2812 16.8123 13.1989 16.9588 13.0524C17.1053 12.9059 17.1876 12.7072 17.1876 12.5V8.59375C17.1876 8.38655 17.1053 8.18784 16.9588 8.04132C16.8123 7.89481 16.6136 7.8125 16.4064 7.8125H12.5001C12.2929 7.8125 12.0942 7.89481 11.9477 8.04132C11.8012 8.18784 11.7189 8.38655 11.7189 8.59375C11.7189 8.80095 11.8012 8.99966 11.9477 9.14618C12.0942 9.29269 12.2929 9.375 12.5001 9.375Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/LuisTrevio/teste" class="link-github link-tech">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_809_2)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="white"/></g><defs><clipPath id="clip0_809_2"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                    </svg>                        
+                </a>
+                <a href="https://www.figma.com/design/pc3IudZ2dLZTDThuvZ9peI/TECHEMET-Dise%C3%B1o-de-Prueba?node-id=0-1&p=f&t=bCMDUbcGYdrB5lci-0" class="link-github link-tech">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_814_2)">
+                        <mask id="mask0_814_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                        <path d="M0 0H24V24H0V0Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_814_2)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.415 0C5.968 0 4 2.053 4 4.568C4 6.097 4.728 7.455 5.847 8.284C5.27028 8.71609 4.80281 9.27728 4.48207 9.92259C4.16132 10.5679 3.99622 11.2794 4 12C4 13.53 4.728 14.887 5.847 15.716C5.27028 16.1481 4.80281 16.7093 4.48207 17.3546C4.16132 17.9999 3.99622 18.7114 4 19.432C4 21.947 5.968 24 8.415 24C10.861 24 12.83 21.947 12.83 19.432V15.57C13.6033 16.2148 14.5781 16.5683 15.585 16.569C18.032 16.568 20 14.515 20 12C20.004 11.2793 19.839 10.5678 19.5183 9.92243C19.1975 9.27708 18.7299 8.71592 18.153 8.284C18.7297 7.85191 19.1972 7.29072 19.5179 6.64541C19.8387 6.0001 20.0038 5.28862 20 4.568C20 2.053 18.032 0 15.585 0H8.415V0ZM5.659 4.568C5.659 2.977 6.901 1.703 8.415 1.703H11.17V7.433H8.415C6.901 7.433 5.659 6.158 5.659 4.568V4.568ZM15.585 7.432H12.83V1.702H15.585C17.1 1.702 18.341 2.977 18.341 4.568C18.341 6.158 17.1 7.432 15.585 7.432ZM5.66 12C5.66 10.41 6.902 9.135 8.416 9.135H11.171V14.865H8.415C6.9 14.865 5.659 13.59 5.659 12H5.66ZM12.83 12C12.83 10.41 14.072 9.135 15.586 9.135C17.101 9.135 18.342 10.409 18.342 12C18.342 13.59 17.101 14.865 15.586 14.865C14.072 14.865 12.831 13.591 12.831 12H12.83ZM5.66 19.432C5.66 17.842 6.902 16.568 8.416 16.568H11.171V19.432C11.171 21.023 9.931 22.297 8.416 22.297C6.902 22.297 5.66 21.023 5.66 19.432Z" fill="white"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_814_2">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>                                              
+                </a>
+            </div>
+                <h2 class="center-text-mobile">Capturas del proyecto</h2>
+
+                <button class="slider-left icon-left-svg ileft" type="button"></button>
+
+                <div class="reel-screenshots">
+                    <div class="screenshots link-tech tch-1"></div>
+                    <div class="screenshots link-tech tch-2"></div>
+                    <div class="screenshots link-tech tch-3"></div>
+                    <div class="screenshots link-tech tch-4"></div>
+                </div>
+               
+                <button class="slider-right icon-right-svg iright" type="button"></button>
+            </div>
+
+        </div>
+
+        </div>
+
+    </body>
+
+</html>
