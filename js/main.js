@@ -186,7 +186,7 @@ function Pop() {
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
         'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Flex-Out', 'Pop-Magic-Out', 
-        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
+        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -197,6 +197,7 @@ function Pop() {
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
+    document.querySelector('.Pop-Store').scrollTop = 0;
     
     document.querySelector('.reels-socialmedia').scrollLeft = 0;
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.remove('trans-img-off')});
@@ -220,6 +221,7 @@ const popFunctions = [
     ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
     ['PopWarn', 'Pop-Warn-O', 'Pop-Warn-Out'],
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
+    ['PopStore', 'Pop-Store-O', 'Pop-Store-Out'],
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out'],
     ['PopPhoto1', 'Pop-P1-O', 'Pop-P1-Out'],
@@ -306,7 +308,7 @@ function Ommit() {
 
 function Ommit2() {
     const classesToRemove = [
-        'Pop-Waltz-Out', 'Pop-Tech-Out'
+        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -317,6 +319,7 @@ function Ommit2() {
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
+    document.querySelector('.Pop-Store').scrollTop = 0;
 }
 
 function Ommit3() {

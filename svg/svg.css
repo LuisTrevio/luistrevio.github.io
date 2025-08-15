@@ -99,6 +99,7 @@
 
 .proyect-waltz {background-image: url(-proyect-waltz.svg);}
 .proyect-techemet {background-image: url(-proyect-techmet.svg);}
+.proyect-store {background-image: url(rt.svg); }
 
 .enter-svg {background-image: url(iconamoon_enter-bold.svg);}
 .gallery-svg {background-image: url(gallery.svg);}
@@ -112,6 +113,11 @@
 .tch-2 {background-image: url(tech-sc2.webp);}
 .tch-3 {background-image: url(tech-sc3.webp);}
 .tch-4 {background-image: url(tech-sc4.webp);}
+
+.st-1 {background-image: url(st-1.svg);}
+.st-2 {background-image: url(st-2.svg);}
+.st-3 {background-image: url(st-3.svg);}
+.st-4 {background-image: url(st-04.webp);}
 
 .pizzalok {background-image: url(pizzaloklogo.png);}
 
@@ -210,6 +216,13 @@
     background-repeat: no-repeat;
 }
 
+.store-icon {
+    background-image: url(poplogo.svg);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+}
+
 .icon-left-svg {
     background-image: url(left.svg);
     background-position: center;
@@ -226,7 +239,7 @@
 
 .icon-filter {
     background-position: center;
-    background-size: 80% 80%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 
     width: 30px;
@@ -235,6 +248,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3px;
 
     transition: 0.2s ease-out;
 }
