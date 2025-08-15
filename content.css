@@ -512,6 +512,8 @@ nav {
     border: 1.6px solid #b0acac;
     transform: translate(150px, 0);
     backdrop-filter: blur(10px);
+
+    user-select: none;
 }
 
 @media (max-width: 780px) {
@@ -583,6 +585,9 @@ nav {
     z-index: 3;
 
     user-select: none;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 @media (max-width: 780px) {
