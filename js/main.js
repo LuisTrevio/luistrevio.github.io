@@ -185,7 +185,7 @@ function Pop() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
-        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Flex-Out', 'Pop-Magic-Out', 
+        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Report-Out', ,'Pop-Flex-Out', 'Pop-Magic-Out', 
         'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
@@ -223,6 +223,7 @@ const popFunctions = [
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
     ['PopStore', 'Pop-Store-O', 'Pop-Store-Out'],
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
+    ['PopReport', 'Pop-Report-O', 'Pop-Report-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out'],
     ['PopPhoto1', 'Pop-P1-O', 'Pop-P1-Out'],
     ['PopPhoto2', 'Pop-P2-O', 'Pop-P2-Out'],
@@ -296,7 +297,7 @@ document.addEventListener('keydown', (event) => {
 function Ommit() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
-        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out', 'Pop-Share-Out',
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out', 'Pop-Share-Out','Pop-Report-Out',
     ];
 
     classesToRemove.forEach(className => {
@@ -642,3 +643,10 @@ containers2.forEach(container2 => {
         }
     });
 });
+
+function ReportFake() {
+    document.querySelector('.congratu-bla').style.display = 'flex';
+    document.querySelector('.button-report-ok').style.display = 'flex';
+    document.querySelector('.report-grid').style.display = 'none';
+    document.querySelector('.button-report-send').style.display = "none";
+}
