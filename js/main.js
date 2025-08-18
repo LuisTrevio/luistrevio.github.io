@@ -32,6 +32,46 @@ window.addEventListener("scroll", () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const images = Array.from(document.querySelectorAll('.Photos'));
+    let loaded = 0;
+    let maxHeight = 0;
+
+    function setCarruselHeight() {
+        document.querySelector('.carrusel-img').forEach(container => {
+            container.style.height = `${maxHeight}px`;
+        });
+    }
+
+    images.forEach(img => {
+        function checkHeight() {
+            if (img.naturalHeight > maxHeight) {
+                maxHeight = img.naturalHeight;
+            }
+            loaded++;
+            if (loaded === images.length) {
+                setCarruselHeight();
+            }
+        }
+        if (img.complete) {
+            checkHeight();
+        } else {
+            img.addEventListener('load', checkHeight);
+        }
+    });
+
+    document.querySelectorAll('.Photos').forEach(img => {
+        // Espera a que la imagen cargue si aún no está cargada
+        if (img.complete) {
+            console.log(`Imagen: ${img.src} - Ancho: ${img.naturalWidth}px, Alto: ${img.naturalHeight}px`);
+        } else {
+            img.addEventListener('load', () => {
+                console.log(`Imagen: ${img.src} - Ancho: ${img.naturalWidth}px, Alto: ${img.naturalHeight}px`);
+            });
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger,ScrollSmoother)
     let smoother = ScrollSmoother.create({
@@ -186,7 +226,7 @@ function Pop() {
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
         'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Report-Out', ,'Pop-Flex-Out', 'Pop-Magic-Out', 
-        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
+        'Pop-Waltz-Out', 'Pop-Waltz2-Out',, 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -196,6 +236,7 @@ function Pop() {
     });
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
+    document.querySelector('.Pop-Waltz2').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
     document.querySelector('.Pop-Store').scrollTop = 0;
     
@@ -221,6 +262,7 @@ const popFunctions = [
     ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
     ['PopWarn', 'Pop-Warn-O', 'Pop-Warn-Out'],
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
+    ['PopWaltz2', 'Pop-Waltz2-O', 'Pop-Waltz2-Out'],
     ['PopStore', 'Pop-Store-O', 'Pop-Store-Out'],
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopReport', 'Pop-Report-O', 'Pop-Report-Out'],
@@ -309,7 +351,7 @@ function Ommit() {
 
 function Ommit2() {
     const classesToRemove = [
-        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out'
+        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-Waltz2-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -319,6 +361,7 @@ function Ommit2() {
     });
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
+    document.querySelector('.Pop-Waltz2').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
     document.querySelector('.Pop-Store').scrollTop = 0;
 }
@@ -643,6 +686,8 @@ containers2.forEach(container2 => {
         }
     });
 });
+
+
 
 function ReportFake() {
     document.querySelector('.congratu-bla').style.display = 'flex';
