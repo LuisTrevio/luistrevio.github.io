@@ -66,7 +66,7 @@ nav {
         /**border-bottom: 1px solid #444444;    **/
         border-bottom: none;    
     }
-    
+
     .off-safari {display: none;}
 
     @keyframes reveal {
@@ -469,6 +469,11 @@ nav {
         top: auto;
         bottom: 0;
         align-items: center;
+    }
+
+    .header-hide {
+    transform: translateY(100%);
+    opacity: 0.5;
     }
 }
 

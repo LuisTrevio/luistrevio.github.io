@@ -1,6 +1,9 @@
-        let headerbg = false
+let headerbg = false
 let LastScrollY = 170
 let NavLastScrollY = 30
+let lastHeaderScroll = window.scrollY;
+const header = document.querySelector('.header-back'); // Cambia el selector si tu header es diferente
+
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
 
@@ -13,6 +16,7 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
         document.querySelectorAll('.rtext').forEach((result) => { result.classList.add('rtext-on');})
         headerbg = true
+        
     } else { 
         
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
@@ -21,6 +25,7 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
        
         headerbg = false
+        
     }
 });
 
@@ -31,6 +36,7 @@ window.addEventListener("scroll", () => {
         document.querySelectorAll('.nav-blur').forEach((result) => { result.classList.remove('nav-blur-off');})
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const images = Array.from(document.querySelectorAll('.Photos'));
@@ -124,7 +130,30 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             });
         });
     });
+
+    window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastHeaderScroll && currentScroll > 50) {
+        header && header.classList.remove('header-hide');
+    } else {
+        header && header.classList.add('header-hide');
+    }
+    lastHeaderScroll = currentScroll;
+    });
 }
+
+else {
+    window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastHeaderScroll && currentScroll > 50) {
+        header && header.classList.add('header-hide');
+    } else {
+        header && header.classList.remove('header-hide');
+    }
+    lastHeaderScroll = currentScroll;
+});
+}
+
 
 let LastScrollY2 = 0
 window.addEventListener("scroll", () => {
