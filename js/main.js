@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
    
 });
 
-
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
@@ -132,13 +131,17 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
     });
 
     window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > lastHeaderScroll && currentScroll > 50) {
+    
+    if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
+    else {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastHeaderScroll && currentScroll > 50) {
         header && header.classList.remove('header-hide');
-    } else {
+        } else {
         header && header.classList.add('header-hide');
-    }
-    lastHeaderScroll = currentScroll;
+        }
+        lastHeaderScroll = currentScroll;
+    };
     });
 }
 
@@ -599,6 +602,7 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
     document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
     document.querySelector('.filter-fotos').style.filter = 'brightness(1)';
     document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
+
 });
 
 document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
