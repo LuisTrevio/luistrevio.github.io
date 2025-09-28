@@ -147,14 +147,18 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
 
 else {
     window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > lastHeaderScroll && currentScroll > 50) {
+    
+    if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
+    else {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastHeaderScroll && currentScroll > 50) {
         header && header.classList.add('header-hide');
-    } else {
+        } else {
         header && header.classList.remove('header-hide');
-    }
-    lastHeaderScroll = currentScroll;
-});
+        }
+        lastHeaderScroll = currentScroll;
+    };
+    });
 }
 
 
