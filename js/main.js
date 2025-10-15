@@ -2,7 +2,9 @@ let headerbg = false
 let LastScrollY = 170
 let NavLastScrollY = 30
 let lastHeaderScroll = window.scrollY;
-const header = document.querySelector('.header-back'); // Cambia el selector si tu header es diferente
+const header = document.querySelector('.header-back');
+const mapbtn = document.querySelector('.map-back');
+// Cambia el selector si tu header es diferente
 
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
@@ -137,10 +139,13 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         const currentScroll = window.scrollY;
         if (currentScroll > lastHeaderScroll && currentScroll > 50) {
         header && header.classList.remove('header-hide');
+        mapbtn && mapbtn.classList.remove('header-hide');
         } else {
         header && header.classList.add('header-hide');
+        mapbtn && mapbtn.classList.add('header-hide');
         }
         lastHeaderScroll = currentScroll;
+        
     };
     });
 }
@@ -153,8 +158,10 @@ else {
         const currentScroll = window.scrollY;
         if (currentScroll > lastHeaderScroll && currentScroll > 50) {
         header && header.classList.add('header-hide');
+        mapbtn && mapbtn.classList.add('header-hide');
         } else {
         header && header.classList.remove('header-hide');
+        mapbtn && mapbtn.classList.remove('header-hide');
         }
         lastHeaderScroll = currentScroll;
     };
@@ -220,14 +227,20 @@ function Dash() {
         ['.select-up', 'select-ani-up'],
         ['.music-up', 'music-dash-up'],
         ['.block-up', 'top-block-up'],
-        ['.filter-up', 'filter-block-up']
+        ['.filter-up', 'filter-block-up'],
+        ['.map-vis', 'map-visible'],
     ];
 
     toggleClasses.forEach(([selector, className]) => {
         document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
     });
 
-
+    if(LastScrollY < window.scrollY) {
+        document.querySelectorAll('.img-scroll-inv').forEach(result => result.classList.remove('invisible'));
+    }
+    else {
+        document.querySelectorAll('.img-scroll-inv').forEach(result => result.classList.toggle('invisible'));
+    }
 }
 
 //Menu de desplazamiento hacia arriba (Mobile)
@@ -542,6 +555,9 @@ window.addEventListener('load', () => {
     document.querySelector('.filter-home').style.filter = 'brightness(1)';
         document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
         document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
+
+        document.querySelectorAll('.home-menu').forEach((result) => { result.classList.add('home-menu-blu');});
+    document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.add('map-on');});
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -594,6 +610,8 @@ document.querySelector('.filter-text[data-sort="all"]').addEventListener('click'
         document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
         document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
     });
+    document.querySelectorAll('.home-menu').forEach((result) => { result.classList.add('home-menu-blu');});
+    document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.add('map-on');});
 });
 
 document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('click', () => {
@@ -606,7 +624,8 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
     document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
     document.querySelector('.filter-fotos').style.filter = 'brightness(1)';
     document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
-
+    document.querySelectorAll('.home-menu').forEach((result) => { result.classList.remove('home-menu-blu');});
+    document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.remove('map-on');});
 });
 
 document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
@@ -619,6 +638,8 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
     document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
     document.querySelector('.filter-fotos').style.filter = 'brightness(0.5)';
     document.querySelector('.filter-web').style.filter = 'brightness(1)';
+    document.querySelectorAll('.home-menu').forEach((result) => { result.classList.remove('home-menu-blu');});
+    document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.remove('map-on');});
 });
 
 document.querySelectorAll('.nav-img').forEach((img) => {

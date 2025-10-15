@@ -253,6 +253,22 @@
     transition: 0.2s ease-out;
 }
 
+.menu-svg {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 30px;
+    height: 30px;
+
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3px;
+
+    transition: 0.2s ease-out;
+    background-image: url(menu-svg.svg);
+}
+
 .filter-home {background-image: url(homero.svg);}
 .filter-fotos {background-image: url(photo.svg);}
 .filter-web {background-image: url(web.svg);}
