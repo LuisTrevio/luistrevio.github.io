@@ -663,10 +663,7 @@ nav {
     100% {transform: rotate(0deg);}
 }
 
-.home-menu-blu {
-    opacity: 0;
-    pointer-events: none;
-}
+.map-menu {display: none;}
 
 @media (max-width: 780px) {
     .map-menu {
@@ -695,6 +692,11 @@ nav {
     pointer-events: none;
 
     transition: 0.2s ease-out;
+}
+
+.home-menu-blu {
+    opacity: 0;
+    pointer-events: none;
 }
 
     .map-on {

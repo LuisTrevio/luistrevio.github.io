@@ -131,7 +131,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             });
         });
     });
-
+    
     window.addEventListener('scroll', () => {
     
     if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
@@ -382,7 +382,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-//function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
+function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
 
 //PopUp de las Habilidades pero de Omitir
 function Ommit() {
