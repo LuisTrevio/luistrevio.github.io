@@ -702,6 +702,11 @@ nav {
     .map-on {
         opacity: 1;
         pointer-events: all;
+        
+    }
+
+    .map-on > .menu-svg {
+         animation: slideup-svg2 0.45s ease-in-out;
     }
 
     .map-visible {

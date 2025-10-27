@@ -131,7 +131,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             });
         });
     });
-    
+    /** 
     window.addEventListener('scroll', () => {
     
     if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
@@ -147,9 +147,9 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         lastHeaderScroll = currentScroll;
         
     };
-    });
+    });*/
 }
-
+/** 
 else {
     window.addEventListener('scroll', () => {
     
@@ -166,7 +166,7 @@ else {
         lastHeaderScroll = currentScroll;
     };
     });
-}
+}*/
 
 
 let LastScrollY2 = 0
