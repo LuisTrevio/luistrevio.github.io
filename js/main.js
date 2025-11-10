@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
    
 });
-
+/* 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     
@@ -218,21 +218,10 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         lastHeaderScroll = currentScroll;
         
     };
-    });*/
+    });
 }
 
 
-isIOSAtLeast(26).then(is26 => {
-    if (is26) {
-        // comportamiento específico para iOS 26
-        safariClasses.forEach(([selector, className]) => {
-        document.querySelectorAll(selector).forEach(result => result.classList.remove(className));
-    });
-    } else {
-        console.log('No iOS 26+ o no detectado');
-    }
-});
-/** 
 else {
     window.addEventListener('scroll', () => {
     
