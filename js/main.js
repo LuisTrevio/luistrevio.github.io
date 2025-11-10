@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (window.innerWidth <= 786) { smoother.kill(); document.querySelector('.stock-detalles').style.padding = '0px';}
    
 });
-/* 
+ 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     
@@ -169,6 +169,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         });
         }
     });
+
+}
 /** POR SI ACASO */ /*
     const safariClasses = [
         ['.sar-web', 'sar-on'],
@@ -200,7 +202,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
             });
         });
     });
-*/ /*  AQUI EL CASO */
+ /*  AQUI EL CASO */
 
     /** 
     window.addEventListener('scroll', () => {
