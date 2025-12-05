@@ -2005,7 +2005,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     background-size: 50% 50%;
     background-repeat: no-repeat;
 
-    transition: 0.195s cubic-bezier(.4,0,.2,1);
+    transition: 0.295s cubic-bezier(.4,0,.2,1), background-color 0.2s ease-out, border 0.2s ease-out;
 }
 
 .Pop-Close-Up {
@@ -2020,7 +2020,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     .Pop {backdrop-filter: blur(1rem);}
     .margin-pop-close {padding: 0 15px;}
     .Pop-Close {transform: translateY(15px) scale(0.92); filter: blur(5px);}
-    .Pop-Close-Up {transform: translateY(15px) scale(1); filter: blur(0);}
+    .Pop-Close-Up {transform: translateY(15px) scale(1); filter: blur(0); transition-delay: 1ms;}
     .Pop-Close:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
     .Pop-Close:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 }
