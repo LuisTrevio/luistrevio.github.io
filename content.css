@@ -530,7 +530,7 @@ nav {
 
         padding: 6px 2px;
         transform: translate(0, 0);
-        background-color: #000000;
+        background-color: var(--content-filter);
             backdrop-filter:none;-webkit-backdrop-filter:none;
 
         transition: 0.2s ease-out;
@@ -551,7 +551,7 @@ nav {
     }
 
     .content-filter.nav-blur-off {
-        backdrop-filter:url(#glass-distortion);-webkit-backdrop-filter:url(#glass-distortion);background-color: #00000096;
+        backdrop-filter:url(#glass-distortion);-webkit-backdrop-filter:url(#glass-distortion);background-color: var(--content-filter-on);
     }
 
     .glass-safari {
@@ -564,7 +564,7 @@ nav {
 }
 
 .content-filter:active {
-    background-color: #00000096;
+    background-color: var(--content-filter);
     filter: brightness(1.2);
 }
 
@@ -573,7 +573,7 @@ nav {
     height: 100%;
 
     padding: 0 20px;
-    color: rgb(153, 153, 153);
+    color: var(--filter-text);
     font-size: 13px;
 
     font-family: var(--Montserrat);
@@ -943,6 +943,7 @@ content {
         animation: reveal-nick linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
+        color: var(--white);
         
     }
 
@@ -978,6 +979,7 @@ content {
         height: auto;
         opacity: 1;
         pointer-events: none;
+        color: white;
         }
     }
 
@@ -1018,6 +1020,7 @@ content {
 
         height: auto;
         opacity: 1;
+        color: white;
     }
 
     .name-safari-on > h1 {
@@ -1730,7 +1733,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 .img-burble {
     padding: 2px;
-    background: #0b0a0a;
+    background: var(--background);
 }
 
 .hd-avise {
@@ -1795,7 +1798,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     gap: 10px;
     justify-content: space-between;
 
-    color: var(--white);
+    color: #ffffff;
     position: absolute;
     transform: translate(10px, -10px);
 }
@@ -2912,17 +2915,17 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 
 .Waltz {
     background: #151515;
-    color: var(--white-dn);
+    color: white;
 }
 
 .Techemet{
     background: var(--techemet-bg);
-    color: var(--white-dn);
+    color: white;
 }
 
 .Store{
     background: #151515;
-    color: var(--white-dn);
+    color: white;
 }
 
 .Pop-Waltz-Out, .Pop-Waltz2-Out, .Pop-Tech-Out, .Pop-Store-Out {

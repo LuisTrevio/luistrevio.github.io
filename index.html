@@ -131,6 +131,99 @@ body {
     background-color: var(--background-color);
     
     /*Text & Nucleo*/
+    --select-text: #a286f4;
+    --white: #000000;
+    --black: #ffffff;
+
+    /*Background*/
+    --background-bg: url(../bg/back-background.png) no-repeat center center fixed;
+    --background-color: #ffffff;
+    --background: #ffffff;
+    --stock-perfil:#9587d4;
+    --border-stock-perfil: #4e39b8;
+
+    /*Header*/
+    --header:#15151500;
+    --header-on:#0b0a0a08;
+
+    /*Botones*/
+    --buttons:#cdcdcd;
+    --buttons-stock:#ffffff21;
+    --buttons-hover:#c4c4c4;
+    --buttons-stock-hover:#66598c;
+    --solid-box: var(--buttons);
+
+    --buttons-pop:#0d0d0d;
+
+    --music-progress:#1f1e1e;
+
+    --buttons-proyect:#4c4c4c;
+
+    --techemet-bg:#08102f;
+    --techemet-bg-bar:#05091b;
+    --buttons-proyect-tech:#0E3B6D;
+    --buttons-proyect-tech-hover:#216fc7;
+
+    /*Webkit Bar*/
+    --bg: var(--background);
+    --bar: #66598c;
+    --bg-bar: #2c212c;
+    --bar-hover: #6a4cc5;
+
+    /*Pop*/
+    --bg-pop-old: #dedede;    
+    --bg-pop: #ffffffbd;
+    --bar-pop: #e0e0e0a8;
+    --white-dn:var(--white);
+
+    --status: #f9f9f9;
+    --status-base: #b7b7b7;
+
+    /*Hover*/
+    --hover: #5b5b5b;
+    --hover-bar: #ffffff;
+
+    --vscode:#0361a0;
+    --javascript:#796e12;
+    --html5:#9f3214;
+    --css3:rebeccapurple;
+    --react:#146b83;
+    --python:#306998;
+    
+    --nodejs:#026e00;
+
+    --astro-bg: linear-gradient(45deg,
+        hsl(259deg 85% 10%) 0%,hsl(259deg 85% 10%) 8%,hsl(259deg 85% 9%) 17%,hsl(259deg 86% 9%) 25%,
+        hsl(259deg 87% 9%) 33%,hsl(258deg 87% 8%) 42%,hsl(258deg 88% 8%) 50%,hsl(257deg 89% 7%) 58%,
+        hsl(256deg 91% 7%) 67%,hsl(255deg 92% 6%) 75%,hsl(253deg 94% 6%) 83%,hsl(252deg 97% 5%) 92%,
+        hsl(250deg 100% 5%) 100%
+    );
+    --astro-color: #18073b;
+
+    --office365:#d83b01;
+    --excel:#217346;
+    --powerpoint:#b7472a;
+    --word:#2b579a;
+
+    --microsoft-bg: linear-gradient(
+    45deg,hsl(58deg 87% 22%) 0%,hsl(73deg 64% 25%) 8%,hsl(91deg 48% 29%) 17%,hsl(119deg 35% 33%) 25%,hsl(147deg 55% 29%) 33%,hsl(174deg 100% 22%) 42%,hsl(191deg 100% 26%) 50%,hsl(201deg 100% 30%) 58%,hsl(216deg 56% 39%) 67%,hsl(271deg 33% 44%) 75%,hsl(321deg 45% 43%) 83%,hsl(345deg 55% 46%) 92%,hsl(12deg 63% 44%) 100%
+    );
+    --microsoft: #000000;
+
+    --basic: #3f3f3f;
+
+    --content-filter: #ffffff;
+     --content-filter-on: #d4d4d400;
+
+    --filter-text: rgb(111, 111, 111);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        /*background: var(--background-bg);*/
+    background-color: var(--background-color);
+    
+    /*Text & Nucleo*/
     --select-text: #66598c;
     --white: #e6e6e6;
     --black: #000000;
@@ -183,34 +276,10 @@ body {
     --hover: #5b5b5b;
     --hover-bar: #ffffff;
 
-    --vscode:#0361a0;
-    --javascript:#796e12;
-    --html5:#9f3214;
-    --css3:rebeccapurple;
-    --react:#146b83;
-    --python:#306998;
-    
-    --nodejs:#026e00;
-
-    --astro-bg: linear-gradient(45deg,
-        hsl(259deg 85% 10%) 0%,hsl(259deg 85% 10%) 8%,hsl(259deg 85% 9%) 17%,hsl(259deg 86% 9%) 25%,
-        hsl(259deg 87% 9%) 33%,hsl(258deg 87% 8%) 42%,hsl(258deg 88% 8%) 50%,hsl(257deg 89% 7%) 58%,
-        hsl(256deg 91% 7%) 67%,hsl(255deg 92% 6%) 75%,hsl(253deg 94% 6%) 83%,hsl(252deg 97% 5%) 92%,
-        hsl(250deg 100% 5%) 100%
-    );
-    --astro-color: #18073b;
-
-    --office365:#d83b01;
-    --excel:#217346;
-    --powerpoint:#b7472a;
-    --word:#2b579a;
-
-    --microsoft-bg: linear-gradient(
-    45deg,hsl(58deg 87% 22%) 0%,hsl(73deg 64% 25%) 8%,hsl(91deg 48% 29%) 17%,hsl(119deg 35% 33%) 25%,hsl(147deg 55% 29%) 33%,hsl(174deg 100% 22%) 42%,hsl(191deg 100% 26%) 50%,hsl(201deg 100% 30%) 58%,hsl(216deg 56% 39%) 67%,hsl(271deg 33% 44%) 75%,hsl(321deg 45% 43%) 83%,hsl(345deg 55% 46%) 92%,hsl(12deg 63% 44%) 100%
-    );
-    --microsoft: #000000;
-
-    --basic: #3f3f3f;
+    --content-filter: rgb(0, 0, 0);
+     --content-filter-on: #00000096; 
+     --filter-text: rgb(153, 153, 153);
+    }
 }
 
 .aurora {

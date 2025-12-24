@@ -5,37 +5,6 @@ let lastHeaderScroll = window.scrollY;
 const header = document.querySelector('.header-back');
 const mapbtn = document.querySelector('.map-back');
 
-async function getiOSMajorVersion() {
-    const ua = navigator.userAgent || '';
-    // 1) Intentar con User-Agent Client Hints (si está soportado)
-    if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
-        try {
-            const high = await navigator.userAgentData.getHighEntropyValues(['platform', 'platformVersion']);
-            if (/iPhone|iPad|iPod/i.test(high.platform)) {
-                const ver = (high.platformVersion || '').split('.')[0];
-                if (ver) return parseInt(ver, 10);
-            }
-        } catch (e) { /* fallbacks abajo */ }
-    }
-
-    // 2) Regex sobre navigator.userAgent (ej: "CPU iPhone OS 16_4 like Mac OS X")
-    const m = ua.match(/(?:CPU )?iPhone OS (\d+)_/i) || ua.match(/\bOS (\d+)_\d+/i);
-    if (m) return parseInt(m[1], 10);
-
-    // 3) iPadOS recientes pueden reportar "MacIntel" + touch points
-    if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
-        const m2 = ua.match(/\bOS (\d+)_\d+/i);
-        if (m2) return parseInt(m2[1], 10);
-    }
-
-    return null; // no detectado
-}
-
-async function isIOSAtLeast(major) {
-    const v = await getiOSMajorVersion();
-    return v !== null && v >= major;
-}
-
 // Cambia el selector si tu header es diferente
 
 window.addEventListener("scroll", () => {
@@ -133,11 +102,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     
-    isIOSAtLeast(26).then(is26 => {
-    if (is26) {
-        console.log('iOS 26+ detectado');
-    } else {
-            const safariClasses = [
+  
+     const safariClasses = [
             ['.sar-web', 'sar-on'],
             ['.img-saf', 'img-safari'],
             ['.off-saf', 'off-safari'],
@@ -167,10 +133,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
                 });
             });
         });
-        }
-    });
-
 }
+
 /** POR SI ACASO */ /*
     const safariClasses = [
         ['.sar-web', 'sar-on'],
@@ -223,6 +187,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
     });
 }
 
+TRABAJA EN DONDE TE PUEDAS BENEFICIAR,
+PERO NO TANTO PORQUE TE PUEDES AXFISIAR.
 
 else {
     window.addEventListener('scroll', () => {
