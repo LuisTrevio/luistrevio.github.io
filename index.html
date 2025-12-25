@@ -104,12 +104,13 @@ body {
 }
 
 body {
-    --shadow-select-color: 0deg 3% 4%;
+    --shadow-color: 0deg 0% 63%;
     --shadow-select-complex:
-      0.3px 0.5px 0.7px hsl(var(--shadow-select-color) / 0.36),
-      0.8px 1.6px 2px -0.8px hsl(var(--shadow-select-color) / 0.36),
-      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-select-color) / 0.36),
-      5px 10px 12.6px -2.5px hsl(var(--shadow-select-color) / 0.36);
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
+    1px 1px 1.6px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.5px 2.4px 3.9px -1.7px hsl(var(--shadow-color) / 0.36),
+    6.1px 5.8px 9.5px -2.5px hsl(var(--shadow-color) / 0.36);
+
 
     --shadow-header-color: 0deg 0% 0%;
     --shadow-header-complex:
@@ -124,7 +125,7 @@ body {
     0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-orange) / 0.36),
     2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-orange) / 0.36),
     5px 10px 12.6px -2.5px hsl(var(--shadow-color-orange) / 0.36);
-}
+} 
 
 body {
     /*background: var(--background-bg);*/
@@ -172,12 +173,18 @@ body {
 
     /*Pop*/
     --bg-pop-old: #dedede;    
-    --bg-pop: #ffffffbd;
-    --bar-pop: #e0e0e0a8;
+    --bg-pop: #ffffff6e;
+    --bar-pop: #ffffff;
     --white-dn:var(--white);
+    --Pop-Window:#c2c2c26b;
 
     --status: #f9f9f9;
     --status-base: #b7b7b7;
+
+    --menu-dash: #ffffffbd;
+
+    --invert-svg: invert(1);
+    --select-box: #ffffff;
 
     /*Hover*/
     --hover: #5b5b5b;
@@ -268,9 +275,14 @@ body {
     --bg-pop: #000000a8;
     --bar-pop: #5b5b5ba8;
     --white-dn:var(--white);
+    --Pop-Window:#0000006e;
 
     --status: #000000;
     --status-base: #717171;
+
+    --menu-dash: #000000e3;
+    --invert-svg: invert(0);
+    --select-box: #1a1a1a;
 
     /*Hover*/
     --hover: #5b5b5b;
@@ -279,8 +291,12 @@ body {
     --content-filter: rgb(0, 0, 0);
      --content-filter-on: #00000096; 
      --filter-text: rgb(153, 153, 153);
+
+    --shadow-select-color: 0deg 3% 4%;
     }
 }
+
+ .svg-invert {filter: var(--invert-svg);}
 
 .aurora {
     background-image: linear-gradient(48deg, 
@@ -508,20 +524,20 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
         <div class="box-tool box-up">
             <div class="grid-box grid-up">
                 <a onclick="Dash(), Top()" class="select-box select-up">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg-invert" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_809_2)">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="white"/></g><defs><clipPath id="clip0_809_2"><rect width="24" height="24" fill="white"/></clipPath></defs>
                     </svg> 
                     Revisar en Github
                 </a>
                 <a onclick="Dash(), Pop(), PopShare()" class="select-box select-up">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg-invert" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17 22C16.1667 22 15.4583 21.7083 14.875 21.125C14.2917 20.5417 14 19.8333 14 19C14 18.9 14.025 18.6667 14.075 18.3L7.05 14.2C6.78333 14.45 6.475 14.646 6.125 14.788C5.775 14.93 5.4 15.0007 5 15C4.16667 15 3.45833 14.7083 2.875 14.125C2.29167 13.5417 2 12.8333 2 12C2 11.1667 2.29167 10.4583 2.875 9.875C3.45833 9.29167 4.16667 9 5 9C5.4 9 5.775 9.071 6.125 9.213C6.475 9.355 6.78333 9.55067 7.05 9.8L14.075 5.7C14.0417 5.58333 14.021 5.471 14.013 5.363C14.005 5.255 14.0007 5.134 14 5C14 4.16667 14.2917 3.45833 14.875 2.875C15.4583 2.29167 16.1667 2 17 2C17.8333 2 18.5417 2.29167 19.125 2.875C19.7083 3.45833 20 4.16667 20 5C20 5.83333 19.7083 6.54167 19.125 7.125C18.5417 7.70833 17.8333 8 17 8C16.6 8 16.225 7.929 15.875 7.787C15.525 7.645 15.2167 7.44933 14.95 7.2L7.925 11.3C7.95833 11.4167 7.97933 11.5293 7.988 11.638C7.99667 11.7467 8.00067 11.8673 8 12C7.99933 12.1327 7.99533 12.2537 7.988 12.363C7.98067 12.4723 7.95967 12.5847 7.925 12.7L14.95 16.8C15.2167 16.55 15.525 16.3543 15.875 16.213C16.225 16.0717 16.6 16.0007 17 16C17.8333 16 18.5417 16.2917 19.125 16.875C19.7083 17.4583 20 18.1667 20 19C20 19.8333 19.7083 20.5417 19.125 21.125C18.5417 21.7083 17.8333 22 17 22Z" fill="white"/>
                     </svg>                        
                     Compartir link
                 </a>
                 <a onclick="Dash(), Top()" class="select-box select-up Stop-er">
-                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg-invert" width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 14.5L12 8.5L18 14.5H6Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
                     </svg>                                               
                     Ir a Inicio
@@ -652,7 +668,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
 
                                     <button name="SQL-pop" onclick="Pop(), PopSQL()" class="svran-bg items-dev">
                                         <span class="items-logo">
-                                            <span class="img-dev icons sql"></span>
+                                            <span class="img-dev icons sql svg-invert"></span>
                                         </span>
                                         <span class="items-name">MySQL</span>
                                     </button>
@@ -686,7 +702,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
 
                                     <button name="Github-pop" onclick="Pop(), PopGit()" class="svran-bg items-dev">
                                         <span class="items-logo">
-                                            <span class="img-dev icons gh"></span>
+                                            <span class="img-dev icons gh svg-invert"></span>
                                         </span>
                                         <span class="items-name">Github</span>
                                     </button>
@@ -790,7 +806,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
         <div class="flex-pop"><!-- -->
             <div class="margin-pop-close">
                 <button onclick="Pop()" class="Pop-Close close-up ">
-                    <span class="img-proyect close-svg"></span>Cerrar&nbsp;
+                    <span class="img-proyect close-svg svg-invert"></span>Cerrar&nbsp;
                 </button>
             </div>
 
@@ -811,7 +827,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
             </div>
 
             <div class="Pop-Git Pop-Git-O ">
-                <div class="Pop-icon"><div class="Pop-bubble icons gh"></div></div>
+                <div class="Pop-icon"><div class="Pop-bubble icons gh svg-invert"></div></div>
                 <div class="Pop-center"><h2>Github</h2></div>
                 <div class="Pop-text">
                     Es una plataforma de repositorios bastante buena para controlar las versiones y gestión de proyectos, y a la vez puedo trabajar con ella mediante la conexión de Visual Studios Code.
@@ -977,7 +993,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
             </div>
 
             <div class="Pop-SQL Pop-SQL-O ">
-                <div class="Pop-icon"><div class="Pop-bubble icons sql"></div></div>
+                <div class="Pop-icon"><div class="Pop-bubble icons sql svg-invert"></div></div>
                 <div class="Pop-center"><h2>MySQL</h2></div>
                 <div class="Pop-text">
                     MySQL y otras plataformas de bases de datos ayudan en la gestión de perfiles, aunque en este punto del desarrollo no es mi punto fuerte, por lo que me enfoco más en el diseño. Trabajaré en mejorar en ese aspecto.
