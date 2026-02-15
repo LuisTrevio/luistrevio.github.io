@@ -101,9 +101,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
  
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    
-  
-     const safariClasses = [
+    function soportaFeature() {
+    return 'share' in navigator;
+    }
+
+    function getIOSVersion() {
+    const match = navigator.userAgent.match(/OS (\d+)_?(\d+)?_?(\d+)?/);
+
+    if (!match) return null;
+
+    return parseFloat(match[1] + '.' + (match[2] || 0));
+    }
+
+    function esIOSMenorA(version) {
+    const iosVersion = getIOSVersion();
+    return iosVersion && iosVersion < version;
+    }
+
+    if (!soportaFeature() || esIOSMenorA(26)) {
+    const safariClasses = [
             ['.sar-web', 'sar-on'],
             ['.img-saf', 'img-safari'],
             ['.off-saf', 'off-safari'],
@@ -133,7 +149,12 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
                 });
             });
         });
+    }
+  
+    
 }
+
+
 
 /** POR SI ACASO */ /*
     const safariClasses = [
@@ -608,6 +629,41 @@ window.addEventListener('DOMContentLoaded', () => {
         filterBall.style.width = `${firstFilter.offsetWidth}px`;
     }
 });
+
+// el filterball se puede arrastrar con el mouse y se queda en la posición del filtro que se suelte, pero no se puede arrastrar fuera de los filtros
+filterBall.addEventListener('mousedown', (event) => {
+    const offsetX = event.clientX - filterBall.getBoundingClientRect().left;
+    function mouseMoveHandler(e) {
+        let newLeft = e.clientX - offsetX;
+        const minLeft = filterPasive.getBoundingClientRect().left;
+        const maxLeft = filterActive.getBoundingClientRect().right - filterBall.offsetWidth;
+        if (newLeft < minLeft) newLeft = minLeft;
+        if (newLeft > maxLeft) newLeft = maxLeft;
+        filterBall.style.left = `${newLeft}px`;
+    }
+    function mouseUpHandler() {
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+        filterText.forEach((text) => {
+            const textLeft = text.getBoundingClientRect().left;
+            const textRight = text.getBoundingClientRect().right;
+            const ballLeft = filterBall.getBoundingClientRect().left;
+            if (ballLeft >= textLeft && ballLeft <= textRight) {
+                filterText.forEach((t) => t.classList.remove('active'));
+                text.classList.add('active');
+                filterBall.style.left = `${text.offsetLeft}px`;
+                filterBall.style.width = `${text.offsetWidth}px`;
+                document.querySelectorAll('.slur').forEach((result) => {result.classList.add('slur-active')});
+                setTimeout(() => {document.querySelectorAll('.slur').forEach((result) => {result.classList.remove('slur-active')});}, 100);
+                document.querySelectorAll('.blur-block').forEach((result) => {result.classList.add('blur-active')});
+                setTimeout(() => {document.querySelectorAll('.blur-block').forEach((result) => {result.classList.remove('blur-active')});}, 200);
+            }
+        });
+    }
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mouseup', mouseUpHandler);
+});
+
 
 // Filtro de Secciones con el Data-sort 
 document.querySelectorAll('.filter-text').forEach((filter) => {
