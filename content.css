@@ -47,9 +47,12 @@ nav {
     header, nav {
         display: flex;
         pointer-events: none;
+
+        /*
         animation: reveal linear both;
         animation-timeline: scroll(root);
         animation-range: 0 170px;
+        */
 
         pointer-events: all;
         backdrop-filter: blur(0);
