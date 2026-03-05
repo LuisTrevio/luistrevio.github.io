@@ -619,6 +619,7 @@ window.addEventListener('load', () => {
 
         document.querySelectorAll('.home-menu').forEach((result) => { result.classList.add('home-menu-blu');});
     document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.add('map-on');});
+
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -693,6 +694,15 @@ window.addEventListener('resize', () => {
             }
         }
     else {document.querySelector('.perfil').style.display = 'flex';}
+   
+
+    if (window.innerWidth >= 780) {
+        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'flex';});
+        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'none';});
+    } else {
+        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
+        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
+    }
 });
 
 document.querySelector('.filter-text[data-sort="all"]').addEventListener('click', () => {
@@ -708,11 +718,19 @@ document.querySelector('.filter-text[data-sort="all"]').addEventListener('click'
     });
     document.querySelectorAll('.home-menu').forEach((result) => { result.classList.add('home-menu-blu');});
     document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.add('map-on');});
+     if (window.innerWidth <= 780) {
+        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
+        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
+     }
+    
 });
 
 document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('click', () => {
    if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
+        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'flex';});
+        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'none';});
+
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
@@ -720,13 +738,18 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
     document.querySelector('.filter-home').style.filter = 'brightness(0.5)';
     document.querySelector('.filter-fotos').style.filter = 'brightness(1)';
     document.querySelector('.filter-web').style.filter = 'brightness(0.5)';
+
     document.querySelectorAll('.home-menu').forEach((result) => { result.classList.remove('home-menu-blu');});
     document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.remove('map-on');});
-});
+
+    });
 
 document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
     if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
+           document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
+            document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
+
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
@@ -736,6 +759,8 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
     document.querySelector('.filter-web').style.filter = 'brightness(1)';
     document.querySelectorAll('.home-menu').forEach((result) => { result.classList.remove('home-menu-blu');});
     document.querySelectorAll('.menu-btn-map').forEach((result) => { result.classList.remove('map-on');});
+
+ 
 });
 
 document.querySelectorAll('.nav-img').forEach((img) => {

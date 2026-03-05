@@ -292,7 +292,16 @@ body {
      --content-filter-on: #00000096; 
      --filter-text: rgb(153, 153, 153);
 
-    --shadow-select-color: 0deg 3% 4%;
+    --shadow-color: 0deg 0% 0%;
+     --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-select-complex:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
     }
 }
 
@@ -746,6 +755,12 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                                             <span class="img-proyect enter-svg"></span>
                                         </span>
                                     </button>
+                                    <button name="Techemet-pop" onclick="Pop(), PopBasta()" class="id-proyect proyect-store">
+                                        <span class="title-proyect ">
+                                            <h2 class="border-poptitle">Textarea Test</h2>
+                                            <span class="img-proyect enter-svg"></span>
+                                        </span>
+                                    </button>
 
                                 </div>
 
@@ -782,8 +797,28 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                                             <span class="img-proyect gallery-svg"></span>
                                         </span>
                                     </button>
+                                    <button name="Nerium Fotos✨" data-sort="img5" onclick="Pop(), PopPhoto1()" class="img-burble block-img-device block-more">
+                                        <img src="https://luistrevio.github.io/svg/PasanWP.png" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
+                                    <button name="Nerium Fotos✨" data-sort="img6" onclick="Pop(), PopPhoto1()" class="img-burble block-img-device block-more">
+                                        <img src="https://luistrevio.github.io/svg/fatoWP.jpeg" alt="Nerium Oleander" class="img-pop">
+                                        <span class="title-proyect title-proyect-reverse">
+                                            <span class="img-proyect gallery-svg"></span>
+                                        </span>
+                                    </button>
 
                                 </div>
+
+                                <div class="large-img-buble svran-bg">
+                                    <div class="img-advise-center">
+                                        <div class="img-example-icon filter-fotos">Fotos</div>      
+                                        <span class="ad-text-img">Si quieres ver mas imagenes haz clic en la barra de desplazamiento "Fotos" para ver mas</span>
+                                    </div>
+                                </div>
+
                                 <br>
                                 <p class="property-text" >La planta adelfa o también conocida como Nerium Oleander es conocida por sus flores vibrantes y coloridas.</p>
                             </div>
@@ -1086,6 +1121,8 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                     <img src="svg/SeriumWP.avif" alt="Negrium" class="img2 Photo" width="100%">
                     <img src="svg/nocheWP.webp" alt="Negrium" class="img3 Photo" width="100%">
                     <img src="svg/WawaWP.avif" alt="Wawerium" class="img4 Photo" width="100%">
+                    <img src="https://cvws.icloud-content.com/B/AY0uzn8UyoaS5dsJjRqY2Q7tPjBRAWTv8pOR8QVfwNenSRrUWN56vJeW/IMG_0781.JPG?o=AkL3J0xw1_M0UnpLj7ksoVSKFWcOwGNQjqDNfVLR_9Bi&v=1&x=3&a=CAogh8sEs5lY8tkREEXmjlAfomPfKQ2XjNLT26AIcVkSBPkSbxDQmvXdyzMY0PfQ38szIgEAUgTtPjBRWgR6vJeWaidz-grrf9Jz_L1h13xAE7T-F__hu15_GUHavWhLoa2Kguv5CnGm3RdyJ3lfIQ3HQU0U9eB0rwN_Cr-ttbdOfeyKVVLYhgaJCxD3uKHukmzXTw&e=1772679871&fl=&r=056e36a6-c181-40d6-a27f-4c65d78f2894-1&k=3fPEyj6JQo816PuIj0XdTQ&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=103&s=gXM_ECG2z88_4h1EUh6SoxeTLq0&cd=i" alt="Wawerium" class="img5 Photo" width="100%">
+                    <img src="https://cvws.icloud-content.com/B/AW5S54uDceZCO4gZngVD52hrd5TwAdWbAxNRmprER1eSanFMRRRSGWWw/IMG_1287.jpeg?o=AqOVRrVwY7hJoRuZAIPXmCR95zNjqK8PaLfEV6wJ9q7z&v=1&x=3&a=CAog32GT7ouzDb2flbruAscOlzb1TYLnyyDcCMNURAz99BkSbxC19ePdyzMYtdK_38szIgEAUgRrd5TwWgRSGWWwaieGFTPlMX7Au38wlltolM6zUDPOB1gsDHlBA-36AL3oBv35HO6gMzhyJ_I1UJLT9qENI2vm49WgjgpHJ4Fwxc5gaSZzi95oFKpg-nuZb714aw&e=1772679588&fl=&r=4fd676b5-4452-45e7-bc7e-a231a6ec33d6-1&k=znJsh4HvjWAvZxZWMUPuug&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=103&s=uMiRAXvNLek64Hej75aH8DoPxrs&cd=i" alt="Wawerium" class="img6 Photo" width="100%">
                 </div>
                 <button class="Pop-Next icon-right-svg"></button>
                 <div class="mini-buttons boat-mini">
@@ -1093,6 +1130,8 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                     <div data-sort="img2" class="nav-img mini-img img2"></div>
                     <div data-sort="img3" class="nav-img mini-img img3"></div>
                     <div data-sort="img4" class="nav-img mini-img img4"></div>
+                    <div data-sort="img5" class="nav-img mini-img img5"></div>
+                    <div data-sort="img6" class="nav-img mini-img img6"></div>
                 </div>
             </div>
 
