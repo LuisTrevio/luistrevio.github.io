@@ -694,15 +694,6 @@ window.addEventListener('resize', () => {
             }
         }
     else {document.querySelector('.perfil').style.display = 'flex';}
-   
-
-    if (window.innerWidth >= 780) {
-        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'flex';});
-        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'none';});
-    } else {
-        document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
-        document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
-    }
 });
 
 document.querySelector('.filter-text[data-sort="all"]').addEventListener('click', () => {
