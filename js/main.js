@@ -336,7 +336,7 @@ function Pop() {
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
         'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Warn-Out', 'Pop-Share-Out' ,'Pop-Report-Out', ,'Pop-Flex-Out', 'Pop-Magic-Out', 
-        'Pop-Waltz-Out', 'Pop-Waltz2-Out',, 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
+        'Pop-Waltz-Out', 'Pop-Waltz2-Out',, 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-Txt-Out', 'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -349,7 +349,8 @@ function Pop() {
     document.querySelector('.Pop-Waltz2').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
     document.querySelector('.Pop-Store').scrollTop = 0;
-    
+    document.querySelector('.Pop-Txt').scrollTop = 0;
+
     document.querySelector('.reels-socialmedia').scrollLeft = 0;
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.remove('trans-img-off')});
     document.querySelectorAll('.HTML-Button').forEach((result) => {result.classList.remove('Close-HTML')});
@@ -374,6 +375,7 @@ const popFunctions = [
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
     ['PopWaltz2', 'Pop-Waltz2-O', 'Pop-Waltz2-Out'],
     ['PopStore', 'Pop-Store-O', 'Pop-Store-Out'],
+    ['PopTxt', 'Pop-Txt-O', 'Pop-Txt-Out'],
     ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopReport', 'Pop-Report-O', 'Pop-Report-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out'],
@@ -461,7 +463,7 @@ function Ommit() {
 
 function Ommit2() {
     const classesToRemove = [
-        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-Waltz2-Out'
+        'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-Waltz2-Out', 'Pop-Txt-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -474,6 +476,7 @@ function Ommit2() {
     document.querySelector('.Pop-Waltz2').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
     document.querySelector('.Pop-Store').scrollTop = 0;
+    document.querySelector('.Pop-Txt').scrollTop = 0;
 }
 
 function Ommit3() {
