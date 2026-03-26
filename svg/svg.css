@@ -102,6 +102,7 @@
 .proyect-waltz {background-image: url(-proyect-waltz.svg);}
 .proyect-techemet {background-image: url(-proyect-techmet.svg);}
 .proyect-store {background-image: url(rt.svg); }
+.proyect-textarea {background-image: url(-proyect-txt.svg); }
 
 .enter-svg {background-image: url(iconamoon_enter-bold.svg);}
 .gallery-svg {background-image: url(gallery.svg);}
@@ -220,6 +221,13 @@
 
 .store-icon {
     background-image: url(poplogo.svg);
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+}
+
+.txt-icon {
+    background-image: url(txt-logo.svg);
     background-position: center;
     background-size: 80% 80%;
     background-repeat: no-repeat;

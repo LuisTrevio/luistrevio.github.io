@@ -1741,7 +1741,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 .large-img-buble {
     width: 100%;
-    height: 180px;
+    height: 150px;
 
     border-radius: 22px;
     background: #ffffff00;
@@ -2996,6 +2996,11 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     color: white;
 }
 
+.Textarea{
+    background: #222222;
+    color: white;
+}
+
 .Pop-Waltz-Out, .Pop-Waltz2-Out, .Pop-Tech-Out, .Pop-Store-Out, .Pop-Txt-Out {
     transform: translate(0,10px);
     opacity: 1;
@@ -3058,7 +3063,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
         height: 45vh;
     }
 
-    .Waltz, .Techemet, .Store {
+    .Waltz, .Techemet, .Store, .Textarea {
         background: none;
     }
 
@@ -3074,6 +3079,11 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 
     .Store-m{
         background-color: #151515;
+        color: white;
+    }
+
+    .Textarea-m{
+        background-color: #222222;
         color: white;
     }
 
