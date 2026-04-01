@@ -875,45 +875,21 @@ autoContainers.forEach(container => {
         }, 4000);
     });
    
-    // el "autocarrusel-img" cuando llega al final, vuelve al inicio
+    // el "autocarrusel-img" cuando llega al final, vuelve al inicio y se desactiva el autoScroll 
+    // para que no se acumule el setInterval, pero se vuelve a activar cuando se sale del carrusel
     container.addEventListener('scroll', function () {
         if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-           setInterval(() => {
-                container.scrollLeft = 0;
-            }, 4000);
+            container.scrollLeft = 0;
+            clearInterval(autoScroll);
         }
     });
+
 
     // se detiene cuando toma el mouse sobre el carrusel
     container.addEventListener('mouseenter', () => {
         clearInterval(autoScroll);
     });
 
-    //solo es para telefonos, el "autocarrusel-img" se desplaza automáticamente cada 4 segundos
-    if (window.innerWidth <= 780) {
-        let autoScrollMobile = setInterval(() => {
-            container.scrollLeft += 200;
-        }, 4000);
-        container.addEventListener('mouseleave', () => {
-            autoScrollMobile = setInterval(() => {
-                container.scrollLeft += 200;
-            }, 4000);
-            });
-            container.addEventListener('scroll', function () {
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                  let autoScrollReset = setInterval(() => {
-                        container.scrollLeft = 0;
-                    }, 4000);
-                     container.addEventListener('mouseleave', () => {
-                        clearInterval(autoScrollReset);
-                     });
-                }
-                });
-                container.addEventListener('mouseenter', () => {
-                    clearInterval(autoScrollMobile);
-                    clearInterval(autoScrollMobileReset);
-                });
-    }
    // las imagenes disminuyen su tamaño pero si esta en la posición central del carrusel, vuelve a su tamaño original
    /* 
    container.addEventListener('scroll', function () {
