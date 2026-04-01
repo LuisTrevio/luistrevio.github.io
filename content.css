@@ -1791,11 +1791,66 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         color: var(--white);
 }
 
+.visualize-img {
+    width: 100%;
+    height: 180px;
+
+    border-radius: 22px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid var(--buttons);
+    transition: 0.2s ease-out;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.autocarrusel-img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 22px;
+    transition: 0.2s ease-out;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+    position: relative;
+
+    scroll-snap-type: x mandatory;
+}
+
+.arm {
+    width: 100%;
+    height: 180px;
+
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid var(--buttons);
+    scroll-snap-align: start;
+
+    object-fit: contain;
+}
+
 @media (max-width:780px) {
    .block-img-device {
         display: none;
     }
     .large-img-buble {
+        display: flex;
+    }
+
+    .visualize-img {
         display: flex;
     }
 }

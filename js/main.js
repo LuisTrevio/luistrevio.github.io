@@ -715,6 +715,7 @@ document.querySelector('.filter-text[data-sort="all"]').addEventListener('click'
      if (window.innerWidth <= 780) {
         document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
         document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
+        document.querySelectorAll('.visualize-img').forEach((result) => { result.style.display = 'flex';});
      }
     
 });
@@ -724,6 +725,7 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
         document.querySelector('.perfil').style.display = 'none';
         document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'flex';});
         document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'none';});
+        document.querySelectorAll('.visualize-img').forEach((result) => { result.style.display = 'none';});
 
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
@@ -743,7 +745,7 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
         document.querySelector('.perfil').style.display = 'none';
            document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
             document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
-
+                document.querySelectorAll('.visualize-img').forEach((result) => { result.style.display = 'flex';});
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
@@ -859,6 +861,35 @@ containers2.forEach(container2 => {
         }
     });
 });
+
+//el "autocarrusel-img" se desplaza automáticamente cada 5 segundos
+const autoContainers = Array.from(document.getElementsByClassName('autocarrusel-img'));
+autoContainers.forEach(container => {
+    let autoScroll = setInterval(() => {
+        container.scrollLeft += 200;
+    }, 4000);
+
+    container.addEventListener('mouseleave', () => {
+        autoScroll = setInterval(() => {
+            container.scrollLeft += 200;
+        }, 4000);
+    });
+   
+    // el "autocarrusel-img" cuando llega al final, vuelve al inicio
+    container.addEventListener('scroll', function () {
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }
+    });
+
+    // se detiene cuando toma el mouse sobre el carrusel
+    container.addEventListener('mouseenter', () => {
+        clearInterval(autoScroll);
+    });
+
+
+});
+
 
 
 
