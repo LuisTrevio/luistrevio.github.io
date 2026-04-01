@@ -901,17 +901,22 @@ autoContainers.forEach(container => {
             });
             container.addEventListener('scroll', function () {
                 if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                   setInterval(() => {
+                  let autoScrollReset = setInterval(() => {
                         container.scrollLeft = 0;
                     }, 4000);
+                     container.addEventListener('mouseleave', () => {
+                        clearInterval(autoScrollReset);
+                     });
                 }
                 });
                 container.addEventListener('mouseenter', () => {
                     clearInterval(autoScrollMobile);
+                    clearInterval(autoScrollMobileReset);
                 });
     }
    // las imagenes disminuyen su tamaño pero si esta en la posición central del carrusel, vuelve a su tamaño original
-    container.addEventListener('scroll', function () {
+   /* 
+   container.addEventListener('scroll', function () {
         const imgs = container.querySelectorAll('.arm');
         imgs.forEach(img => {
             const imgRect = img.getBoundingClientRect();
@@ -926,6 +931,7 @@ autoContainers.forEach(container => {
             }
         });
     });
+    */
 });
 
 

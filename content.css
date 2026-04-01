@@ -1831,16 +1831,18 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     width: 100%;
     height: 180px;
 
-    border-radius: 25px;
+    border-radius: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    border: 2px solid var(--buttons);
     scroll-snap-align: start;
 
     object-fit: contain;
+    transition: 0.2s ease-out;
 }
+
+.scroll-down {transform: scale(0.97); }
 
 @media (max-width:780px) {
    .block-img-device {
