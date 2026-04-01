@@ -862,7 +862,7 @@ containers2.forEach(container2 => {
     });
 });
 
-//el "autocarrusel-img" se desplaza automáticamente cada 5 segundos
+//el "autocarrusel-img" se desplaza automáticamente cada 4 segundos
 const autoContainers = Array.from(document.getElementsByClassName('autocarrusel-img'));
 autoContainers.forEach(container => {
     let autoScroll = setInterval(() => {
@@ -878,7 +878,9 @@ autoContainers.forEach(container => {
     // el "autocarrusel-img" cuando llega al final, vuelve al inicio
     container.addEventListener('scroll', function () {
         if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-            container.scrollLeft = 0;
+           setInterval(() => {
+                container.scrollLeft = 0;
+            }, 4000);
         }
     });
 
@@ -887,7 +889,43 @@ autoContainers.forEach(container => {
         clearInterval(autoScroll);
     });
 
-
+    //solo es para telefonos, el "autocarrusel-img" se desplaza automáticamente cada 4 segundos
+    if (window.innerWidth <= 780) {
+        let autoScrollMobile = setInterval(() => {
+            container.scrollLeft += 200;
+        }, 4000);
+        container.addEventListener('mouseleave', () => {
+            autoScrollMobile = setInterval(() => {
+                container.scrollLeft += 200;
+            }, 4000);
+            });
+            container.addEventListener('scroll', function () {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                   setInterval(() => {
+                        container.scrollLeft = 0;
+                    }, 4000);
+                }
+                });
+                container.addEventListener('mouseenter', () => {
+                    clearInterval(autoScrollMobile);
+                });
+    }
+   // las imagenes disminuyen su tamaño pero si esta en la posición central del carrusel, vuelve a su tamaño original
+    container.addEventListener('scroll', function () {
+        const imgs = container.querySelectorAll('.arm');
+        imgs.forEach(img => {
+            const imgRect = img.getBoundingClientRect();
+            const contRect = container.getBoundingClientRect();
+            const imgCenter = imgRect.left + imgRect.width / 2;
+            const contCenter = contRect.left + contRect.width / 2;
+            const diff = Math.abs(imgCenter - contCenter);
+            if (diff < 200) {
+                img.style.transform = 'scale(1)';
+            } else {
+                img.style.transform = 'scale(0.96)';
+            }
+        });
+    });
 });
 
 
