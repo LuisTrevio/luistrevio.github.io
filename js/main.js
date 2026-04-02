@@ -5,15 +5,12 @@ let lastHeaderScroll = window.scrollY;
 const header = document.querySelector('.header-back');
 const mapbtn = document.querySelector('.map-back');
 
-// Cambia el selector si tu header es diferente
-
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
 
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
-        document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
-        
+        document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})      
 
         document.querySelectorAll('.vid').forEach((result) => { result.classList.add('vid-on');})
         document.querySelectorAll('.ltext').forEach((result) => { result.classList.add('ltext-on');})
@@ -27,8 +24,7 @@ window.addEventListener("scroll", () => {
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
        
-        headerbg = false
-        
+        headerbg = false       
     }
 });
 
@@ -274,7 +270,6 @@ document.querySelector('.img-random').addEventListener('click', () => {
     }
 });
 
-
 //Menu en Dispositivos Móviles
 function Dash() {
     const toggleClasses = [
@@ -345,6 +340,7 @@ function Pop() {
         });
     });
 
+    // PopUp de Proyectos
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Waltz2').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
@@ -356,8 +352,7 @@ function Pop() {
     document.querySelectorAll('.HTML-Button').forEach((result) => {result.classList.remove('Close-HTML')});
 }
 
-
-//PopUp de las Habilidades
+//PopUp de las Habilidades, Proyectos, Capturas de Pantalla y Omitir
 const popFunctions = [
     ['PopVS', 'Pop-VS-O', 'Pop-VS-Out'],
     ['PopGit', 'Pop-Git-O', 'Pop-Git-Out'],
@@ -420,6 +415,7 @@ document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
 
 //function tip() {tipwav.play();tipwav.currentTime = 0;}
 
+// PopUp de Advertencia para Cookies, carga al inicio de la página y si se cierra, no volverá a aparecer
 window.addEventListener("load", () => {
     const warnClosed = localStorage.getItem('🍪');
     if (warnClosed === 'true') {    
@@ -429,6 +425,7 @@ window.addEventListener("load", () => {
     }
 });
 
+// TabIndex para PopUp
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Tab' && document.querySelector('.Pop-Exit.Pop-out')) {
         event.preventDefault();
@@ -445,6 +442,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// Cerrar el PopUp de Advertencia para Cookies y que no vuelva a aparecer
 function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}
 
 //PopUp de las Habilidades pero de Omitir
@@ -461,6 +459,7 @@ function Ommit() {
     });
 }
 
+// Omision a las PopUp de los Proyectos
 function Ommit2() {
     const classesToRemove = [
         'Pop-Waltz-Out', 'Pop-Tech-Out', 'Pop-Store-Out', 'Pop-Waltz2-Out', 'Pop-Txt-Out'
@@ -479,6 +478,8 @@ function Ommit2() {
     document.querySelector('.Pop-Txt').scrollTop = 0;
 }
 
+// Omision a las PopUp de las Capturas de Pantalla
+// NO DISPONIBLE
 function Ommit3() {
     const classesToRemove = [
         'Pop-P1-Out', 'Pop-P2-Out', 'Pop-P3-Out', 'Pop-P4-Out'
@@ -493,6 +494,7 @@ function Ommit3() {
     document.querySelectorAll('.trans-img').forEach((result) => {result.classList.add('trans-img-off')});
 }
 
+// Cerrar el PopUp con la tecla "Escape"
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && document.querySelector('.Pop-Exit.Pop-out')) {
         Pop();
@@ -502,6 +504,7 @@ document.addEventListener('keydown', (event) => {
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
 function PopMagic() {document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.add('Pop-Magic-Out')})}
 
+// Slider de las Capturas de Pantalla
 const rightButtons = Array.from(document.getElementsByClassName('slider-right'));
 const leftButtons = Array.from(document.getElementsByClassName('slider-left'));
 const containers = Array.from(document.getElementsByClassName('reel-screenshots'));
@@ -530,7 +533,7 @@ containers.forEach(container => {
     leftButton.classList.add('icon-o-left');
 });
 
-
+// Habilitar o deshabilitar el botón derecho dependiendo de la posición del scroll
 containers.forEach(container => {
     container.addEventListener("scroll", function () {
         const rightButton = container.nextElementSibling;
@@ -544,6 +547,7 @@ containers.forEach(container => {
     });
 });
 
+// Habilitar o deshabilitar el botón izquierdo dependiendo de la posición del scroll
 containers.forEach(container => {
     container.addEventListener("scroll", function () {
         const leftButton = container.previousElementSibling;
@@ -557,7 +561,7 @@ containers.forEach(container => {
     });
 });
 
-
+// Copy to Clipboard
 document.querySelectorAll(".email-button").forEach(CopyButton => {
     CopyButton.addEventListener("click", () => {
         const targetElement = document.querySelector(CopyButton.dataset.copy);
@@ -576,6 +580,8 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
     })
 })
 
+// Funcion de Volumen
+// NO DISPONIBLE
 function Volume() {
     document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.toggle('volume-colapse')});
     document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.toggle('volume-hover')});
@@ -592,6 +598,8 @@ document.addEventListener('click', function(event) {
     }
 });
 
+
+//Filterball
 const filterText = document.querySelectorAll('.filter-text');
 const filterBall = document.querySelector('.filter-ball');
 const filterPasive = document.querySelector('.filter-pasive');
@@ -625,6 +633,7 @@ window.addEventListener('load', () => {
 
 });
 
+// Al cargar la página, el filterball se posiciona en el primer filtro "All"
 window.addEventListener('DOMContentLoaded', () => {
     const firstFilter = document.querySelector('.filter-text');
     if (firstFilter) {
@@ -683,6 +692,8 @@ document.querySelectorAll('.filter-text').forEach((filter) => {
     });
 });
 
+
+// Al hacer resize, el filterball se ajusta a la posición del filtro activo y si el filtro activo es "All" en dispositivos móviles, se muestra el perfil, de lo contrario se oculta
 window.addEventListener('resize', () => {
     const activeText = document.querySelector('.filter-text.active');
     if (activeText) {
@@ -699,6 +710,8 @@ window.addEventListener('resize', () => {
     else {document.querySelector('.perfil').style.display = 'flex';}
 });
 
+
+// Nav de Home, "All" se refiere a todas las secciones, se desplaza a la sección correspondiente al hacer click en el nav, con un scroll suave
 document.querySelector('.filter-text[data-sort="all"]').addEventListener('click', () => {
     document.querySelectorAll('.section').forEach((section) => {
         section.style.display = 'block';
@@ -720,6 +733,7 @@ document.querySelector('.filter-text[data-sort="all"]').addEventListener('click'
     
 });
 
+// Nav de Fotos y Sitios Web, se desplaza a la sección correspondiente al hacer click en el nav, con un scroll suave
 document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('click', () => {
    if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
@@ -740,6 +754,7 @@ document.querySelector('.filter-text[data-sort="Fotos"]').addEventListener('clic
 
     });
 
+// Nav de Sitios Web, se desplaza a la sección correspondiente al hacer click en el nav, con un scroll suave
 document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener('click', () => {
     if (window.innerWidth <= 780) {
         document.querySelector('.perfil').style.display = 'none';
@@ -781,6 +796,7 @@ document.querySelectorAll('.img-burble').forEach((img) => {
     });
 });
 
+// Dot de Carrusel de Fotos, se activa el dot que corresponda a la imagen que esté más cerca del centro del carrusel
 document.querySelectorAll('.carrusel-img').forEach((container) => {
     const imgs = Array.from(container.querySelectorAll('.Photo'));
     const dots = Array.from(container.parentElement.querySelectorAll('.mini-img'));
@@ -807,6 +823,7 @@ document.querySelectorAll('.carrusel-img').forEach((container) => {
     });
 });
 
+// Carrusel de Pop de Fotos
 const rightButtons2 = Array.from(document.getElementsByClassName('Pop-Next'));
 const leftButtons2 = Array.from(document.getElementsByClassName('Pop-Prev'));
 const containers2 = Array.from(document.getElementsByClassName('carrusel-img'));
@@ -884,14 +901,25 @@ autoContainers.forEach(container => {
         }
     });
 
+    // se detiene cuando se sale del mouse del carrusel y se vuelve a activar el autoScroll
+    container.addEventListener('mouseleave', () => {
+        autoScroll = setInterval(() => {
+            container.scrollLeft += 200;
+        }, 4000);
+    });
 
     // se detiene cuando toma el mouse sobre el carrusel
     container.addEventListener('mouseenter', () => {
         clearInterval(autoScroll);
     });
 
+    // en telefono se detiene cuando se toca el carrusel y se vuelve a activar cuando se suelta
+    container.addEventListener('touchstart', () => {
+        clearInterval(autoScroll);
+    });
+
    // las imagenes disminuyen su tamaño pero si esta en la posición central del carrusel, vuelve a su tamaño original
-   /* 
+   
    container.addEventListener('scroll', function () {
         const imgs = container.querySelectorAll('.arm');
         imgs.forEach(img => {
@@ -901,16 +929,16 @@ autoContainers.forEach(container => {
             const contCenter = contRect.left + contRect.width / 2;
             const diff = Math.abs(imgCenter - contCenter);
             if (diff < 200) {
-                img.style.transform = 'scale(1)';
+                img.style.transform = 'scale(1.05)';
+                img.style.borderRadius = '22px';
             } else {
-                img.style.transform = 'scale(0.96)';
+                img.style.transform = 'scale(0.95)';
+                img.style.borderRadius = '30px';
             }
         });
     });
-    */
+    
 });
-
-
 
 
 function ReportFake() {
