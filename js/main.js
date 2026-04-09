@@ -97,24 +97,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
  
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    function soportaFeature() {
-    return 'share' in navigator;
-    }
-
-    function getIOSVersion() {
-    const match = navigator.userAgent.match(/OS (\d+)_?(\d+)?_?(\d+)?/);
-
-    if (!match) return null;
-
-    return parseFloat(match[1] + '.' + (match[2] || 0));
-    }
-
-    function esIOSMenorA(version) {
-    const iosVersion = getIOSVersion();
-    return iosVersion && iosVersion < version;
-    }
-
-    if (!soportaFeature() || esIOSMenorA(26)) {
     const safariClasses = [
             ['.sar-web', 'sar-on'],
             ['.img-saf', 'img-safari'],
@@ -128,8 +110,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         });
 
         document.querySelector('.content-filter').style.background = '000000bc';
-
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B0A0A');
     
         window.addEventListener("scroll", () => {
             const toggleClasses = [
@@ -145,86 +125,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
                 });
             });
         });
-    }
   
-    
 }
-
-
-
-/** POR SI ACASO */ /*
-    const safariClasses = [
-        ['.sar-web', 'sar-on'],
-        ['.img-saf', 'img-safari'],
-        ['.off-saf', 'off-safari'],
-        ['.sms-saf', 'sms-safari'], 
-        ['.glass-saf', 'glass-safari'], 
-    ];
-
-    safariClasses.forEach(([selector, className]) => {
-        document.querySelectorAll(selector).forEach(result => result.classList.add(className));
-    });
-
-    document.querySelector('.content-filter').style.background = '000000bc';
-
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B0A0A');
-   
-    window.addEventListener("scroll", () => {
-        const toggleClasses = [
-            ['.animate-safari', 'animate-safari-on'],
-            ['.name-safari', 'name-safari-on'],
-            ['.header-safari', 'header-saf-on'],
-            ['.h1-safari', 'h1-saf-on'],
-        ];
-
-        toggleClasses.forEach(([selector, className]) => {
-            document.querySelectorAll(selector).forEach(result => {
-                result.classList.toggle(className, LastScrollY3 < window.scrollY);
-            });
-        });
-    });
- /*  AQUI EL CASO */
-
-    /** 
-    window.addEventListener('scroll', () => {
-    
-    if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
-    else {
-        const currentScroll = window.scrollY;
-        if (currentScroll > lastHeaderScroll && currentScroll > 50) {
-        header && header.classList.remove('header-hide');
-        mapbtn && mapbtn.classList.remove('header-hide');
-        } else {
-        header && header.classList.add('header-hide');
-        mapbtn && mapbtn.classList.add('header-hide');
-        }
-        lastHeaderScroll = currentScroll;
-        
-    };
-    });
-}
-
-TRABAJA EN DONDE TE PUEDAS BENEFICIAR,
-PERO NO TANTO PORQUE TE PUEDES AXFISIAR.
-
-else {
-    window.addEventListener('scroll', () => {
-    
-    if (document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Fotos' || document.querySelector('.filter-text.active').getAttribute('data-sort') === 'Sitios Web') {}
-    else {
-        const currentScroll = window.scrollY;
-        if (currentScroll > lastHeaderScroll && currentScroll > 50) {
-        header && header.classList.add('header-hide');
-        mapbtn && mapbtn.classList.add('header-hide');
-        } else {
-        header && header.classList.remove('header-hide');
-        mapbtn && mapbtn.classList.remove('header-hide');
-        }
-        lastHeaderScroll = currentScroll;
-    };
-    });
-}*/
-
 
 let LastScrollY2 = 0
 window.addEventListener("scroll", () => {
@@ -919,24 +821,6 @@ autoContainers.forEach(container => {
     });
 
    // las imagenes disminuyen su tamaño pero si esta en la posición central del carrusel, vuelve a su tamaño original
-   
-   container.addEventListener('scroll', function () {
-        const imgs = container.querySelectorAll('.arm');
-        imgs.forEach(img => {
-            const imgRect = img.getBoundingClientRect();
-            const contRect = container.getBoundingClientRect();
-            const imgCenter = imgRect.left + imgRect.width / 2;
-            const contCenter = contRect.left + contRect.width / 2;
-            const diff = Math.abs(imgCenter - contCenter);
-            if (diff < 200) {
-                img.style.transform = 'scale(1.05)';
-                img.style.borderRadius = '22px';
-            } else {
-                img.style.transform = 'scale(0.95)';
-                img.style.borderRadius = '30px';
-            }
-        });
-    });
     
 });
 
