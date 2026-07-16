@@ -822,7 +822,7 @@ window.addEventListener('scroll', () => {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrolledPercentage = (window.scrollY / scrollableHeight) * 100;
     
-
+ 
     if (scrolledPercentage >= 85) {
         document.querySelector('.insta-filter').style.backgroundColor = '#5b1fa48d';
     }
@@ -830,4 +830,11 @@ window.addEventListener('scroll', () => {
         
         document.querySelector('.insta-filter').style.backgroundColor = 'var(--content-filter-on)';
     }
+
+    // Si esta en seccion de "Sitios Web" y llega al final, se activa el PopUp de Reporte de Fake News
+    const filterWeb = document.querySelector('.filter-text[data-sort="Sitios Web"]');
+    if (filterWeb && filterWeb.classList.contains('active') && scrolledPercentage >= 85) {
+         document.querySelector('.insta-filter').style.backgroundColor = 'var(--content-filter-on)';
+    }
+    
 });
