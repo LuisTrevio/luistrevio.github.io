@@ -111,6 +111,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
         });
 
         document.querySelector('.content-filter').style.background = '000000bc';
+        document.querySelector('.insta-filter').style.backdropFilter = '000000bc';
     
         window.addEventListener("scroll", () => {
             const toggleClasses = [
@@ -187,7 +188,7 @@ function Dash() {
         ['.music-up', 'music-dash-up'],
         ['.block-up', 'top-block-up'],
         ['.filter-up', 'filter-block-up'],
-        ['.map-vis', 'map-visible'],
+        ['.map-vis', 'map-visible']
     ];
 
     toggleClasses.forEach(([selector, className]) => {
@@ -824,7 +825,7 @@ window.addEventListener('scroll', () => {
     
  
     if (scrolledPercentage >= 85) {
-        document.querySelector('.insta-filter').style.backgroundColor = '#5b1fa48d';
+        document.querySelector('.insta-filter').style.backgroundColor = 'var(--content-filter)';
     }
     else {
         
