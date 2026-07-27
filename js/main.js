@@ -319,52 +319,51 @@ document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
 });
 
 // Scroll .Pop-Waltz
-let PopLastScroll = 120
+let PopLastScroll = 160
+let PopSWaltz = document.querySelector('.Pop-Waltz');
+let PopSTech = document.querySelector('.Pop-Tech');
+let PopSStore = document.querySelector('.Pop-Store');
+let PopSTxt = document.querySelector('.Pop-Txt');
+let PopSWaltz2 = document.querySelector('.Pop-Waltz2');
 
 document.querySelector('.Pop-Waltz').addEventListener('scroll', () => {
-    if(PopLastScroll < document.querySelector('.Pop-Waltz').scrollTop) {
+    if(PopLastScroll < PopSWaltz.scrollTop) {
           document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
     } else {
         document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
     }
-    PopLastScroll = document.querySelector('.Pop-Waltz').scrollTop;
 });
 
 document.querySelector('.Pop-Tech').addEventListener('scroll', () => {
-    if(PopLastScroll < document.querySelector('.Pop-Tech').scrollTop) {
+    if(PopLastScroll < PopSTech.scrollTop) {
             document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
     } else {
         document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
     }
-
-    PopLastScroll = document.querySelector('.Pop-Tech').scrollTop;
 });
 
 document.querySelector('.Pop-Store').addEventListener('scroll', () => {
-    if(PopLastScroll < document.querySelector('.Pop-Store').scrollTop) {
+    if(PopLastScroll < PopSStore.scrollTop) {
             document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
     } else {
         document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
     }
-    PopLastScroll = document.querySelector('.Pop-Store').scrollTop;
 });
 
 document.querySelector('.Pop-Txt').addEventListener('scroll', () => {
-    if(PopLastScroll < document.querySelector('.Pop-Txt').scrollTop) {
+    if(PopLastScroll < PopSTxt.scrollTop) {
             document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
     } else {
         document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
     }
-    PopLastScroll = document.querySelector('.Pop-Txt').scrollTop;
 });
 
 document.querySelector('.Pop-Waltz2').addEventListener('scroll', () => {
-    if(PopLastScroll < document.querySelector('.Pop-Waltz2').scrollTop) {
+    if(PopLastScroll < PopSWaltz2.scrollTop) {
             document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
     } else {
         document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
     }
-    PopLastScroll = document.querySelector('.Pop-Waltz2').scrollTop;
 });
 
 //function tip() {tipwav.play();tipwav.currentTime = 0;}
