@@ -295,6 +295,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
+
 //las popFunctions cuando están abiertas, se pueden arrastrar con el mouse
 document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
     result.addEventListener('mousedown', (event) => {
@@ -315,6 +316,55 @@ document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
         document.addEventListener('mousemove', mouseMoveHandler);
         document.addEventListener('mouseup', mouseUpHandler);
     });
+});
+
+// Scroll .Pop-Waltz
+let PopLastScroll = 120
+
+document.querySelector('.Pop-Waltz').addEventListener('scroll', () => {
+    if(PopLastScroll < document.querySelector('.Pop-Waltz').scrollTop) {
+          document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
+    } else {
+        document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
+    }
+    PopLastScroll = document.querySelector('.Pop-Waltz').scrollTop;
+});
+
+document.querySelector('.Pop-Tech').addEventListener('scroll', () => {
+    if(PopLastScroll < document.querySelector('.Pop-Tech').scrollTop) {
+            document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
+    } else {
+        document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
+    }
+
+    PopLastScroll = document.querySelector('.Pop-Tech').scrollTop;
+});
+
+document.querySelector('.Pop-Store').addEventListener('scroll', () => {
+    if(PopLastScroll < document.querySelector('.Pop-Store').scrollTop) {
+            document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
+    } else {
+        document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
+    }
+    PopLastScroll = document.querySelector('.Pop-Store').scrollTop;
+});
+
+document.querySelector('.Pop-Txt').addEventListener('scroll', () => {
+    if(PopLastScroll < document.querySelector('.Pop-Txt').scrollTop) {
+            document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
+    } else {
+        document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
+    }
+    PopLastScroll = document.querySelector('.Pop-Txt').scrollTop;
+});
+
+document.querySelector('.Pop-Waltz2').addEventListener('scroll', () => {
+    if(PopLastScroll < document.querySelector('.Pop-Waltz2').scrollTop) {
+            document.querySelectorAll('.ani-close').forEach((result) => {result.classList.add('ani-close-up')});
+    } else {
+        document.querySelectorAll('.ani-close').forEach((result) => {result.classList.remove('ani-close-up')});
+    }
+    PopLastScroll = document.querySelector('.Pop-Waltz2').scrollTop;
 });
 
 //function tip() {tipwav.play();tipwav.currentTime = 0;}
@@ -345,6 +395,8 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+
+
 
 // Cerrar el PopUp de Advertencia para Cookies y que no vuelva a aparecer
 function CloseWarn() { localStorage.setItem('🍪', 'true');  document.querySelectorAll('.Pop-Warn-O').forEach((result) => { result.classList.remove('Pop-Warn-Out');})}

@@ -2210,41 +2210,36 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     flex-wrap: nowrap;
 }
 
-.mini-pop-close {
-width: 40px;
+.mini-pop-close, .mini-code-close, .mini-em-close {
+    width: 40px;
     height: 40px;
-    background-color: var(--bg-pop-old);
-    border: 2px solid var(--buttons);
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
 
     border-radius: 30px;
 
-    transform: translate(0, -11ch);
     right: 14px;
     position: absolute;
 
     transition: 0.2s ease-out;
 }
 
+.mini-pop-close {
+    background-color: var(--bg-pop-old);
+    border: 2px solid var(--buttons);
+    transform: translate(0, -11ch);
+}
+
 .mini-code-close {
-    width: 40px;
-    height: 40px;
     background-color: var(--bg-pop);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 30px;
-
     transform: translate(0, -17ch);
-    right: 14px;
-    position: absolute;
+}
 
-    transition: 0.2s ease-out;
+.mini-em-close {
+    background-color: var(--bg-pop-old);
+    transform: translate(0, -4ch);
 }
 
 .mini-pop-close:hover {background-color: var(--bg-pop-old); border: 2px solid var(--buttons);}
@@ -2256,13 +2251,32 @@ width: 40px;
 @media (max-width:780px) { 
     .Pop {backdrop-filter: blur(1rem);}
     .margin-pop-close {padding: 0 15px;}
-    .Pop-Close {transform: translateY(15px) scale(0.92); filter: blur(5px); display:none;}
-    .Pop-Close-Up {transform: translateY(15px) scale(1); filter: blur(0); transition-delay: 1ms;}
+    .Pop-Close {
+        transform: translateY(15px) scale(0.92); 
+        filter: blur(5px); 
+        display:flex;
+    }
+    .Pop-Close-Up {transform: translateY(15px) scale(1); filter: blur(0); transition-delay: 1ms; opacity: 0; pointer-events: none;}
     .Pop-Close:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
     .Pop-Close:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
     .bubble-close {display: flex;};
 }
 
+@keyframes reveal-close {
+    0% {background-color: rgb(202, 116, 116); }
+    100% {background-color: red;}
+}
+
+.ani-close-up {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*
+animation: reveal-pop linear both;
+            animation-timeline: scroll(self);
+            animation-range: 0 170px;
+            */
 .Pop-bubble {
     width: 100px;
     height: 100px;
@@ -3210,11 +3224,7 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 
         flex-wrap: wrap;
         flex-direction: row;
-            /*
-            animation: reveal-pop linear both;
-            animation-timeline: scroll(self);
-            animation-range: 0 170px;
-            */
+         
         box-shadow: none;
         border: none;
         transition: opacity 0.303s, transform 0.302s, cubic-bezier cubic-bezier(0.41, 0.1, 0.13, 1);
@@ -3223,11 +3233,6 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
     .Pop-Waltz-Out, .Pop-Waltz2-Out, .Pop-Tech-Out, .Pop-Store-Out, .Pop-Txt-Out {
         transform: translate(0,0);
         opacity: 1;
-    }
-
-    @keyframes reveal-pop {
-        0% {width: 90%;}
-        100% {width: 100%;}
     }
 
     .Pop-enge {
