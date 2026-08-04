@@ -2313,8 +2313,8 @@ animation: reveal-pop linear both;
     .icon-bar {border: 2px solid var(--white);}
     .icon-late {transform: translate(0, -103px);
         height: 20px;}
-
-    .icon-left {justify-content: center;}
+        /**
+    .icon-left {justify-content: center;}*/
 }
 
 .Ability {
@@ -3354,17 +3354,18 @@ a.socialmedia.icons.email:hover::before {transition: 0.2s ease-out; transform: t
 }
 
 @media (max-width:780px) {
+    /**
     .tags-proyect {
         justify-content: center;
-    }
+    }*/
 
     .buttons-role {
-        justify-content: center;
+        /**justify-content: center;*/
         margin-bottom: 40px;
     }
 
     .center-text-mobile {
-        text-align: center;
+        /**text-align: center;*/
         width: 40ch;
         margin: auto;
     }
