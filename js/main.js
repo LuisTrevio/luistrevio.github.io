@@ -319,7 +319,7 @@ document.querySelectorAll('.Pop-Exit.Pop-out').forEach((result) => {
 });
 
 // Scroll .Pop-Waltz
-let PopLastScroll = 160
+let PopLastScroll = 450
 let PopSWaltz = document.querySelector('.Pop-Waltz');
 let PopSTech = document.querySelector('.Pop-Tech');
 let PopSStore = document.querySelector('.Pop-Store');
