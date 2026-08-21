@@ -106,15 +106,22 @@ nav {
         transition: 0.2s ease-out;
 
         width: fit-content;
+        color: white;
 
         border-radius: 50px;
-        border: 1px solid var(--buttons-proyect);
+        border: 1px solid var(--background);
         background-color: rgb(31, 31, 31);
 
         backdrop-filter:url(#frosted);-webkit-backdrop-filter:url(#frosted);
     }
 
-    .button-fever {display: none; flex-direction: row; gap: 3px; flex-wrap: nowrap; width: fit-content;}
+    .button-fever {
+        display: none; 
+        flex-direction: row; 
+        gap: 3px; 
+        flex-wrap: nowrap; 
+        width: fit-content;
+    }
 
     .vid-on {animation: colorvivid 4.85s cubic-bezier(0.39, 0.575, 0.565, 1) forwards alternate;}
     @keyframes colorvivid {
@@ -371,7 +378,7 @@ nav {
     height: 3px;
     border-radius: 50px;
 
-    background-color: var(--white);
+    background-color: white;
     transition: 0.2s ease-out;
 
 }
@@ -567,8 +574,8 @@ nav {
     }
 
      .insta-filter {
-        backdrop-filter: url(#glass-distortion);
-        -webkit-backdrop-filter: url(#glass-distortion);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         background-color: var(--content-filter);
          border: 1.6px solid #b0acac;
             width:56px;
@@ -586,12 +593,11 @@ nav {
      .insta-filter::before {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 56px;
+            height: 56px;
             border-radius: 50px;
             filter: blur(11px);
-            backdrop-filter: url(#glass-distortion);
-            -webkit-backdrop-filter: url(#glass-distortion);
+            backdrop-filter: url(#glass-distortion);-webkit-backdrop-filter: url(#glass-distortion);
     }
 
     .insta-filter:hover {
@@ -994,7 +1000,9 @@ content {
         animation-timeline: scroll(root);
         animation-range: 0 170px;
         color: var(--white);
-        
+       
+         backdrop-filter: url(#glass-distortion);
+            -webkit-backdrop-filter: url(#glass-distortion);
     }
 
     .nickname-h1 {
@@ -1002,6 +1010,8 @@ content {
         animation-timeline: scroll(root);
         animation-range: 0 170px;
         font-size: 36px;
+         backdrop-filter: url(#glass-distortion);
+            -webkit-backdrop-filter: url(#glass-distortion);
     }
 
     .color {
@@ -1023,17 +1033,18 @@ content {
         opacity: 1;
         pointer-events: none;
         color: var(--white);}
+     
 
-        50% {opacity: 0; filter: blur(5px);}
-        70% {opacity: 0; filter: blur(5px);}
+        50% {opacity: 0; filter: blur(5px); }
+        70% {opacity: 0; filter: blur(5px); left: 50%; transform: translate(-50%,52px);}
 
         100% {
         transition: 0.2s ease-out;
     
         top: 0;
-        left: 0;
+        left: 50%;
     
-        transform: translate(0,52px);
+        transform: translate(-50%,52px);
         position: fixed;
         z-index: 3;
 
@@ -1041,25 +1052,27 @@ content {
         opacity: 1;
         pointer-events: none;
         color: white;
+        
+        width: fit-content;
+        border-radius: 20px;
         }
     }
 
     @keyframes reveal-nick-h1 {
         0% {} 100% {
             font-size: 15px;
-            background-color: #140b32;
-            border-top: 1.5px solid #fff;
-            border-right: 1.5px solid #fff;
-            border-bottom: 1.5px solid #ffff;
-            padding: 1px 3px;
-            border-radius: 0 20px 20px 0;
+            padding: 7px 10px;
+            border-radius: 20px;
+
+            background-color: var(--buttons-stock);
+            border: 1.6px solid #b0acac;
         }
     }
 
       @keyframes reveal-nick-color {
         0% {} 100% {
             font-size: 15px;
-            background-color: #140b32;
+            background-color: var(--buttons-stock);
             padding: 2.2px;
             border-radius: 20px 0 0 20px;
             border-top: 1.5px solid #fff;
@@ -1311,8 +1324,6 @@ button.sub.icons.email:hover::before { transform: translateY(-45px); opacity: 1;
 
     padding: 10px 20px;
 }
-
-.loaded {padding: 70px 20px;}
 
 .stock-detalles {
     width: 100%;
@@ -1691,6 +1702,68 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         pointer-events: all;
     }
 }
+
+.info-box-grid {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.info-box {
+    width: 100%;
+    height: auto;
+
+    border: 2px solid var(--buttons);
+    background-color: #ffffff00;
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+
+    flex-direction: column;
+
+    border-radius: 22px;
+    transition: 0.2s ease-out;
+    padding: 10px 20px;
+
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+}
+
+
+
+@media (max-width:780px) {
+    .info-box-grid {
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));
+    }
+
+    .info-box h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        color: var(--white);
+    }
+
+    .info-box {
+        font-size: 13px;
+        width: auto;
+        height: 93px;
+        padding: 10px 12px;
+    }
+}
+
+/* .info-box:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+.info-box:active{transform: scale(0.95);}
+@media (max-width:780px) { 
+    .info-box:hover{background-color: var(--solid-box); border: 2px solid var(--buttons);}
+    .info-box:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+} */
 
 .flex-items-dev {
     width: 100%;

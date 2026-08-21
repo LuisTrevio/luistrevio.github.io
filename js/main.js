@@ -701,6 +701,7 @@ document.querySelector('.filter-text[data-sort="Sitios Web"]').addEventListener(
            document.querySelectorAll('.block-img-device').forEach((result) => { result.style.display = 'none';});
             document.querySelectorAll('.large-img-buble').forEach((result) => { result.style.display = 'flex';});
                 document.querySelectorAll('.visualize-img').forEach((result) => { result.style.display = 'flex';});
+                document.querySelectorAll('.sitios').forEach((result) => { result.style.padding = '50px 0px 10px 0px';});
     }
      window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelector('.property-text').style.display = 'none';
@@ -889,4 +890,12 @@ window.addEventListener('scroll', () => {
          document.querySelector('.insta-filter').style.backgroundColor = 'var(--content-filter-on)';
     }
     
+});
+
+// Cuando se esta cargando una imagen utilizaremos el evento "load" para que cuando la imagen se cargue, se le quite la clase "loading" y se le agregue la clase "loaded"
+document.querySelectorAll('img').forEach((img) => {
+    img.addEventListener('load', () => {
+        img.classList.remove('loading');
+        img.classList.add('loaded');
+    });
 });

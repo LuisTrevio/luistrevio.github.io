@@ -14,7 +14,9 @@
 
         <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="theme-color" content="#0B0A0A" />
+       
+        <meta name="theme-color" content="#efeded" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0B0A0A" media="(prefers-color-scheme: dark)" />
         <meta name="darkreader-lock">
 
         <meta
@@ -149,7 +151,7 @@ body {
 
     /*Botones*/
     --buttons:#cdcdcd;
-    --buttons-stock:#231a3e57;
+    --buttons-stock:#38199757;
     --buttons-hover:#c4c4c4;
     --buttons-stock-hover:#66598c;
     --solid-box: var(--buttons);
@@ -196,9 +198,7 @@ body {
     --css3:rebeccapurple;
     --react:#146b83;
     --python:#306998;
-    
     --nodejs:#026e00;
-
     --astro-bg: linear-gradient(45deg,
         hsl(259deg 85% 10%) 0%,hsl(259deg 85% 10%) 8%,hsl(259deg 85% 9%) 17%,hsl(259deg 86% 9%) 25%,
         hsl(259deg 87% 9%) 33%,hsl(258deg 87% 8%) 42%,hsl(258deg 88% 8%) 50%,hsl(257deg 89% 7%) 58%,
@@ -220,7 +220,7 @@ body {
     --basic: #3f3f3f;
 
     --content-filter: #ffffff;
-     --content-filter-on: #d4d4d400;
+    --content-filter-on: #d4d4d400;
 
     --filter-text: rgb(111, 111, 111);
 
@@ -237,7 +237,6 @@ body {
     --black: #000000;
 
     /*Background*/
-    --background-bg: url(../bg/back-background.png) no-repeat center center fixed;
     --background-color: #0B0A0A;
     --background: #0B0A0A;
     --stock-perfil:#120f21;
@@ -287,7 +286,7 @@ body {
 
     /*Hover*/
     --hover: #5b5b5b;
-    --hover-bar: #ffffff;
+     --hover-bar: #ffffff;
 
     --content-filter: rgb(0, 0, 0);
      --content-filter-on: #00000096; 
@@ -306,7 +305,7 @@ body {
     }
 }
 
- .svg-invert {filter: var(--invert-svg);}
+.svg-invert {filter: var(--invert-svg);}
 
 .aurora {
     background-image: linear-gradient(48deg, 
@@ -319,7 +318,7 @@ body {
     hsl(104deg 41% 44% / 30%) 100%);
 }
 
-.exnor-rainbow {background-image: linear-gradient(
+.rainbow {background-image: linear-gradient(
     45deg,hsl(266deg 77% 36%) 0%,hsl(219deg 100% 35%) 8%,hsl(212deg 100% 35%) 17%,hsl(205deg 100% 31%) 25%,hsl(196deg 100% 26%) 33%,hsl(184deg 100% 21%) 42%,hsl(172deg 78% 23%) 50%,hsl(155deg 83% 24%) 58%,hsl(105deg 56% 29%) 67%,hsl(71deg 100% 23%) 75%,hsl(45deg 100% 29%) 83%,hsl(26deg 100% 39%) 92%,hsl(0deg 100% 50%) 100%
 );}
 
@@ -337,7 +336,7 @@ body {
 
 
 @keyframes scrollx {0% {background-position: 0% 0%;}    100% {background-position: 100% 100%;}  }
-.gradient-loading {
+.loading {
     background-image: linear-gradient(90deg,
         hsl(0deg 0% 47%) 0%,hsl(344deg 0% 47%) 8%,hsl(344deg 0% 47%) 17%,hsl(0deg 0% 47%) 25%,
         hsl(344deg 0% 57%) 33%,hsl(344deg 0% 68%) 42%,hsl(0deg 0% 79%) 50%,hsl(344deg 0% 68%) 58%,
@@ -350,7 +349,7 @@ body {
 
 @media screen and (max-width: 780px) {
     .gradient {background-size: 200% 200%;}
-    .gradient-loading {background-size: 600% 200%;}
+    .loading {background-size: 600% 200%;}
 }
 
 @keyframes loading {0% {background-position: 0% 0%;}100% {background-position: 100% 100%;}  }
@@ -590,7 +589,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
 
                             <div class="height-name">
                                 <div class="nickname"><!-- Clases eliminados: "name-safari" "sar-web"-->
-                                    <span class="color">@</span><h1 class="nickname-h1 ">LuisTrevio4</h1><!-- Clases eliminados: "h1-safari" "sar-web"-->
+                                    <h1 class="nickname-h1 ">LuisTrevio4</h1><!-- Clases eliminados: "h1-safari" "sar-web"-->
                                 </div>
                             </div>
 
@@ -615,7 +614,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                     <div class="detalles load">
                         <div class="stock-detalles">
     
-                            <div class="section #alert closed">
+                            <!-- <div class="section #alert closed">
                                 <div class="square-orange alert-dunot">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                             <path d="M1 21L12 2L23 21H1ZM12 18C12.2833 18 12.521 17.904 12.713 17.712C12.905 17.52 13.0007 17.2827 13 17C12.9993 16.7173 12.9033 16.48 12.712 16.288C12.5207 16.096 12.2833 16 12 16C11.7167 16 11.4793 16.096 11.288 16.288C11.0967 16.48 11.0007 16.7173 11 17C10.9993 17.2827 11.0953 17.5203 11.288 17.713C11.4807 17.9057 11.718 18.0013 12 18ZM11 15H13V10H11V15Z" fill="white"/>
@@ -623,12 +622,12 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                                     <span> &nbsp;
                                         Por el momento esta pagina esta en medio de desarrollo.</span>    
                                 </div>
-                            </div>
+                            </div> -->
             
                             <!-- Div de section -->
                             
                             <div class="section #info all" data-sort="all">
-                                <h1>Acerca de mi</h1>
+                                <!-- <h1>Acerca de mi</h1>
                                 <p>
                                     Mi nombre es <b style="font-family:'Montserrat';">Luis Treviño</b> (aunque algunos sistemas insistan en quitarme la 'ñ'). 
                                     En servidores y juegos, muchos me conocen como <b style="font-family:'Montserrat';">CheeseBurguer</b>. 
@@ -637,10 +636,30 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                                     Ingeniería en Sistemas Computacionales.
                                 </p>
                                     <br><p>Por el momento no tengo proyectos, seguiré en curso aprendiendo lo mas que pueda.</p>
+                             -->
+                                    <div class="info-box-grid">
+                                        <div class="info-box svran-bg">
+                                            <h2 class="info-box-title">Nickname</h2>
+                                            <p>CheeseBurguer</p>
+                                        </div>
+                                        <div class="info-box svran-bg">
+                                            <h2 class="info-box-title">Hobby</h2>
+                                            <p>Gaming</p>
+                                        </div>
+                                        <div class="info-box svran-bg">
+                                            <h2 class="info-box-title">Comida Favorita</h2>
+                                            <p>Pizza de Piña</p>
+                                        </div>
+                                        <div class="info-box svran-bg">
+                                            <h2 class="info-box-title">Favorite Font</h2>
+                                            <p>Montserrat</p>
+                                        </div>
+                                    </div>
+                            
                             </div>
                 
                             <div class="section #items all" data-sort="all">
-                                <h1>Desarrollo de Web/Apps</h1>
+                                <h1>Desarrollo de Web/Apps🧩​</h1>
                                 <div class="flex-items-dev">
 
                                     <button name="HTML-pop" onclick="Pop(), PopHTML()" class="svran-bg items-dev">
@@ -697,7 +716,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                             </div>
 
                             <div class="section #items all" data-sort="all">
-                                <h1>Herramientas</h1>
+                                <h1>Herramientas🛠️</h1>
                                 <div class="flex-items-dev">
                                     <button name="VisualStudio-pop" onclick="Pop(), PopVS(), PopMagic()" class="svran-bg items-dev Pop-Magic-O">
                                         <span class="items-logo">
@@ -731,7 +750,7 @@ body::-webkit-scrollbar-button:vertical:single-button:increment:hover {border-co
                             </div>    
 
                             <div class="section #repost sitios" data-sort="Sitios Web">
-                                <h1>Sitios Web</h1>
+                                <h1>Sitios Web🎨</h1>
                                 <div class="proyect-box">
 
                                     <button name="Waltz-pop" onclick="Pop(), PopWaltz()" class="id-proyect proyect-waltz">
